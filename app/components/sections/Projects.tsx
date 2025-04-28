@@ -56,7 +56,7 @@ const projects = [
     category: 'Machine Learning',
     image: 'https://via.placeholder.com/600x400.png/3B82F6/FFFFFF?text=Drone+RL',
     tags: ['Unity 3D', 'Tensorflow', 'ML-Agents', 'C#'],
-    description: 'A reinforcement learning project for autonomous drone navigation and combat.'
+    description: 'A reinforcement learning project for training a drone to autonomously navigate a city and avoid obstacles.'
   },
 ]
 

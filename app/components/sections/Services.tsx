@@ -20,7 +20,7 @@ const services = [
   },
   {
     title: 'Artificial Intelligence',
-    description: 'Developing AI solutions, including reinforcement learning for MMO combat, with a focus on strategic decision-making and applied research.',
+    description: 'Developing AI solutions, including reinforcement learning to train a drone to autonomously navigate a city and avoid obstacles, with a focus on strategic decision-making and applied research.',
     icon: FiLayout,
     delay: 0.4,
   },
@@ -67,7 +67,7 @@ export default function Services() {
             transition={{ duration: 0.5 }}
             className="text-3xl md:text-4xl font-bold mb-4 font-heading"
           >
-            Key Areas of Expertise
+            Key Areas of Interest
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
