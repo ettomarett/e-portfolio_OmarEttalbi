@@ -48,7 +48,6 @@ const education = [
     location: 'Settat, Morocco',
     years: 'Graduated in 2023'
   },
-  { school: 'Independent Study', degree: 'Programming, Web Dev, DBMS', location: 'Ouarzazate, Morocco', years: '2020–2022' },
 ]
 
 export default function About() {
@@ -77,7 +76,13 @@ export default function About() {
             <h3 className="text-xl font-bold mb-4 text-primary">About Me</h3>
             <div className="bg-gray-50 dark:bg-secondary-light p-4 rounded-xl shadow-sm">
               <div className="text-gray-700 dark:text-gray-300">
-                I am a 25-year-old software engineering student at ENSIAS, Morocco, passionate about technology, innovation, and practical applications that merge technical prowess and creativity. My journey spans software development, automation, AI, and SaaS, with a drive to build robust, scalable, and creative solutions.
+                <p className="mb-4">
+                  I am a 25-year-old software engineering student at ENSIAS, Morocco, passionate about technology, innovation, and practical applications that merge technical prowess and creativity. My journey spans software development, automation, AI, and SaaS, with a drive to build robust, scalable, and creative solutions.
+                </p>
+                
+                <p>
+                  As a motivated software engineering student at the intersection of DevOps, cloud infrastructure, and AI-powered web development, I aim to architect scalable solutions that leverage automation pipelines, containerization, and machine learning capabilities. I'm passionate about implementing CI/CD workflows, infrastructure-as-code, and cloud-native architectures while continuously expanding my expertise in emerging technologies to deliver resilient, intelligent web applications that solve real-world business challenges.
+                </p>
               </div>
             </div>
           </div>
