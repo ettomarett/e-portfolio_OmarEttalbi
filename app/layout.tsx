@@ -40,9 +40,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${poppins.variable} font-sans bg-white dark:bg-secondary text-gray-900 dark:text-gray-100`}>
+      <body className={`${inter.variable} ${poppins.variable} font-sans bg-secondary text-gray-100`}>
         <AnimatedGeometricBackground />
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider>
           <Navbar />
           <div className="px-8 md:px-24">
             {children}

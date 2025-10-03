@@ -25,10 +25,10 @@ export default function Hero() {
           >
             <h2 className="text-lg text-primary mb-2">Hi, I'm</h2>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 font-heading">
-              Omar Ettalbi
+              Ettalbi Omar
             </h1>
             <h2 className="text-2xl md:text-3xl text-gray-600 dark:text-gray-400 mb-6">
-              Software Engineering Student | Aspiring Entrepreneur | Multi-disciplinary Technologist
+              Software Engineering Student — End-of-Studies Internship
             </h2>
           
             

@@ -8,31 +8,30 @@ import { SiMongodb, SiPostgresql, SiSpring, SiNextdotjs, SiUml, SiAdobephotoshop
 
 const skills = [
   { name: 'Python', icon: FaPython },
-  { name: 'C', icon: SiC },
+  { name: 'TypeScript', icon: FaCode },
+  { name: 'JavaScript', icon: FaCode },
   { name: 'Java', icon: FaJava },
-  { name: 'React JS', icon: FaReact },
-  { name: 'Next JS', icon: SiNextdotjs },
-  { name: 'Spring Boot', icon: SiSpring },
-  { name: 'WordPress', icon: FaWordpress },
-  { name: 'Joomla', icon: FaJoomla },
-  { name: 'PHP', icon: FaPhp },
-  { name: 'HTML', icon: FaHtml5 },
-  { name: 'CSS', icon: FaCss3Alt },
-  { name: 'MySQL', icon: FaDatabase },
-  { name: 'MongoDB', icon: SiMongodb },
+  { name: 'React', icon: FaReact },
+  { name: 'Next.js', icon: SiNextdotjs },
+  { name: 'Node.js', icon: FaCode },
   { name: 'PostgreSQL', icon: SiPostgresql },
+  { name: 'MySQL', icon: FaDatabase },
+  { name: 'Power BI', icon: FaDatabase },
+  { name: 'Excel', icon: FaCode },
+  { name: 'Docker', icon: FaCode },
   { name: 'Git', icon: FaGitAlt },
-  { name: 'UML', icon: SiUml },
-  { name: 'SysML', icon: SiUml },
+  { name: 'Linux', icon: FaCode },
+  { name: 'Prometheus', icon: FaCode },
+  { name: 'Grafana', icon: FaCode },
   { name: 'Photoshop', icon: SiAdobephotoshop },
   { name: 'Illustrator', icon: SiAdobeillustrator },
 ]
 
 const personalInfo = [
-  { label: 'Age', value: '24' },
-  { label: 'Location', value: 'Morocco' },
-  { label: 'Education', value: 'ENSIAS Student' },
-  { label: 'Languages', value: 'EN, FR, AR, ES' },
+  { label: 'Location', value: 'Rabat, Morocco' },
+  { label: 'Education', value: 'ENSIAS - Last semester' },
+  { label: 'Languages', value: 'EN, FR, AR' },
+  { label: 'Website', value: 'ettalbiomar.netlify.app' },
 ]
 
 const education = [
@@ -40,13 +39,13 @@ const education = [
     school: 'National School of Computer Science and System Analysis (ENSIAS)',
     degree: 'Software Engineering',
     location: 'Rabat, Morocco',
-    years: '2nd year. (Currently)'
+    years: 'Last semester (current) - Present'
   },
   {
-    school: 'CPGE Settat - Preparatory school',
+    school: 'CPGE Settat - Preparatory School',
     degree: 'Technology and Sciences option',
     location: 'Settat, Morocco',
-    years: 'Graduated in 2023'
+    years: 'Graduated'
   },
 ]
 
@@ -77,11 +76,15 @@ export default function About() {
             <div className="bg-gray-50 dark:bg-secondary-light p-4 rounded-xl shadow-sm">
               <div className="text-gray-700 dark:text-gray-300">
                 <p className="mb-4">
-                  I am a 25-year-old software engineering student at ENSIAS, Morocco, passionate about technology, innovation, and practical applications that merge technical prowess and creativity. My journey spans software development, automation, AI, and SaaS, with a drive to build robust, scalable, and creative solutions.
+                  I build containerized, data-driven software and pragmatic dashboards. I move fast from ambiguous requirements to working POCs, then harden them with tests, CI/CD, health checks, and observability.
+                </p>
+                
+                <p className="mb-4">
+                  I'm strong in Python and backend/data workflows, comfortable from the Linux shell to Docker/Kubernetes, and fluent in relational/NoSQL design. When needed, I design clean schemas and KPIs and deliver dashboards—usually custom (Python/React), and I can also ship in Power BI or Excel/VBA.
                 </p>
                 
                 <p>
-                  As a motivated software engineering student at the intersection of DevOps, cloud infrastructure, and AI-powered web development, I aim to architect scalable solutions that leverage automation pipelines, containerization, and machine learning capabilities. I'm passionate about implementing CI/CD workflows, infrastructure-as-code, and cloud-native architectures while continuously expanding my expertise in emerging technologies to deliver resilient, intelligent web applications that solve real-world business challenges.
+                  My focus is clear APIs and SQL semantics, reproducible environments, and measurable impact, in service of real-world decisions.
                 </p>
               </div>
             </div>

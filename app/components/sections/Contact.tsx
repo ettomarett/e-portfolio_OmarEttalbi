@@ -1,7 +1,7 @@
 'use client'
 
 import * as React from 'react'
-import { FaEnvelope, FaPhone, FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaEnvelope, FaPhone, FaGithub, FaLinkedin, FaGlobe } from 'react-icons/fa'
 
 export default function Contact() {
   return (
@@ -17,7 +17,11 @@ export default function Contact() {
             </div>
             <div className="flex items-center gap-2">
               <FaPhone />
-              <a href="tel:0604546427" className="hover:underline text-black dark:text-white">06 04 54 64 27</a>
+              <a href="tel:212604546427" className="hover:underline text-black dark:text-white">212 6 04 54 64 27</a>
+            </div>
+            <div className="flex items-center gap-2">
+              <FaGlobe />
+              <a href="https://ettalbiomar.netlify.app" target="_blank" rel="noopener noreferrer" className="hover:underline text-black dark:text-white">ettalbiomar.netlify.app</a>
             </div>
             <div className="flex items-center gap-2">
               <FaGithub />

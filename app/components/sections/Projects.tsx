@@ -11,56 +11,53 @@ import { SiSpring, SiUnity, SiTensorflow } from 'react-icons/si'
 
 const projects = [
   {
-    id: 6,
-    title: 'Monolith to Microservices Migration Framework',
-    category: 'AI & Cloud',
-    image: '', // No image, will use icon
-    tags: ['Python', 'Google-ADK', 'LLM', 'MCP Tools', 'Docker', 'Kubernetes'],
-    description: 'A framework to migrate monolithic applications to microservices, featuring an AI agent developed with Google-ADK, Python, LLM, and MCP Tools, deployed using Docker and Kubernetes.'
-  },
-  {
     id: 1,
-    title: 'Study Abroad Consultancy',
-    category: 'Web Application',
-    image: 'https://via.placeholder.com/600x400.png/3B82F6/FFFFFF?text=Study+Abroad',
-    tags: ['Next JS', 'PostgreSQL', 'REST API', 'Typescript', 'CSS'],
-    description: 'A consultancy platform for students to explore study abroad opportunities.'
+    title: 'Morocco Rainfall & Wealth Analysis',
+    category: 'Data Analytics',
+    image: '',
+    tags: ['Python', 'Pandas', 'Prophet', 'statsmodels', 'ARIMA', 'SARIMA', 'Holt-Winters'],
+    description: 'Unified geospatial–temporal dataset (admin boundaries, monthly rainfall, Relative Wealth Index) with lag/rolling features and drought/variability metrics; evaluated four forecasting approaches across 60 rolling test periods — Prophet (MAE 8.41), Holt–Winters (8.91), SARIMA (10.23), ARIMA (11.30) — and delivered a lightweight Python analysis dashboard (maps, trends, KPI cards) with documented assumptions and data lineage.',
+    year: '2025'
   },
   {
     id: 2,
-    title: 'Equipment Maintenance Supervisor',
-    category: 'Web Application',
-    image: 'https://via.placeholder.com/600x400.png/3B82F6/FFFFFF?text=Maintenance',
-    tags: ['React JS', 'Spring Boot', 'REST API', 'Typescript', 'CSS'],
-    description: 'A web app for managing and supervising equipment maintenance tasks.'
+    title: 'Monolith → Microservices Migration Framework',
+    category: 'AI & Cloud',
+    image: '',
+    tags: ['Python', 'LLM', 'DeepSeek', 'MCP Tools', 'Docker', 'Kubernetes', 'Google ADK'],
+    description: 'AI-assisted framework that analyzes monolith boundaries and scaffolds microservices with a container-first approach. Generates per-service Dockerfiles/manifests, baseline REST stubs and tests, API-gateway routes, and health checks, with a local Compose runner to accelerate POC→MVP hand-off.',
+    year: '2025'
   },
   {
     id: 3,
-    title: 'Articles and News Website',
-    category: 'Website',
-    image: 'https://via.placeholder.com/600x400.png/3B82F6/FFFFFF?text=News+Site',
-    tags: ['WordPress', 'PHP', 'Javascript', 'HTML', 'CSS'],
-    description: 'A dynamic website for publishing articles and news.'
+    title: 'Office Equipment Management Tool',
+    category: 'Web Application',
+    image: '',
+    tags: ['React', 'TypeScript', 'Spring Boot', 'REST APIs', 'OpenAPI', 'Docker', 'GitHub Actions'],
+    description: 'Web app for asset tracking and maintenance with clear service boundaries and strongly typed API contracts. Delivered an asset register plus maintenance request flows (create → status updates → history), with validated, paginated REST endpoints and a responsive React UI in TypeScript. Dockerized for dev/prod parity and wired to CI/CD for reliable releases.',
+    year: '2025'
   },
   {
     id: 4,
-    title: 'Automated Data Analytics',
-    category: 'Data Analytics',
-    image: 'https://via.placeholder.com/600x400.png/3B82F6/FFFFFF?text=Data+Analytics',
-    tags: ['Python', 'Pandas', 'Google Analytics API', 'Taboola API'],
-    description: 'Automated data collection and analysis for business insights.'
+    title: 'News & Blogging Website',
+    category: 'Website',
+    image: '',
+    tags: ['WordPress', 'PHP', 'JavaScript', 'Docker', 'GitHub Actions'],
+    description: 'Content site for articles/news with automated deployments.',
+    year: '2024'
   },
   {
     id: 5,
-    title: 'Autonomous Drone RL',
-    category: 'Machine Learning',
-    image: 'https://via.placeholder.com/600x400.png/3B82F6/FFFFFF?text=Drone+RL',
-    tags: ['Unity 3D', 'Tensorflow', 'ML-Agents', 'C#'],
-    description: 'A reinforcement learning project for training a drone to autonomously navigate a city and avoid obstacles.'
-  },
+    title: 'Data Analytics & Insights Pipeline',
+    category: 'Data Analytics',
+    image: '',
+    tags: ['Python', 'Pandas', 'Google APIs', 'Taboola APIs', 'Docker', 'GitHub Actions'],
+    description: 'Automated ingestion from multiple APIs, transformation with Pandas, and scheduled insights dashboards (idempotent jobs, schema checks).',
+    year: '2024'
+  }
 ]
 
-const categories = ['All', 'Web Application', 'Website', 'Data Analytics', 'Machine Learning']
+const categories = ['All', 'Web Application', 'Website', 'Data Analytics', 'AI & Cloud']
 
 const breakpointColumns = {
   default: 3,
@@ -72,11 +69,7 @@ const projectIcons: { [key: string]: React.ComponentType<{ className?: string }>
   'Web Application': FaReact,
   'Website': FaWordpress,
   'Data Analytics': FaDatabase,
-  'Machine Learning': FaRobot,
   'AI & Cloud': FaRobot,
-  'Spring Boot': SiSpring,
-  'Unity 3D': SiUnity,
-  'Tensorflow': SiTensorflow,
 }
 
 export default function Projects() {
@@ -129,9 +122,14 @@ export default function Projects() {
                   <Icon className="text-primary text-6xl" />
                 </div>
                 <div className="flex-1 flex flex-col p-6">
-                  <h3 className="text-xl font-bold mb-1 text-primary">{project.title}</h3>
-                  <span className="text-xs uppercase tracking-wide text-gray-400 dark:text-gray-500 mb-2">{project.category}</span>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4 flex-1">{project.description}</p>
+                  <div className="flex justify-between items-start mb-2">
+                    <h3 className="text-xl font-bold text-primary">{project.title}</h3>
+                    <span className="text-xs bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary px-2 py-1 rounded-full font-medium">
+                      {project.year}
+                    </span>
+                  </div>
+                  <span className="text-xs uppercase tracking-wide text-gray-400 dark:text-gray-500 mb-3">{project.category}</span>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 flex-1 text-sm leading-relaxed">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mt-auto">
                     {project.tags.map((tag) => (
                       <span

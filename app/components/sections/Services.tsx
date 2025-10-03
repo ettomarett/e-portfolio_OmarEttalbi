@@ -7,34 +7,40 @@ import { FiLayout, FiSmartphone, FiPenTool, FiCode } from 'react-icons/fi'
 
 const services = [
   {
-    title: 'Software Development',
-    description: 'Building robust, scalable solutions with hands-on experience in full-stack development and a focus on the latest technologies.',
+    title: 'Full-Stack Development',
+    description: 'Frontend and backend software development across multiple frameworks and languages including Java, JavaScript, C++, Python, React, Next.js, Spring Boot, and Node.js.',
     icon: FiCode,
     delay: 0,
   },
   {
-    title: 'Automation & Integration',
-    description: 'Automating workflows and integrating platforms like Make.com to enhance efficiency and minimize manual intervention.',
-    icon: FiSmartphone,
+    title: 'Backend & Data Workflows',
+    description: 'Strong in Python and backend/data workflows, comfortable from the Linux shell to Docker/Kubernetes, and fluent in relational/NoSQL design.',
+    icon: FiCode,
     delay: 0.2,
   },
   {
-    title: 'Artificial Intelligence',
-    description: 'Developing AI solutions, including reinforcement learning to train a drone to autonomously navigate a city and avoid obstacles, with a focus on strategic decision-making and applied research.',
+    title: 'BI & Dashboards',
+    description: 'Design clean schemas and KPIs and deliver dashboards—usually custom (Python/React), and I can also ship in Power BI or Excel/VBA.',
     icon: FiLayout,
     delay: 0.4,
   },
   {
-    title: 'SaaS & Startup Development',
-    description: 'Leading SaaS projects like Sibaqy, overseeing product design, customer experience, and seamless UI development.',
-    icon: FiPenTool,
+    title: 'DevOps & Cloud',
+    description: 'Docker/Compose, Git/GitHub, CI/CD (GitHub Actions, Drone, Travis CI), Traefik, Linux, Observability (Prometheus/Grafana).',
+    icon: FiSmartphone,
     delay: 0.6,
   },
   {
-    title: 'Multidisciplinary Interests',
-    description: 'Music production, mixing engineering, embroidery, sketching, and learning 3D modeling with Blender to balance technical and creative skills.',
+    title: 'Data Analytics & ML',
+    description: 'Time series analysis (Prophet, statsmodels ARIMA/SARIMA/Holt-Winters), feature engineering, evaluation (MAE), and automated data pipelines.',
     icon: FiPenTool,
     delay: 0.8,
+  },
+  {
+    title: 'API Design & Testing',
+    description: 'REST API design, health checks & rollbacks, structured logging, RBAC, secrets management, testing/linting, and clear error contracts.',
+    icon: FiCode,
+    delay: 1.0,
   },
 ]
 

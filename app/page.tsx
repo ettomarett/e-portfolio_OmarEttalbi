@@ -5,11 +5,13 @@ import About from './components/sections/About';
 import Services from './components/sections/Services';
 import Projects from './components/sections/Projects';
 import Experience from './components/sections/Experience';
+import Languages from './components/sections/Languages';
+import Interests from './components/sections/Interests';
 import Contact from './components/sections/Contact';
 
 export const metadata: Metadata = {
   title: 'My Portfolio | ETTALBI OMAR',
-  description: 'Welcome to my portfolio website showcasing my work as a Software Engineer.',
+  description: 'Software Engineering Student specializing in Business Intelligence & Dashboards. Building containerized, data-driven software with Python, React, and modern DevOps practices.',
 };
 
 export default function Home() {
@@ -20,9 +22,11 @@ export default function Home() {
       <Services />
       <Projects />
       <Experience />
+      <Languages />
+      <Interests />
       <Contact />
-      <footer className="w-full py-8 bg-gray-100 dark:bg-secondary text-center text-gray-500 dark:text-gray-400 text-sm mt-12">
-        &copy; {new Date().getFullYear()} Omar Ettalbi. All rights reserved.
+      <footer className="w-full py-8 bg-secondary text-center text-gray-400 text-sm mt-12">
+        &copy; {new Date().getFullYear()} Ettalbi Omar. All rights reserved.
       </footer>
     </main>
   );
