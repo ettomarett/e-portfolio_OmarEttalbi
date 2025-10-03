@@ -1,4 +1,4 @@
-// File: E:\omarslab\2025projects\eportfolio\app\page.tsx
+// File: /media/ettomar/FL/githubhub/e-portfolio_OmarEttalbi/app/page.tsx
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

@@ -31,7 +31,7 @@ const personalInfo = [
   { label: 'Location', value: 'Rabat, Morocco' },
   { label: 'Education', value: 'ENSIAS - Last semester' },
   { label: 'Languages', value: 'EN, FR, AR' },
-  { label: 'Website', value: 'ettalbiomar.netlify.app' },
+  { label: 'Website', value: 'ettalbi.com' },
 ]
 
 const education = [

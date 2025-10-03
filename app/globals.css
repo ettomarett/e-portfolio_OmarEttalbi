@@ -78,4 +78,16 @@
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+/* Mobile menu animations */
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 } 

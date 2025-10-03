@@ -21,7 +21,7 @@ export default function Contact() {
             </div>
             <div className="flex items-center gap-2">
               <FaGlobe />
-              <a href="https://ettalbiomar.netlify.app" target="_blank" rel="noopener noreferrer" className="hover:underline text-black dark:text-white">ettalbiomar.netlify.app</a>
+              <a href="https://ettalbi.com" target="_blank" rel="noopener noreferrer" className="hover:underline text-black dark:text-white">ettalbi.com</a>
             </div>
             <div className="flex items-center gap-2">
               <FaGithub />

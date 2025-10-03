@@ -84,23 +84,38 @@ export default function Navbar() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden mt-4">
-            <div className="flex flex-col space-y-4 py-4">
-              {navItems.map((item) => (
-                <ScrollLink
-                  key={item.name}
-                  to={item.href.replace('#', '')}
-                  smooth={true}
-                  duration={500}
-                  offset={-80}
-                  className="text-gray-300 hover:text-primary transition-colors cursor-pointer"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.name}
-                </ScrollLink>
-              ))}
+          <>
+            {/* Backdrop */}
+            <div 
+              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 md:hidden animate-in fade-in duration-200"
+              onClick={() => setIsOpen(false)}
+            />
+            
+            {/* Mobile Menu */}
+            <div className="md:hidden mt-4 relative z-50 animate-in slide-in-from-top-2 fade-in duration-300">
+              <div className="bg-gray-900/95 backdrop-blur-md rounded-lg border border-gray-700/50 shadow-xl">
+                <div className="flex flex-col space-y-2 py-4 px-4">
+                  {navItems.map((item, index) => (
+                    <ScrollLink
+                      key={item.name}
+                      to={item.href.replace('#', '')}
+                      smooth={true}
+                      duration={500}
+                      offset={-80}
+                      className="text-gray-300 hover:text-primary transition-all duration-200 cursor-pointer py-2 px-3 rounded-lg hover:bg-gray-800/50 transform hover:translate-x-1"
+                      onClick={() => setIsOpen(false)}
+                      style={{
+                        animationDelay: `${index * 50}ms`,
+                        animation: 'slideInFromLeft 0.3s ease-out forwards'
+                      }}
+                    >
+                      {item.name}
+                    </ScrollLink>
+                  ))}
+                </div>
+              </div>
             </div>
-          </div>
+          </>
         )}
       </nav>
     </header>

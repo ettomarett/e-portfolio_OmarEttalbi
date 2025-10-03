@@ -28,7 +28,7 @@ export default function Hero() {
               Ettalbi Omar
             </h1>
             <h2 className="text-2xl md:text-3xl text-gray-600 dark:text-gray-400 mb-6">
-              Software Engineering Student — End-of-Studies Internship
+              Software Engineering Student — Looking for my End-of-Studies Internship
             </h2>
           
             
