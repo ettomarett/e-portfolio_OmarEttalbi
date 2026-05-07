@@ -10,14 +10,22 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#3B82F6',
-          dark: '#2563EB',
+          DEFAULT: '#E8763A',
+          dark: '#D4632A',
           foreground: 'hsl(var(--primary-foreground) / <alpha-value>)',
         },
+        accent2: {
+          DEFAULT: '#4CAF7D',
+          dark: '#3D9468',
+        },
+        accent3: {
+          DEFAULT: '#6C5CE7',
+          dark: '#5A4BD1',
+        },
         secondary: {
-          light: '#1F2937',
-          DEFAULT: '#111827',
-          dark: '#0F172A',
+          light: '#1A1F2E',
+          DEFAULT: '#0F1320',
+          dark: '#0A0D16',
           foreground: 'hsl(var(--secondary-foreground) / <alpha-value>)',
         },
         background: 'hsl(var(--background) / <alpha-value>)',

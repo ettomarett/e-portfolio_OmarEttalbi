@@ -28,7 +28,7 @@ export default function Hero() {
               Ettalbi Omar
             </h1>
             <h2 className="text-2xl md:text-3xl text-gray-600 dark:text-gray-400 mb-6">
-              Software Engineering Student — Looking for my End-of-Studies Internship
+              Software Engineering Student at ENSIAS — Currently at Diehl Aviation, Toulouse
             </h2>
           
             
@@ -43,10 +43,10 @@ export default function Hero() {
                 Contact Me
               </ScrollLink>
               <a
-                href="images\cvomar.pdf"
+                href="/curriculum"
                 className="px-8 py-3 border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-full transition-colors"
               >
-                Download CV
+                Full Curriculum
               </a>
             </div>
 
@@ -78,7 +78,7 @@ export default function Hero() {
           >
             <div className="absolute inset-0 bg-primary/10 dark:bg-primary/20 rounded-full" />
             <Image
-              src="\images\omar.png"
+              src="/images/omar.png"
               alt="Omar Ettalbi"
               width={400}
               height={400}

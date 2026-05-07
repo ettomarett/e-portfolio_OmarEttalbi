@@ -44,7 +44,7 @@ export default function RootLayout({
         <AnimatedGeometricBackground />
         <ThemeProvider>
           <Navbar />
-          <div className="px-8 md:px-24">
+          <div className="px-4 md:px-8 lg:px-12">
             {children}
           </div>
         </ThemeProvider>

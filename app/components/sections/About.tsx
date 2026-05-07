@@ -3,50 +3,45 @@
 import * as React from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { FaPython, FaJava, FaDatabase, FaHtml5, FaCss3Alt, FaReact, FaGitAlt, FaWordpress, FaJoomla, FaPhp, FaCode } from 'react-icons/fa'
-import { SiMongodb, SiPostgresql, SiSpring, SiNextdotjs, SiUml, SiAdobephotoshop, SiAdobeillustrator, SiC } from 'react-icons/si'
+import { FaPython, FaJava, FaDatabase, FaReact, FaGitAlt, FaDocker, FaCode, FaLinux } from 'react-icons/fa'
+import { SiPostgresql, SiSpringboot, SiNextdotjs, SiTypescript, SiTensorflow, SiPytorch, SiApachespark, SiBlender } from 'react-icons/si'
 
 const skills = [
   { name: 'Python', icon: FaPython },
-  { name: 'TypeScript', icon: FaCode },
-  { name: 'JavaScript', icon: FaCode },
-  { name: 'Java', icon: FaJava },
-  { name: 'React', icon: FaReact },
-  { name: 'Next.js', icon: SiNextdotjs },
-  { name: 'Node.js', icon: FaCode },
-  { name: 'PostgreSQL', icon: SiPostgresql },
-  { name: 'MySQL', icon: FaDatabase },
-  { name: 'Power BI', icon: FaDatabase },
-  { name: 'Excel', icon: FaCode },
-  { name: 'Docker', icon: FaCode },
+  { name: 'Java / Spring Boot', icon: SiSpringboot },
+  { name: 'TypeScript', icon: SiTypescript },
+  { name: 'React / Next.js', icon: FaReact },
+  { name: 'PostgreSQL / SQL', icon: SiPostgresql },
+  { name: 'TensorFlow / Keras', icon: SiTensorflow },
+  { name: 'PyTorch', icon: SiPytorch },
+  { name: 'Docker / CI-CD', icon: FaDocker },
   { name: 'Git', icon: FaGitAlt },
-  { name: 'Linux', icon: FaCode },
-  { name: 'Prometheus', icon: FaCode },
-  { name: 'Grafana', icon: FaCode },
-  { name: 'Photoshop', icon: SiAdobephotoshop },
-  { name: 'Illustrator', icon: SiAdobeillustrator },
-]
-
-const personalInfo = [
-  { label: 'Location', value: 'Rabat, Morocco' },
-  { label: 'Education', value: 'ENSIAS - Last semester' },
-  { label: 'Languages', value: 'EN, FR, AR' },
-  { label: 'Website', value: 'ettalbi.com' },
+  { name: 'Linux', icon: FaLinux },
+  { name: 'Power BI / Tableau', icon: FaDatabase },
+  { name: 'SAP S/4HANA', icon: FaCode },
+  { name: 'Spark / dbt', icon: SiApachespark },
+  { name: 'XML / XSLT / XSD', icon: FaCode },
+  { name: 'Blender', icon: SiBlender },
 ]
 
 const education = [
   {
-    school: 'National School of Computer Science and System Analysis (ENSIAS)',
-    degree: 'Software Engineering',
+    school: 'ENSIAS — Université Mohammed V',
+    degree: 'Cycle d\'Ingénieur — Génie Logiciel (Software Engineering)',
     location: 'Rabat, Morocco',
-    years: 'Last semester (current) - Present'
+    years: '2022–2026 (3ème Année — S6 PFE in progress)'
   },
   {
-    school: 'CPGE Settat - Preparatory School',
-    degree: 'Technology and Sciences option',
+    school: 'CPGE TSI — Classes Préparatoires, Settat',
+    degree: 'Maths, Physics & Engineering Sciences — CNC top 18%',
     location: 'Settat, Morocco',
-    years: 'Graduated'
+    years: '2020–2022'
   },
+]
+
+const certifications = [
+  { name: 'IBM AI Analyst Professional Certificate', year: '2025' },
+  { name: 'DataCamp — Deep Reinforcement Learning in Python', year: '2025' },
 ]
 
 export default function About() {
@@ -56,9 +51,9 @@ export default function About() {
   })
 
   return (
-    <section id="about" className="py-24 bg-gray-50 dark:bg-secondary-light">
+    <section id="about" className="py-24">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-6">
+        <div className="max-w-6xl mx-auto text-center mb-6">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -70,21 +65,21 @@ export default function About() {
         </div>
 
         {/* About Me Card - above Education */}
-        <div id="about-me-card" className="max-w-3xl mx-auto mb-12">
+        <div id="about-me-card" className="max-w-6xl mx-auto mb-12">
           <div className="bg-white dark:bg-secondary p-8 rounded-2xl shadow-lg">
             <h3 className="text-xl font-bold mb-4 text-primary">About Me</h3>
             <div className="bg-gray-50 dark:bg-secondary-light p-4 rounded-xl shadow-sm">
               <div className="text-gray-700 dark:text-gray-300">
                 <p className="mb-4">
-                  I build containerized, data-driven software and pragmatic dashboards. I move fast from ambiguous requirements to working POCs, then harden them with tests, CI/CD, health checks, and observability.
+                  Final-year Software Engineering student at ENSIAS (Université Mohammed V, Rabat). My training spans the full software lifecycle — from algorithms and formal methods to enterprise architecture, AI, and DevOps — with a strong foundation in mathematics and engineering sciences from CPGE TSI (top 18% CNC).
                 </p>
-                
+
                 <p className="mb-4">
-                  I'm strong in Python and backend/data workflows, comfortable from the Linux shell to Docker/Kubernetes, and fluent in relational/NoSQL design. When needed, I design clean schemas and KPIs and deliver dashboards—usually custom (Python/React), and I can also ship in Power BI or Excel/VBA.
+                  I have hands-on experience building multi-agent AI systems, full-stack web platforms, ML pipelines, and data-driven dashboards. I work across Python, Java/Spring Boot, TypeScript/React/Next.js, and modern data tools (dbt, Spark, SAP).
                 </p>
-                
+
                 <p>
-                  My focus is clear APIs and SQL semantics, reproducible environments, and measurable impact, in service of real-world decisions.
+                  Currently completing my end-of-studies internship at Diehl Aviation (Toulouse, France), working on digitalization of shop floor processes with SAP S/4HANA, SAP Datasphere, and SAP Analytics Cloud.
                 </p>
               </div>
             </div>
@@ -92,7 +87,7 @@ export default function About() {
         </div>
 
         {/* Education Card */}
-        <div id="education-card" className="max-w-3xl mx-auto mb-12">
+        <div id="education-card" className="max-w-6xl mx-auto mb-12">
           <div className="bg-white dark:bg-secondary p-8 rounded-2xl shadow-lg">
             <h3 className="text-xl font-bold mb-4 text-primary">Education</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -109,7 +104,7 @@ export default function About() {
         </div>
 
         {/* Skills Card */}
-        <div id="skills-card" className="max-w-3xl mx-auto mb-12">
+        <div id="skills-card" className="max-w-6xl mx-auto mb-12">
           <div className="bg-white dark:bg-secondary p-8 rounded-2xl shadow-lg">
             <h3 className="text-xl font-bold mb-4 text-primary">Skills</h3>
             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4">
@@ -117,6 +112,24 @@ export default function About() {
                 <div key={skill.name} className="flex flex-col items-center">
                   <span className="text-3xl mb-2"><skill.icon /></span>
                   <span className="text-xs text-gray-700 dark:text-gray-300 text-center">{skill.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Certifications Card */}
+        <div id="certifications-card" className="max-w-6xl mx-auto mb-12">
+          <div className="bg-white dark:bg-secondary p-8 rounded-2xl shadow-lg">
+            <h3 className="text-xl font-bold mb-4 text-primary">Certifications</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {certifications.map((cert) => (
+                <div key={cert.name} className="bg-gray-50 dark:bg-secondary-light p-4 rounded-xl shadow-sm flex items-center gap-3">
+                  <span className="text-2xl">🏆</span>
+                  <div>
+                    <div className="font-bold text-sm">{cert.name}</div>
+                    <div className="text-xs text-gray-400">{cert.year}</div>
+                  </div>
                 </div>
               ))}
             </div>

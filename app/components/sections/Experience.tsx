@@ -8,35 +8,46 @@ import { SiPostgresql, SiNextdotjs, SiTypescript, SiDocker, SiGithubactions } fr
 
 const experiences = [
   {
-    title: 'Software Engineer Intern',
-    company: 'Raise Up Consulting',
-    period: 'Internship 2025 (3 months)',
-    type: 'Finished',
-    description: 'Led the end-to-end delivery of the Study-Abroad Platform (public site + role-based dashboards) and hardened it for production.',
+    title: 'End-of-Studies Intern — Digitalization & Data Analytics',
+    company: 'Diehl Aviation',
+    period: 'PFE 2026 · Toulouse, France',
+    type: 'Current',
+    description: 'Digitalization of operational shop floor processes in the MRO aviation sector using SAP technologies.',
     achievements: [
-      'Architecture & Data: Scoped the domain model (Students, Applications, Documents, Payments, Tickets). Designed the PostgreSQL schema, migrations, and constraints.',
-      'APIs & Backend: Built REST services with validation, pagination, and clear error contracts; JWT/RBAC for authN/authZ; basic OpenAPI docs; API tests with Postman collections.',
-      'Frontend: Next.js (TypeScript) dashboards and forms (multi-step intake, document upload, status tracking); pragmatic charts and admin views.',
-      'Ops & CI/CD: Containerized services with Docker; GitHub Actions pipelines (build/test/lint/image publish); env-based configs; health checks & structured logs; deployment runbooks.',
-      'Dashboards & KPIs: Implemented basic operational views (e.g., applications by stage, backlog) with filters/exports; documented KPI definitions (conversion, time-to-decision).',
-      'Platform features: Appointments (slot management, reminders), Payments (service tiers, receipts), Notifications (email/SMS), Help desk (tickets, priorities, attachments).'
+      'Digitalization of shop floor operational processes using SAP S/4HANA.',
+      'Data processing and pipeline design with SAP Datasphere.',
+      'Data visualization and dashboarding with SAP Analytics Cloud.',
     ],
-    technologies: ['Next.js', 'TypeScript', 'PostgreSQL', 'Docker', 'GitHub Actions', 'REST APIs', 'JWT', 'RBAC'],
+    technologies: ['SAP S/4HANA', 'SAP Datasphere', 'SAP Analytics Cloud'],
+    icon: FaChartLine
+  },
+  {
+    title: 'Full-Stack Developer — International Student Ops Platform',
+    company: 'RaiseUp Consulting',
+    period: '2nd Year Internship · 2025',
+    type: 'Finished',
+    description: 'End-to-end web application consolidating the international study lifecycle: document management, appointments, visa tracking, and payments with role-based dashboards.',
+    achievements: [
+      'Built Next.js 15 / TypeScript application with Prisma ORM and PostgreSQL.',
+      'Implemented RBAC authentication, document upload & review workflows, appointment booking with rescheduling.',
+      'Designed application/visa progression tracking, payment system with receipts, and audit trails.',
+      'Created role-based dashboards (Student vs. Admin) with structured status progression workflows.',
+    ],
+    technologies: ['Next.js 15', 'TypeScript', 'Prisma ORM', 'PostgreSQL', 'RBAC'],
     icon: FaCode
   },
   {
-    title: 'Full-Stack Developer',
-    company: 'Raise Up Consulting',
-    period: 'Internship 2024 (3 months)',
+    title: 'Front-End Developer — Corporate Website',
+    company: 'RaiseUp Consulting',
+    period: '1st Year Internship · 2024',
     type: 'Previous',
-    description: 'Contributed across the stack to ship user-facing features with reliable delivery mechanics.',
+    description: 'Designed and developed the company\'s official website front-end, which was adopted as the production version and deployed to the company\'s domain.',
     achievements: [
-      'Frontend: Implemented reusable UI components and multi-step forms in React/Next.js (TypeScript); integrated REST endpoints; handled client-side routing and basic state.',
-      'Backend & Data: Wrote data-access utilities and DTOs; assisted in PostgreSQL schema design (tables, indexes) and basic query optimization; created simple SQL views to support reporting needs.',
-      'Dev Environment & Ops: Containerized local dev with Docker Compose; added app/service health checks and standardized env configs.',
-      'Handoffs: Prepared export-friendly tables/CSVs for Excel and documented KPI definitions when stakeholders needed clarity.'
+      'UX/UI research (Behance, Dribbble) and responsive design with Next.js (SSR/SSG) and Bootstrap.',
+      'Built reusable component architecture, navigation management, and visual interaction effects.',
+      'Site adopted as official production version — led to extended collaboration for mobile app development.',
     ],
-    technologies: ['React', 'Next.js', 'TypeScript', 'PostgreSQL', 'Docker', 'REST APIs'],
+    technologies: ['Next.js', 'Bootstrap', 'SSR/SSG', 'React'],
     icon: FaCode
   }
 ]
@@ -48,9 +59,9 @@ export default function Experience() {
   })
 
   return (
-    <section id="experience" className="py-24 bg-gray-50 dark:bg-secondary-light">
+    <section id="experience" className="py-24">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}

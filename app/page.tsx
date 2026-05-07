@@ -11,7 +11,7 @@ import Contact from './components/sections/Contact';
 
 export const metadata: Metadata = {
   title: 'My Portfolio | ETTALBI OMAR',
-  description: 'Software Engineering Student specializing in Business Intelligence & Dashboards. Building containerized, data-driven software with Python, React, and modern DevOps practices.',
+  description: 'Software Engineering Student at ENSIAS (Génie Logiciel). AI, Multi-Agent Systems, Full-Stack Development, Data Engineering & Model-Driven Engineering.',
 };
 
 export default function Home() {
@@ -26,8 +26,7 @@ export default function Home() {
       <Interests />
       <Contact />
       <footer className="w-full py-8 bg-secondary text-center text-gray-400 text-sm mt-12">
-        &copy; {new Date().getFullYear()} Ettalbi Omar. All rights reserved.
-      </footer>
+        &copy; {new Date().getFullYear()} Ettalbi Omar.      </footer>
     </main>
   );
 } 

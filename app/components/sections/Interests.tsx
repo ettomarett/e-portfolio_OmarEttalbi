@@ -3,28 +3,42 @@
 import * as React from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { FaMicrophone, FaPalette, FaBroadcastTower, FaGamepad, FaMusic } from 'react-icons/fa'
+import { FaBroadcastTower, FaMusic, FaChess, FaCamera, FaCubes } from 'react-icons/fa'
 
 const interests = [
   {
     category: 'Extracurricular',
-    title: 'Founder & Lead — ENSIAS Radio',
-    description: 'Student club leadership and radio broadcasting',
+    title: 'Co-Founder & Lead — ENSIAS Radio',
+    description: 'Student club leadership and content creation',
     icon: FaBroadcastTower,
     social: '@ensiasradiohq'
+  },
+  {
+    category: 'Hobbies',
+    title: 'Computer Vision — YOLO & OpenCV',
+    description: 'Object detection, image processing, model fine-tuning, and video analysis through personal side projects',
+    icon: FaCamera,
+    social: null
+  },
+  {
+    category: 'Hobbies',
+    title: 'Blender — 3D Modeling',
+    description: 'Mesh modeling, sculpting, materials/textures, lighting, scene composition, and rendering',
+    icon: FaCubes,
+    social: null
+  },
+  {
+    category: 'Hobbies',
+    title: 'Chess',
+    description: 'Active player working on tactical pattern recognition and strategic thinking',
+    icon: FaChess,
+    social: null
   },
   {
     category: 'Hobbies',
     title: 'Audio Processing',
     description: 'Music production and audio engineering',
     icon: FaMusic,
-    social: null
-  },
-  {
-    category: 'Hobbies',
-    title: 'Embroidery',
-    description: 'Creative textile arts and handcrafting',
-    icon: FaPalette,
     social: null
   }
 ]
@@ -36,9 +50,9 @@ export default function Interests() {
   })
 
   return (
-    <section id="interests" className="py-24 bg-gray-50 dark:bg-secondary-light">
+    <section id="interests" className="py-24">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
