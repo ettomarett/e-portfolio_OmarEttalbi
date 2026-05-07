@@ -25,8 +25,9 @@ export default function Home() {
       <Languages />
       <Interests />
       <Contact />
-      <footer className="w-full py-8 bg-secondary text-center text-gray-400 text-sm mt-12">
-        &copy; {new Date().getFullYear()} Ettalbi Omar.      </footer>
+      <footer className="w-full py-8 text-center text-gray-500 text-sm mt-12">
+        &copy; {new Date().getFullYear()} Ettalbi Omar
+      </footer>
     </main>
   );
 } 
