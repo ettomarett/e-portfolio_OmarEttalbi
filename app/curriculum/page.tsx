@@ -146,8 +146,8 @@ const semesters = [
         code: 'M2.6',
         title: 'Économie, Gestion, Finance 2',
         subs: [
-          { name: 'Management Science', prof: 'Pr. A. Bentaleb' },
-          { name: 'Analyse des Coûts', prof: 'Pr. K. Chaouni' },
+          { name: 'Management Science', prof: 'Pr. A. Bentaleb', topics: 'Management principles, organizational behavior, decision-making' },
+          { name: 'Analyse des Coûts', prof: 'Pr. K. Chaouni', topics: 'Cost analysis methods, cost-volume-profit analysis, budgeting' },
         ],
       },
     ],
