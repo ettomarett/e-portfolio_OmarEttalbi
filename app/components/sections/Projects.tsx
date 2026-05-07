@@ -69,8 +69,8 @@ const projects = [
     title: 'TIPE — Autonomous Drone Navigation with Deep RL',
     category: 'AI & Cloud',
     image: '',
-    tags: ['Deep RL', 'Q-Learning', 'Neural Networks', 'Python'],
-    description: 'Individual CPGE research project: autonomous drone system for waste management navigation using deep reinforcement learning. Full pipeline from Bellman equation and Q-learning to neural network training and sim-to-real transfer methodology.',
+    tags: ['Unity 3D', 'ML-Agents', 'Deep RL', 'C#', 'Python'],
+    description: 'Individual CPGE research project: modeled a city environment, drone, and sensors in Unity 3D. Trained an autonomous navigation agent using the ML-Agents toolkit with deep RL (Q-learning, policy gradients, reward shaping) for waste management network navigation.',
     year: '2022'
   },
 ]

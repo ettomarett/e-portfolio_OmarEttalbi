@@ -31,7 +31,7 @@ const semesters = [
           {
             name: 'Autonomous Drone Navigation using Deep Reinforcement Learning',
             prof: 'Code CNC: ST046T',
-            topics: 'Individual TIPE research project. Designed an autonomous drone system for waste management network navigation using deep RL. Full pipeline: Bellman equation, Q-learning algorithm, discounted returns & convergence analysis, policy/value functions, neural network training (forward/back propagation, gradient descent, activation functions), agent observation space design (distance, angle, lidar sensors), and sim-to-real transfer methodology.',
+            topics: 'Individual TIPE research project. Built a 3D city environment, drone model, and sensor suite in Unity 3D. Trained an autonomous navigation agent using the ML-Agents toolkit with deep RL for waste management network navigation. Full pipeline: Bellman equation, Q-learning algorithm, discounted returns & convergence analysis, policy/value functions, neural network training (forward/back propagation, gradient descent, activation functions), agent observation space design (distance, angle, lidar sensors), reward shaping, and sim-to-real transfer methodology.',
             tags: ['Machine Learning'],
           },
           {
