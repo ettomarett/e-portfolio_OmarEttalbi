@@ -1,7 +1,7 @@
 'use client'
 
 import * as React from 'react'
-import { FaEnvelope, FaPhone, FaGithub, FaLinkedin, FaGlobe } from 'react-icons/fa'
+import { FaEnvelope, FaPhone, FaGithub, FaLinkedin, FaGlobe, FaChess } from 'react-icons/fa'
 
 export default function Contact() {
   return (
@@ -30,6 +30,10 @@ export default function Contact() {
             <div className="flex items-center gap-2">
               <FaLinkedin />
               <a href="https://www.linkedin.com/in/omar-ettalbi" target="_blank" rel="noopener noreferrer" className="hover:underline text-black dark:text-white">omar-ettalbi</a>
+            </div>
+            <div className="flex items-center gap-2">
+              <FaChess />
+              <a href="https://www.chess.com/member/7iyy" target="_blank" rel="noopener noreferrer" className="hover:underline text-black dark:text-white">@7iyy</a>
             </div>
           </div>
         </div>
