@@ -4,6 +4,7 @@ import Hero from './components/sections/Hero';
 import About from './components/sections/About';
 import Services from './components/sections/Services';
 import Projects from './components/sections/Projects';
+import Publications from './components/sections/Publications';
 import Experience from './components/sections/Experience';
 import Languages from './components/sections/Languages';
 import Interests from './components/sections/Interests';
@@ -21,6 +22,7 @@ export default function Home() {
       <About />
       <Services />
       <Projects />
+      <Publications />
       <Experience />
       <Languages />
       <Interests />
