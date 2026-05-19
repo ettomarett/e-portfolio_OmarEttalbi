@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import Masonry from 'react-masonry-css'
-import { FaReact, FaPython, FaWordpress, FaRobot, FaDatabase } from 'react-icons/fa'
+import { FaReact, FaPython, FaWordpress, FaRobot, FaDatabase, FaExternalLinkAlt } from 'react-icons/fa'
 import { SiSpring, SiUnity, SiTensorflow } from 'react-icons/si'
 
 const projects = [
@@ -71,7 +71,8 @@ const projects = [
     image: '',
     tags: ['Unity 3D', 'ML-Agents', 'Deep RL', 'C#', 'Python'],
     description: 'Individual CPGE research project: modeled a city environment, drone, and sensors in Unity 3D. Trained an autonomous navigation agent using the ML-Agents toolkit with deep RL (Q-learning, policy gradients, reward shaping) for waste management network navigation.',
-    year: '2022'
+    year: '2022',
+    link: { label: 'View Presentation', href: 'https://github.com/ettomarett/Drone-Autonomous-Manoeuver/blob/main/Project_Presentation_2022_Autonomous_Drone.pdf' }
   },
 ]
 
@@ -159,6 +160,17 @@ export default function Projects() {
                       </span>
                     ))}
                   </div>
+                  {project.link && (
+                    <a
+                      href={project.link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`inline-flex items-center gap-2 mt-4 px-4 py-2 ${style.bg} ${style.color} rounded-xl text-sm font-medium hover:opacity-80 transition-opacity w-fit`}
+                    >
+                      <FaExternalLinkAlt className="text-xs" />
+                      {project.link.label}
+                    </a>
+                  )}
                 </div>
               </motion.div>
             )
