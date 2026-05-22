@@ -96,8 +96,8 @@ export const translations = {
           description: 'Research report on RAG pipeline architecture: document retrieval, embedding, chunking, vector databases. Comparative analysis vs. fine-tuning and traditional search. Market analysis of RAG ecosystem. Systematic literature review (2022–2025) with structured scoring matrices.',
         },
         {
-          title: 'Statements System — AI-Assisted Statements Management',
-          description: 'AI-assisted web application for statements management with AI-driven requirements extraction, use case modeling, dashboards with statistics, and ERP simulation module. 75 tests (45 backend, 30 frontend) with Vitest. AI-augmented software engineering workflow.',
+          title: 'Statements System — Utility Meter Management Backoffice',
+          description: 'Backoffice web application for Rabat Energie & Eau (REE): meter fleet management (water & electricity), field agent assignment to city districts, and consumption data centralization before billing. ERP integration simulation module. Built with a structured AI Coding methodology — AI-assisted requirements analysis (NLP), code generation, test data creation, and documentation using Cursor IDE. 75 tests with Vitest.',
         },
         {
           title: 'Equipment Supervision Tool',
@@ -307,8 +307,8 @@ export const translations = {
           description: 'Rapport de recherche sur l\'architecture des pipelines RAG : recherche de documents, embedding, chunking, bases vectorielles. Analyse comparative vs. fine-tuning et recherche traditionnelle. Analyse du marché de l\'écosystème RAG. Revue systématique de la littérature (2022–2025).',
         },
         {
-          title: 'SI Relevés — Gestion de Relevés Assistée par IA',
-          description: 'Application web assistée par IA pour la gestion de relevés avec extraction d\'exigences par IA, modélisation de cas d\'utilisation, tableaux de bord statistiques et module de simulation ERP. 75 tests (45 backend, 30 frontend) avec Vitest. Workflow de génie logiciel augmenté par l\'IA.',
+          title: 'SI Relevés — Backoffice de Gestion des Compteurs',
+          description: 'Application Backoffice Web pour Rabat Énergie & Eau (REE) : gestion du parc de compteurs (eau et électricité), affectation des agents de terrain aux quartiers, et centralisation des données de consommation avant facturation. Module de simulation d\'intégration ERP. Développé avec une méthodologie AI Coding structurée — analyse des besoins assistée par IA (NLP), génération de code, création de jeux de données de test et documentation via Cursor IDE. 75 tests avec Vitest.',
         },
         {
           title: 'Outil de Supervision d\'Équipements',
