@@ -19,7 +19,7 @@ const projectMeta = [
     tags: ['Unity 3D', 'ML-Agents', 'Deep RL', 'C#', 'Python'],
     year: '2022',
     repo: 'https://github.com/ettomarett/Drone-Autonomous-Manoeuver',
-    pdf: '/images/Project_Presentation_2022_Autonomous_Drone.pdf',
+    pdf: '/images/drone_presentation.pdf',
   },
 ]
 
@@ -148,7 +148,7 @@ export default function Projects() {
                 </button>
               </div>
               <iframe
-                src="/images/Project_Presentation_2022_Autonomous_Drone.pdf"
+                src="/images/drone_presentation.pdf"
                 className="w-full h-[calc(90vh-48px)]"
                 title="Drone Project Presentation"
               />
