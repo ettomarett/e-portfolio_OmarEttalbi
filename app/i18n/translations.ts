@@ -96,7 +96,7 @@ export const translations = {
           description: 'Research report on RAG pipeline architecture: document retrieval, embedding, chunking, vector databases. Comparative analysis vs. fine-tuning and traditional search. Market analysis of RAG ecosystem. Systematic literature review (2022–2025) with structured scoring matrices.',
         },
         {
-          title: 'Statements System — Utility Meter Management Backoffice',
+          title: 'Meter Readings System — Utility Meter Management Backoffice',
           description: 'Backoffice web application for Rabat Energie & Eau (REE): meter fleet management (water & electricity), field agent assignment to city districts, and consumption data centralization before billing. ERP integration simulation module. Built with a structured AI Coding methodology — AI-assisted requirements analysis (NLP), code generation, test data creation, and documentation using Cursor IDE. 75 tests with Vitest.',
         },
         {
