@@ -19,7 +19,7 @@ export const translations = {
     },
     about: {
       title: 'About Me',
-      bio1: 'Final-year Software Engineering student at ENSIAS (Université Mohammed V, Rabat). My training spans the full software lifecycle — from algorithms and formal methods to enterprise architecture, AI, and DevOps — with a strong foundation in mathematics and engineering sciences from CPGE TSI (top 18% CNC).',
+      bio1: 'Final-year Software Engineering student at ENSIAS (Mohammed V University, Rabat). My training spans the full software lifecycle — from algorithms and formal methods to enterprise architecture, AI, and DevOps — with a strong foundation in mathematics and engineering sciences from CPGE TSI (top 18% CNC).',
       bio2: 'I have hands-on experience building multi-agent AI systems, full-stack web platforms, ML pipelines, and data-driven dashboards. I work across Python, Java/Spring Boot, TypeScript/React/Next.js, and modern data tools (dbt, Spark, SAP).',
       bio3: 'Currently completing my end-of-studies internship at Diehl Aviation (Toulouse, France), working on digitalization of shop floor processes with SAP S/4HANA, SAP Datasphere, and SAP Analytics Cloud.',
       education: 'Education',
@@ -27,13 +27,13 @@ export const translations = {
       certifications: 'Certifications',
       edu: [
         {
-          school: 'ENSIAS — Université Mohammed V',
-          degree: "Cycle d'Ingénieur — Génie Logiciel (Software Engineering)",
+          school: 'ENSIAS — Mohammed V University',
+          degree: 'State Engineering Degree — Software Engineering',
           location: 'Rabat, Morocco',
-          years: '2022–2026 (3ème Année — S6 PFE in progress)',
+          years: '2022–2026 (3rd Year — S6 Final Internship in progress)',
         },
         {
-          school: 'CPGE TSI — Classes Préparatoires, Settat',
+          school: 'CPGE TSI — Preparatory Classes, Settat',
           degree: 'Maths, Physics & Engineering Sciences — CNC top 18%',
           location: 'Settat, Morocco',
           years: '2020–2022',

@@ -105,12 +105,12 @@ const semesters = [
 ]
 
 const projects = [
-  { code: 'PFA 1A', title: 'Conception et Développement d\'un Outil de Supervision des Équipements', team: 'Omar Ettalbi, Anass Serroukh', jury: 'Pr. W. Ettazi', year: '2022–2023 · 1ère Année', tags: ['Spring Boot', 'Angular', 'JWT', 'PostgreSQL'] },
-  { code: 'PFA 2A', title: 'Mo-To-Mi: Framework de Migration Monolithique → Microservices par IA', team: 'Omar Ettalbi, Doha Negraoui', jury: 'Pr. S. Baina, Pr. M. Nassar, Mme M. Labaalli', year: '2024–2025 · 2ème Année', tags: ['Python', 'LLM', 'Multi-Agent', 'Google ADK'] },
-  { code: 'PFA 3A', title: 'Smart Sleep Tracker: Suivi Intelligent du Sommeil et Recommandations Personnalisées', team: 'Omar Ettalbi, Ayoub Akour, Saad Aittaleb', jury: 'Pr. S. El Fkihi, Pr. R. Oulad Haj Thami', year: '2025–2026 · 3ème Année', tags: ['CatBoost', 'LightGBM', 'React Native', 'FastAPI', 'dbt'] },
-  { code: 'Proj IA', title: 'SI Relevés: Application Web de Gestion des Relevés Assistée par IA', team: 'Omar Ettalbi + 6 teammates · Encadrante: Mme Z. Mcharfi', jury: '', year: '2025–2026 · 3ème Année', tags: ['AI Coding', 'Vitest', 'Cursor IDE', 'Full-Stack'] },
-  { code: 'M4.5', title: 'Morocco Rainfall & Wealth Analysis — Data-Driven Decision Making', team: 'Omar Ettalbi (individual project)', jury: 'Pr. Y. Tabii', year: '2024–2025 · Systèmes Décisionnels', tags: ['Python', 'Prophet', 'ARIMA', 'Leaflet', 'Geospatial'] },
-  { code: 'Proj 3A', title: 'RAG: Analyse Technique et Perspectives d\'Adoption en Entreprise', team: 'Omar Ettalbi, Ayoub Akour, Saad Ait Taleb', jury: 'M. A. Remli', year: '2025–2026 · 3ème Année', tags: ['RAG', 'LLM', 'Vector DB', 'LangChain'] },
+  { code: 'PFA 1A', jury: 'Pr. W. Ettazi', tags: ['Spring Boot', 'Angular', 'JWT', 'PostgreSQL'] },
+  { code: 'PFA 2A', jury: 'Pr. S. Baina, Pr. M. Nassar, Mme M. Labaalli', tags: ['Python', 'LLM', 'Multi-Agent', 'Google ADK'] },
+  { code: 'PFA 3A', jury: 'Pr. S. El Fkihi, Pr. R. Oulad Haj Thami', tags: ['CatBoost', 'LightGBM', 'React Native', 'FastAPI', 'dbt'] },
+  { code: 'Proj IA', jury: '', tags: ['AI Coding', 'Vitest', 'Cursor IDE', 'Full-Stack'] },
+  { code: 'M4.5', jury: 'Pr. Y. Tabii', tags: ['Python', 'Prophet', 'ARIMA', 'Leaflet', 'Geospatial'] },
+  { code: 'Proj 3A', jury: 'M. A. Remli', tags: ['RAG', 'LLM', 'Vector DB', 'LangChain'] },
 ]
 
 const internships = [
@@ -154,7 +154,7 @@ export default function CurriculumPage() {
             {ui.headerBadge}
           </div>
           <h1 className="text-4xl md:text-5xl font-bold font-heading mb-3">
-            ENSIAS — <span className="text-primary">Génie Logiciel</span>
+            ENSIAS — <span className="text-primary">{ui.headerTitle}</span>
           </h1>
           <p className="text-gray-400 max-w-3xl text-lg">{ui.headerSubtitle}</p>
           <div className="flex flex-wrap gap-8 mt-8">
@@ -206,17 +206,19 @@ export default function CurriculumPage() {
             </div>
           </div>
           <div className="space-y-3">
-            {projects.map((proj, idx) => (
+            {projects.map((proj, idx) => {
+              const projTrans = st.projects[idx]
+              return (
               <div key={idx} className="bg-white/[0.03] border border-white/[0.06] rounded-xl p-5 hover:border-white/10 transition-colors">
                 <div className="flex items-start gap-3 mb-2">
                   <span className="font-mono text-xs text-primary bg-primary/10 px-2.5 py-1 rounded-md flex-shrink-0">{proj.code}</span>
-                  <h3 className="font-semibold text-sm">{proj.title}</h3>
+                  <h3 className="font-semibold text-sm">{projTrans.title}</h3>
                 </div>
-                <p className="text-xs text-gray-400 leading-relaxed mb-3 pl-3 border-l-2 border-white/[0.06]">{st.projects[idx].description}</p>
+                <p className="text-xs text-gray-400 leading-relaxed mb-3 pl-3 border-l-2 border-white/[0.06]">{projTrans.description}</p>
                 <div className="flex flex-wrap gap-x-6 gap-y-1 text-xs text-gray-500 mb-3">
-                  <span>{ui.team}: {proj.team}</span>
+                  <span>{ui.team}: {projTrans.team}</span>
                   {proj.jury && <span>{ui.jury}: {proj.jury}</span>}
-                  <span>{proj.year}</span>
+                  <span>{projTrans.year}</span>
                 </div>
                 <div className="flex flex-wrap gap-1.5">
                   {proj.tags.map((tag) => (
@@ -224,7 +226,8 @@ export default function CurriculumPage() {
                   ))}
                 </div>
               </div>
-            ))}
+              )
+            })}
           </div>
         </motion.section>
 
