@@ -96,7 +96,7 @@ export const translations = {
           description: 'Research report on RAG pipeline architecture: document retrieval, embedding, chunking, vector databases. Comparative analysis vs. fine-tuning and traditional search. Market analysis of RAG ecosystem. Systematic literature review (2022–2025) with structured scoring matrices.',
         },
         {
-          title: 'SI Relevés — AI-Assisted Statements Management',
+          title: 'Statements System — AI-Assisted Statements Management',
           description: 'AI-assisted web application for statements management with AI-driven requirements extraction, use case modeling, dashboards with statistics, and ERP simulation module. 75 tests (45 backend, 30 frontend) with Vitest. AI-augmented software engineering workflow.',
         },
         {
