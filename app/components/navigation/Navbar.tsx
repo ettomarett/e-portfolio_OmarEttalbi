@@ -17,8 +17,6 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const { lang, t, toggleLanguage } = useLanguage()
 
-  if (pathname === '/curriculum') return null
-
   useEffect(() => {
     setMounted(true)
     const handleScroll = () => {
@@ -28,7 +26,7 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  if (!mounted) return null
+  if (!mounted || pathname === '/curriculum') return null
 
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
