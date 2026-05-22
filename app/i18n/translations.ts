@@ -19,7 +19,7 @@ export const translations = {
     },
     about: {
       title: 'About Me',
-      bio1: 'Final-year Software Engineering student at ENSIAS (Mohammed V University, Rabat). My training spans the full software lifecycle — from algorithms and formal methods to enterprise architecture, AI, and DevOps — with a strong foundation in mathematics and engineering sciences from CPGE TSI (top 18% CNC).',
+      bio1: 'Final-year Software Engineering student at ENSIAS (Mohammed V University, Rabat). My training spans the full software lifecycle — from algorithms and formal methods to enterprise architecture, AI, and DevOps — with a strong foundation in mathematics and engineering sciences from CPGE TSI (ranked top 18% in the national engineering school entrance exam).',
       bio2: 'I have hands-on experience building multi-agent AI systems, full-stack web platforms, ML pipelines, and data-driven dashboards. I work across Python, Java/Spring Boot, TypeScript/React/Next.js, and modern data tools (dbt, Spark, SAP).',
       bio3: 'Currently completing my end-of-studies internship at Diehl Aviation (Toulouse, France), working on digitalization of shop floor processes with SAP S/4HANA, SAP Datasphere, and SAP Analytics Cloud.',
       education: 'Education',
@@ -34,7 +34,7 @@ export const translations = {
         },
         {
           school: 'CPGE TSI — Preparatory Classes, Settat',
-          degree: 'Maths, Physics & Engineering Sciences — CNC top 18%',
+          degree: 'Maths, Physics & Engineering Sciences — Ranked top 18% in national engineering school entrance exam',
           location: 'Settat, Morocco',
           years: '2020–2022',
         },
@@ -230,7 +230,7 @@ export const translations = {
     },
     about: {
       title: 'À propos',
-      bio1: 'Élève ingénieur en dernière année de Génie Logiciel à l\'ENSIAS (Université Mohammed V, Rabat). Ma formation couvre l\'ensemble du cycle de vie logiciel — des algorithmes et méthodes formelles à l\'architecture d\'entreprise, l\'IA et le DevOps — avec une solide base en mathématiques et sciences de l\'ingénieur acquise en CPGE TSI (top 18% CNC).',
+      bio1: 'Élève ingénieur en dernière année de Génie Logiciel à l\'ENSIAS (Université Mohammed V, Rabat). Ma formation couvre l\'ensemble du cycle de vie logiciel — des algorithmes et méthodes formelles à l\'architecture d\'entreprise, l\'IA et le DevOps — avec une solide base en mathématiques et sciences de l\'ingénieur acquise en CPGE TSI (classé top 18% au Concours National Commun).',
       bio2: 'J\'ai une expérience pratique dans la construction de systèmes multi-agents IA, de plateformes web full-stack, de pipelines ML et de tableaux de bord data-driven. Je travaille avec Python, Java/Spring Boot, TypeScript/React/Next.js et des outils de données modernes (dbt, Spark, SAP).',
       bio3: 'Actuellement en stage de fin d\'études chez Diehl Aviation (Toulouse, France), je travaille sur la digitalisation des processus opérationnels avec SAP S/4HANA, SAP Datasphere et SAP Analytics Cloud.',
       education: 'Formation',
@@ -245,7 +245,7 @@ export const translations = {
         },
         {
           school: 'CPGE TSI — Classes Préparatoires, Settat',
-          degree: 'Mathématiques, Physique & Sciences de l\'Ingénieur — CNC top 18%',
+          degree: 'Mathématiques, Physique & Sciences de l\'Ingénieur — Classé top 18% au Concours National Commun',
           location: 'Settat, Maroc',
           years: '2020–2022',
         },
