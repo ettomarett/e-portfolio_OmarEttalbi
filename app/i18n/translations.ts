@@ -77,7 +77,8 @@ export const translations = {
     projects: {
       title: 'My Projects',
       subtitle: 'Here are some of my recent projects. Each one is crafted with attention to detail and focus on user experience.',
-      viewPresentation: 'View Presentation',
+      viewPresentation: 'Preview Presentation',
+      viewRepo: 'View Repository',
       items: [
         {
           title: 'Smart Sleep Tracker — ML Closed-Loop Recommendation System',
@@ -288,7 +289,8 @@ export const translations = {
     projects: {
       title: 'Mes Projets',
       subtitle: 'Voici quelques-uns de mes projets récents. Chacun est réalisé avec attention aux détails et un focus sur l\'expérience utilisateur.',
-      viewPresentation: 'Voir la Présentation',
+      viewPresentation: 'Aperçu Présentation',
+      viewRepo: 'Voir le Dépôt',
       items: [
         {
           title: 'Smart Sleep Tracker — Système de Recommandation ML en Boucle Fermée',

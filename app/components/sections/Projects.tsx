@@ -2,9 +2,9 @@
 
 import * as React from 'react'
 import { useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { FaReact, FaWordpress, FaRobot, FaDatabase, FaExternalLinkAlt } from 'react-icons/fa'
+import { FaReact, FaWordpress, FaRobot, FaDatabase, FaExternalLinkAlt, FaFilePdf, FaGithub, FaTimes } from 'react-icons/fa'
 import { useLanguage } from '../../i18n/LanguageContext'
 
 const projectMeta = [
@@ -18,7 +18,8 @@ const projectMeta = [
     category: 'AI & Cloud',
     tags: ['Unity 3D', 'ML-Agents', 'Deep RL', 'C#', 'Python'],
     year: '2022',
-    link: { label: 'viewPresentation', href: 'https://github.com/ettomarett/Drone-Autonomous-Manoeuver/blob/main/Project_Presentation_2022_Autonomous_Drone.pdf' },
+    repo: 'https://github.com/ettomarett/Drone-Autonomous-Manoeuver',
+    pdf: '/images/Project_Presentation_2022_Autonomous_Drone.pdf',
   },
 ]
 
@@ -35,6 +36,7 @@ export default function Projects() {
     threshold: 0.1,
   })
   const { t } = useLanguage()
+  const [pdfOpen, setPdfOpen] = useState(false)
 
   return (
     <section id="projects" className="py-24">
@@ -93,16 +95,25 @@ export default function Projects() {
                       </span>
                     ))}
                   </div>
-                  {meta.link && (
-                    <a
-                      href={meta.link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`inline-flex items-center gap-2 mt-4 px-4 py-2 ${style.bg} ${style.color} rounded-xl text-sm font-medium hover:opacity-80 transition-opacity w-fit`}
-                    >
-                      <FaExternalLinkAlt className="text-xs" />
-                      {t.projects.viewPresentation}
-                    </a>
+                  {'repo' in meta && (
+                    <div className="flex flex-wrap gap-2 mt-4">
+                      <a
+                        href={meta.repo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`inline-flex items-center gap-2 px-4 py-2 ${style.bg} ${style.color} rounded-xl text-sm font-medium hover:opacity-80 transition-opacity`}
+                      >
+                        <FaGithub className="text-sm" />
+                        {t.projects.viewRepo}
+                      </a>
+                      <button
+                        onClick={() => setPdfOpen(true)}
+                        className={`inline-flex items-center gap-2 px-4 py-2 ${style.bg} ${style.color} rounded-xl text-sm font-medium hover:opacity-80 transition-opacity`}
+                      >
+                        <FaFilePdf className="text-sm" />
+                        {t.projects.viewPresentation}
+                      </button>
+                    </div>
                   )}
                 </div>
               </motion.div>
@@ -110,6 +121,41 @@ export default function Projects() {
           })}
         </div>
       </div>
+
+      <AnimatePresence>
+        {pdfOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+            onClick={() => setPdfOpen(false)}
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              className="relative w-full max-w-5xl h-[90vh] bg-gray-900 rounded-2xl overflow-hidden shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex items-center justify-between px-5 py-3 bg-gray-800 border-b border-white/10">
+                <span className="text-sm font-medium text-gray-200">TIPE — Autonomous Drone Presentation</span>
+                <button
+                  onClick={() => setPdfOpen(false)}
+                  className="p-1.5 rounded-lg hover:bg-white/10 transition-colors text-gray-400 hover:text-white"
+                >
+                  <FaTimes className="w-4 h-4" />
+                </button>
+              </div>
+              <iframe
+                src="/images/Project_Presentation_2022_Autonomous_Drone.pdf"
+                className="w-full h-[calc(90vh-48px)]"
+                title="Drone Project Presentation"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   )
 }
