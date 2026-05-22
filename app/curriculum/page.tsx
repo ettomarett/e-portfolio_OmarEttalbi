@@ -134,7 +134,7 @@ const tagColors: Record<string, string> = {
 }
 
 export default function CurriculumPage() {
-  const { lang } = useLanguage()
+  const { lang, toggleLanguage } = useLanguage()
   const ui = curriculumUI[lang]
   const st = semesterTranslations[lang]
 
@@ -142,11 +142,18 @@ export default function CurriculumPage() {
 
   return (
     <div className="min-h-screen py-12">
-      <div className="max-w-6xl mx-auto">
-        <Link href="/" className="inline-flex items-center gap-2 text-primary hover:text-primary-dark transition-colors mb-8 text-sm font-medium">
-          <FaArrowLeft className="w-3 h-3" />
-          {ui.backToPortfolio}
-        </Link>
+      <div className="fixed top-0 left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-md shadow-lg">
+        <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+          <Link href="/" className="inline-flex items-center gap-2 text-primary hover:text-primary-dark transition-colors text-sm font-medium">
+            <FaArrowLeft className="w-3 h-3" />
+            {ui.backToPortfolio}
+          </Link>
+          <button onClick={toggleLanguage} className="px-3 py-1.5 rounded-full border border-white/10 text-xs font-medium hover:bg-white/5 transition-colors">
+            {lang === 'en' ? 'FR' : 'EN'}
+          </button>
+        </div>
+      </div>
+      <div className="max-w-6xl mx-auto pt-8">
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-xs text-primary font-medium tracking-wide uppercase mb-6">

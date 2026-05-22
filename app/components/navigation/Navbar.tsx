@@ -2,6 +2,7 @@
 
 import * as React from 'react'
 import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link as ScrollLink } from 'react-scroll'
 import { useLanguage } from '../../i18n/LanguageContext'
@@ -10,10 +11,13 @@ const navKeys = ['home', 'about', 'services', 'projects', 'publications', 'exper
 const navHrefs = ['hero', 'about', 'services', 'projects', 'publications', 'experience', 'languages', 'interests', 'contact']
 
 export default function Navbar() {
+  const pathname = usePathname()
   const [mounted, setMounted] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const { lang, t, toggleLanguage } = useLanguage()
+
+  if (pathname === '/curriculum') return null
 
   useEffect(() => {
     setMounted(true)
