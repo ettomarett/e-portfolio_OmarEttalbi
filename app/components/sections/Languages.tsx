@@ -4,30 +4,16 @@ import * as React from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { FaLanguage } from 'react-icons/fa'
+import { useLanguage } from '../../i18n/LanguageContext'
 
-const languages = [
-  {
-    name: 'French',
-    level: 'Fluent',
-    proficiency: 90
-  },
-  {
-    name: 'Arabic',
-    level: 'Native',
-    proficiency: 100
-  },
-  {
-    name: 'English',
-    level: 'Fluent',
-    proficiency: 95
-  }
-]
+const proficiencies = [90, 100, 95]
 
 export default function Languages() {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   })
+  const { t } = useLanguage()
 
   return (
     <section id="languages" className="py-24">
@@ -39,17 +25,15 @@ export default function Languages() {
             transition={{ duration: 0.5 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 font-heading">Languages</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 font-heading">{t.languages.title}</h2>
             <div className="h-0.5 bg-primary/40 w-16 mb-8 mx-auto" />
-            <p className="text-gray-600 dark:text-gray-400">
-              My language proficiency across different languages
-            </p>
+            <p className="text-gray-600 dark:text-gray-400">{t.languages.subtitle}</p>
           </motion.div>
 
           <div ref={ref} className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {languages.map((language, index) => (
+            {t.languages.items.map((language, index) => (
               <motion.div
-                key={language.name}
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
@@ -64,17 +48,17 @@ export default function Languages() {
                     <p className="text-sm text-primary font-medium">{language.level}</p>
                   </div>
                 </div>
-                
+
                 <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
                   <motion.div
                     className="bg-primary h-2 rounded-full"
                     initial={{ width: 0 }}
-                    animate={inView ? { width: `${language.proficiency}%` } : { width: 0 }}
+                    animate={inView ? { width: `${proficiencies[index]}%` } : { width: 0 }}
                     transition={{ duration: 1, delay: index * 0.2 + 0.5 }}
                   />
                 </div>
                 <p className="text-xs text-gray-500 dark:text-gray-400 mt-2 text-center">
-                  {language.proficiency}% proficiency
+                  {proficiencies[index]}% {t.languages.proficiency}
                 </p>
               </motion.div>
             ))}

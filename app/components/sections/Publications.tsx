@@ -3,13 +3,15 @@
 import * as React from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { FaBook, FaExternalLinkAlt, FaBrain } from 'react-icons/fa'
+import { FaBook, FaExternalLinkAlt } from 'react-icons/fa'
+import { useLanguage } from '../../i18n/LanguageContext'
 
 export default function Publications() {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   })
+  const { t } = useLanguage()
 
   return (
     <section id="publications" className="py-24">
@@ -21,7 +23,7 @@ export default function Publications() {
             transition={{ duration: 0.5 }}
             className="text-3xl md:text-4xl font-bold mb-4 font-heading"
           >
-            Scientific Publication
+            {t.publications.title}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -29,7 +31,7 @@ export default function Publications() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-gray-600 dark:text-gray-400"
           >
-            Published research bridging neuroscience, content analysis, and viewer behavior.
+            {t.publications.subtitle}
           </motion.p>
         </div>
 
@@ -46,17 +48,13 @@ export default function Publications() {
             <div className="p-8">
               <div className="flex items-center gap-3 mb-3">
                 <span className="px-3 py-1 bg-[#6C5CE7]/10 text-[#6C5CE7] rounded-full text-xs font-semibold uppercase tracking-wide">
-                  Scientific Publication
+                  {t.publications.badge}
                 </span>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-3">
-                Khozai — Understanding Content Engagement Through Neuroscience
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                A formal scientific framework connecting the physics of video content to the biology of the human brain to the behavior of real viewers. The book spans 13 chapters across 5 parts — covering brain architecture, dimensions of experience, behavioral measurement vectors, mutation and correlation engines, inference chains, calibration and governance, and real-world applications. A multidisciplinary work at the intersection of neuroscience, data science, and content analytics.
-              </p>
+              <h3 className="text-2xl font-bold text-white mb-3">{t.publications.bookTitle}</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">{t.publications.bookDescription}</p>
               <div className="flex flex-wrap gap-2 mb-6">
-                {['Neuroscience', 'Content Analytics', 'Behavioral Science', 'Data Science', 'Formal Framework'].map((tag) => (
+                {t.publications.tags.map((tag) => (
                   <span
                     key={tag}
                     className="px-3 py-1 bg-white/5 dark:bg-white/[0.07] text-gray-300 rounded-full text-xs font-medium"
@@ -72,7 +70,7 @@ export default function Publications() {
                 className="inline-flex items-center gap-2 px-6 py-3 bg-[#6C5CE7] hover:bg-[#5A4BD5] text-white rounded-xl font-medium transition-colors"
               >
                 <FaExternalLinkAlt className="text-sm" />
-                Read on khozai.com
+                {t.publications.readOn}
               </a>
             </div>
           </motion.div>

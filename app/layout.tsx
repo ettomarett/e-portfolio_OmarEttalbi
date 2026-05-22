@@ -1,5 +1,6 @@
 import { Inter, Poppins } from 'next/font/google'
 import { ThemeProvider } from './components/providers/theme-provider'
+import { LanguageProvider } from './i18n/LanguageContext'
 import Navbar from './components/navigation/Navbar'
 import './globals.css'
 import type { Metadata } from 'next'
@@ -43,10 +44,12 @@ export default function RootLayout({
       <body className={`${inter.variable} ${poppins.variable} font-sans bg-secondary text-gray-100`}>
         <AnimatedGeometricBackground />
         <ThemeProvider>
-          <Navbar />
-          <div className="px-4 md:px-8 lg:px-12">
-            {children}
-          </div>
+          <LanguageProvider>
+            <Navbar />
+            <div className="px-4 md:px-8 lg:px-12">
+              {children}
+            </div>
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

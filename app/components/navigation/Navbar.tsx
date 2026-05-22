@@ -4,30 +4,16 @@ import * as React from 'react'
 import { useState, useEffect } from 'react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link as ScrollLink } from 'react-scroll'
+import { useLanguage } from '../../i18n/LanguageContext'
 
-const navItems = [
-  { name: 'Home', href: '#hero' },
-  { name: 'About', href: '#about' },
-  { name: 'Services', href: '#services' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Publications', href: '#publications' },
-  { name: 'Experience', href: '#experience' },
-  { name: 'Languages', href: '#languages' },
-  { name: 'Interests', href: '#interests' },
-  { name: 'Contact', href: '#contact' },
-]
-
-const socialLinks = [
-  { name: 'Facebook', href: '#', icon: 'facebook' },
-  { name: 'Twitter', href: '#', icon: 'twitter' },
-  { name: 'Instagram', href: '#', icon: 'instagram' },
-  { name: 'LinkedIn', href: '#', icon: 'linkedin' },
-]
+const navKeys = ['home', 'about', 'services', 'projects', 'publications', 'experience', 'languages', 'interests', 'contact'] as const
+const navHrefs = ['hero', 'about', 'services', 'projects', 'publications', 'experience', 'languages', 'interests', 'contact']
 
 export default function Navbar() {
   const [mounted, setMounted] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const { lang, t, toggleLanguage } = useLanguage()
 
   useEffect(() => {
     setMounted(true)
@@ -46,29 +32,32 @@ export default function Navbar() {
     }`}>
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            {/* Intentionally left blank for minimalist look */}
-          </div>
+          <div className="flex-shrink-0" />
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
+            {navKeys.map((key, i) => (
               <ScrollLink
-                key={item.name}
-                to={item.href.replace('#', '')}
+                key={key}
+                to={navHrefs[i]}
                 smooth={true}
                 duration={500}
                 offset={-80}
                 className="text-gray-300 hover:text-primary transition-colors cursor-pointer"
               >
-                {item.name}
+                {t.nav[key]}
               </ScrollLink>
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-3">
+            <button
+              onClick={toggleLanguage}
+              className="px-3 py-1.5 rounded-full border border-gray-600 hover:border-primary text-gray-300 hover:text-primary transition-colors text-sm font-medium"
+              aria-label="Toggle language"
+            >
+              {lang === 'en' ? 'FR' : 'EN'}
+            </button>
+
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="md:hidden p-2 rounded-lg bg-gray-800 hover:bg-gray-700 transition-colors"
@@ -83,34 +72,30 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
         {isOpen && (
           <>
-            {/* Backdrop */}
-            <div 
+            <div
               className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 md:hidden animate-in fade-in duration-200"
               onClick={() => setIsOpen(false)}
             />
-            
-            {/* Mobile Menu */}
             <div className="md:hidden mt-4 relative z-50 animate-in slide-in-from-top-2 fade-in duration-300">
               <div className="bg-gray-900/95 backdrop-blur-md rounded-lg border border-gray-700/50 shadow-xl">
                 <div className="flex flex-col space-y-2 py-4 px-4">
-                  {navItems.map((item, index) => (
+                  {navKeys.map((key, i) => (
                     <ScrollLink
-                      key={item.name}
-                      to={item.href.replace('#', '')}
+                      key={key}
+                      to={navHrefs[i]}
                       smooth={true}
                       duration={500}
                       offset={-80}
                       className="text-gray-300 hover:text-primary transition-all duration-200 cursor-pointer py-2 px-3 rounded-lg hover:bg-gray-800/50 transform hover:translate-x-1"
                       onClick={() => setIsOpen(false)}
                       style={{
-                        animationDelay: `${index * 50}ms`,
+                        animationDelay: `${i * 50}ms`,
                         animation: 'slideInFromLeft 0.3s ease-out forwards'
                       }}
                     >
-                      {item.name}
+                      {t.nav[key]}
                     </ScrollLink>
                   ))}
                 </div>
@@ -121,4 +106,4 @@ export default function Navbar() {
       </nav>
     </header>
   )
-} 
+}

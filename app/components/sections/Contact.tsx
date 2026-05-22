@@ -2,14 +2,17 @@
 
 import * as React from 'react'
 import { FaEnvelope, FaPhone, FaGithub, FaLinkedin, FaGlobe, FaChess } from 'react-icons/fa'
+import { useLanguage } from '../../i18n/LanguageContext'
 
 export default function Contact() {
+  const { t } = useLanguage()
+
   return (
     <section id="contact" className="py-24">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 font-heading">Contact Me</h2>
-          <p className="text-gray-600 dark:text-gray-400 mb-8">Feel free to reach out for opportunities, collaborations, or just to connect!</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 font-heading">{t.contact.title}</h2>
+          <p className="text-gray-600 dark:text-gray-400 mb-8">{t.contact.subtitle}</p>
           <div className="flex flex-wrap justify-center gap-8 text-primary text-lg font-medium">
             <div className="flex items-center gap-2">
               <FaEnvelope />
@@ -40,4 +43,4 @@ export default function Contact() {
       </div>
     </section>
   )
-} 
+}
