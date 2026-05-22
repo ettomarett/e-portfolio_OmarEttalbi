@@ -296,7 +296,7 @@ export default function CurriculumPage() {
   )
 }
 
-function renderSemester(sem: typeof semesters[number], semIdx: number, semTrans: { title: string; modules: { subs: { name: string; topics: string }[] }[] }) {
+function renderSemester(sem: typeof semesters[number], semIdx: number, semTrans: { title: string; year: string; modules: { title: string; subs: { name: string; topics: string }[] }[] }) {
   return (
     <motion.section
       key={sem.id}
@@ -312,7 +312,7 @@ function renderSemester(sem: typeof semesters[number], semIdx: number, semTrans:
         </div>
         <div>
           <h2 className="text-2xl font-bold">{semTrans.title}</h2>
-          <span className="text-sm text-gray-500">{sem.year}</span>
+          <span className="text-sm text-gray-500">{semTrans.year}</span>
         </div>
       </div>
 
@@ -323,7 +323,7 @@ function renderSemester(sem: typeof semesters[number], semIdx: number, semTrans:
             <div key={`${sem.id}-${modIdx}`} className="bg-white/[0.03] border border-white/[0.06] rounded-xl overflow-hidden hover:border-white/10 transition-colors">
               <div className="flex items-center gap-3 px-5 py-3.5">
                 <span className="font-mono text-xs text-primary bg-primary/10 px-2.5 py-1 rounded-md flex-shrink-0">{mod.code}</span>
-                <span className="font-semibold text-sm">{mod.title}</span>
+                <span className="font-semibold text-sm">{modTrans.title}</span>
               </div>
               <div className="px-5 pb-4">
                 {mod.subs.map((sub, subIdx) => {
