@@ -192,7 +192,7 @@ function FrastTab() {
           ['Guided Creation Flow', 'Step-by-step website creation: name → domain → VPS → repo → template → confirm'],
           ['Deployment Tracking', 'Status, timestamps, and success/failure indicators per deployment'],
           ['State Machines', 'VPS and site setup state machines with provisioning steps and event logs'],
-          ['Planned Extensions', 'GitHub repo creation, VPS bootstrap via Ansible, Drone CI integration, team/client support'],
+          ['Extensions', 'GitHub repo creation, VPS bootstrap via Ansible, Drone CI integration, team/client support'],
         ]} />
       </div>
       <div className={SECTION}>
@@ -242,8 +242,8 @@ function DevOpsTab() {
           ['Persistent Volumes', 'Named Docker volumes for PostgreSQL and Redis ensure data survives container restarts and redeployments'],
           ['Database Migrations', 'Prisma migrations auto-applied on container startup — zero-downtime schema evolution across services'],
           ['Secrets Management', 'API credentials encrypted at rest via a provider secret key; environment variables injected at runtime, never committed'],
-          ['Ansible (Frast roadmap)', 'VPS bootstrap and site provisioning via Ansible playbooks — automated from Frast\'s guided creation flow'],
-          ['Drone CI (Frast roadmap)', 'CI/CD pipeline integration planned for automated build, test, and deploy workflows triggered from Frast'],
+          ['Ansible', 'VPS bootstrap and site provisioning via Ansible playbooks — automated from Frast\'s guided creation flow'],
+          ['Drone CI', 'CI/CD pipeline integration for automated build, test, and deploy workflows triggered from Frast'],
         ]} />
       </div>
 
@@ -259,7 +259,7 @@ function DevOpsTab() {
 
       <div className={SECTION}>
         <h3 className={H3}>Tech Stack</h3>
-        <TechStack items={['Docker', 'Docker Compose', 'OVH VPS', 'Linux', 'PostgreSQL 16', 'Redis 7', 'MinIO', 'BullMQ', 'Prisma Migrations', 'Ansible (planned)', 'Drone CI (planned)', 'Reverse Proxy']} />
+        <TechStack items={['Docker', 'Docker Compose', 'OVH VPS', 'Linux', 'PostgreSQL 16', 'Redis 7', 'MinIO', 'BullMQ', 'Prisma Migrations', 'Ansible', 'Drone CI', 'Reverse Proxy']} />
       </div>
     </div>
   )
