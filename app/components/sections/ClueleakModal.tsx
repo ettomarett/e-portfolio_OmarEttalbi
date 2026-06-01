@@ -3,13 +3,15 @@
 import * as React from 'react'
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { FaTimes, FaServer, FaBrain, FaShare, FaCog, FaBolt } from 'react-icons/fa'
+import { FaTimes, FaServer, FaBrain, FaShare, FaCog, FaBolt, FaDocker } from 'react-icons/fa'
+import { SiAnsible } from 'react-icons/si'
 
 const TABS = [
   { id: 'overview', label: 'Overview', icon: FaServer },
   { id: 'ace', label: 'ACE', icon: FaBrain },
   { id: 'skidjoule', label: 'Skidjoule', icon: FaShare },
   { id: 'frast', label: 'Frast', icon: FaCog },
+  { id: 'devops', label: 'DevOps', icon: FaDocker },
   { id: 'highlights', label: 'Engineering', icon: FaBolt },
 ]
 
@@ -201,6 +203,68 @@ function FrastTab() {
   )
 }
 
+function DevOpsTab() {
+  return (
+    <div>
+      <div className={SECTION}>
+        <p className="text-gray-300 leading-relaxed text-sm mb-4">
+          The entire Clueleak platform runs on a self-managed OVH VPS under a hand-crafted Docker Compose stack — no managed cloud services, no PaaS. Every service, network, volume, and deployment is owned and operated independently.
+        </p>
+      </div>
+
+      <div className={SECTION}>
+        <h3 className={H3}>Docker Compose Stack</h3>
+        <div className="rounded-xl border border-white/[0.07] overflow-hidden">
+          {[
+            ['ACE Frontend', 'Next.js · Port 3099', 'Turbopack hot reload in dev; production build in container'],
+            ['ACE Backend', 'Fastify 5 · Port 4000', 'tsx watch in dev; compiled in production'],
+            ['ACE Worker', 'BullMQ container', 'Isolated worker process — scaled independently from the API'],
+            ['PostgreSQL 16', 'Port 5432', 'Persistent named volume; Prisma migrations auto-applied on startup'],
+            ['Redis 7', 'Port 6379', 'Persistent named volume; used for BullMQ job queues and caching'],
+            ['MinIO', 'Ports 9000 / 9001', 'S3-compatible object storage for generated assets; console on 9001'],
+          ].map(([service, detail, note], i) => (
+            <div key={service} className={`flex gap-4 px-5 py-3.5 ${i > 0 ? 'border-t border-white/[0.05]' : ''}`}>
+              <div className="flex-shrink-0 w-28">
+                <span className="font-mono text-xs font-bold text-[#a29bfe]">{service}</span>
+                <p className="text-[11px] text-gray-500 mt-0.5">{detail}</p>
+              </div>
+              <p className="text-xs text-gray-400 leading-relaxed">{note}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className={SECTION}>
+        <h3 className={H3}>Infrastructure</h3>
+        <FeatureList items={[
+          ['OVH VPS', 'Self-managed Linux server — OS configuration, firewall rules, SSH hardening, and service supervision all done manually'],
+          ['Reverse Proxy', 'Custom domain routing for each application over the VPS; TLS termination at the edge'],
+          ['Persistent Volumes', 'Named Docker volumes for PostgreSQL and Redis ensure data survives container restarts and redeployments'],
+          ['Database Migrations', 'Prisma migrations auto-applied on container startup — zero-downtime schema evolution across services'],
+          ['Secrets Management', 'API credentials encrypted at rest via a provider secret key; environment variables injected at runtime, never committed'],
+          ['Ansible (Frast roadmap)', 'VPS bootstrap and site provisioning via Ansible playbooks — automated from Frast\'s guided creation flow'],
+          ['Drone CI (Frast roadmap)', 'CI/CD pipeline integration planned for automated build, test, and deploy workflows triggered from Frast'],
+        ]} />
+      </div>
+
+      <div className={SECTION}>
+        <h3 className={H3}>Async Job Infrastructure</h3>
+        <FeatureList items={[
+          ['BullMQ + Redis', 'Separate worker containers for ACE content generation and Skidjoule social posting — decoupled from API response path'],
+          ['Job Status Tracking', 'Per-job state machine: pending → queued → in_progress → completed / failed / cancelled with retry logic'],
+          ['Worker Isolation', 'ACE worker runs as a dedicated container — can be scaled or restarted independently without affecting the API or frontend'],
+          ['Cost Observability', 'Token usage, API costs, and captcha costs recorded per job for full spending visibility'],
+        ]} />
+      </div>
+
+      <div className={SECTION}>
+        <h3 className={H3}>Tech Stack</h3>
+        <TechStack items={['Docker', 'Docker Compose', 'OVH VPS', 'Linux', 'PostgreSQL 16', 'Redis 7', 'MinIO', 'BullMQ', 'Prisma Migrations', 'Ansible (planned)', 'Drone CI (planned)', 'Reverse Proxy']} />
+      </div>
+    </div>
+  )
+}
+
 function HighlightsTab() {
   return (
     <div>
@@ -233,6 +297,7 @@ export default function ClueleakModal({ open, onClose }: Props) {
     ace: <AceTab />,
     skidjoule: <SkidjouleTab />,
     frast: <FrastTab />,
+    devops: <DevOpsTab />,
     highlights: <HighlightsTab />,
   }
 
