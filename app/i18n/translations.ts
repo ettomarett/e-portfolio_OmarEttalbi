@@ -79,6 +79,8 @@ export const translations = {
       subtitle: 'Here are some of my recent projects. Each one is crafted with attention to detail and focus on user experience.',
       viewPresentation: 'Preview Presentation',
       viewRepo: 'View Repository',
+      viewDetails: 'View Details',
+      personalProject: 'Personal Project',
       items: [
         {
           title: 'Smart Sleep Tracker — ML Closed-Loop Recommendation System',
@@ -107,6 +109,10 @@ export const translations = {
         {
           title: 'TIPE — Autonomous Drone Navigation with Deep RL',
           description: 'Individual CPGE research project: modeled a city environment, drone, and sensors in Unity 3D. Trained an autonomous navigation agent using the ML-Agents toolkit with deep RL (Q-learning, policy gradients, reward shaping) for waste management network navigation.',
+        },
+        {
+          title: 'Clueleak — AI Content & Social SaaS Platform',
+          description: 'Production-grade multi-application SaaS platform built and deployed independently on a self-managed OVH VPS. Covers AI-powered content production (ACE), social media automation (Skidjoule), and VPS infrastructure management (Frast).',
         },
       ],
     },
@@ -291,6 +297,8 @@ export const translations = {
       subtitle: 'Voici quelques-uns de mes projets récents. Chacun est réalisé avec attention aux détails et un focus sur l\'expérience utilisateur.',
       viewPresentation: 'Aperçu Présentation',
       viewRepo: 'Voir le Dépôt',
+      viewDetails: 'Voir les Détails',
+      personalProject: 'Projet Personnel',
       items: [
         {
           title: 'Smart Sleep Tracker — Système de Recommandation ML en Boucle Fermée',
@@ -319,6 +327,10 @@ export const translations = {
         {
           title: 'TIPE — Navigation Autonome de Drone par Deep RL',
           description: 'Projet de recherche CPGE individuel : modélisation d\'un environnement urbain, d\'un drone et de capteurs dans Unity 3D. Entraînement d\'un agent de navigation autonome avec le toolkit ML-Agents et le deep RL (Q-learning, policy gradients, reward shaping) pour la navigation dans un réseau de gestion des déchets.',
+        },
+        {
+          title: 'Clueleak — Plateforme SaaS IA & Médias Sociaux',
+          description: 'Plateforme multi-applications SaaS de niveau production, construite et déployée indépendamment sur un VPS OVH autogéré. Couvre la production de contenu IA (ACE), l\'automatisation des réseaux sociaux (Skidjoule) et la gestion d\'infrastructure VPS (Frast).',
         },
       ],
     },

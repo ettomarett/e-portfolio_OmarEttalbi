@@ -4,8 +4,9 @@ import * as React from 'react'
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { FaReact, FaWordpress, FaRobot, FaDatabase, FaExternalLinkAlt, FaFilePdf, FaGithub, FaTimes } from 'react-icons/fa'
+import { FaReact, FaWordpress, FaRobot, FaDatabase, FaExternalLinkAlt, FaFilePdf, FaGithub, FaTimes, FaLayerGroup } from 'react-icons/fa'
 import { useLanguage } from '../../i18n/LanguageContext'
+import ClueleakModal from './ClueleakModal'
 
 const projectMeta = [
   { category: 'AI & Cloud', tags: ['CatBoost', 'LightGBM', 'React Native', 'FastAPI', 'dbt', 'PostgreSQL'], year: '2026' },
@@ -21,6 +22,12 @@ const projectMeta = [
     repo: 'https://github.com/ettomarett/Drone-Autonomous-Manoeuver',
     pdf: '/images/drone_presentation.pdf',
   },
+  {
+    category: 'Personal SaaS',
+    tags: ['Next.js', 'Fastify', 'PostgreSQL', 'BullMQ', 'Redis', 'Gemini AI'],
+    year: '2024',
+    isClueleak: true,
+  },
 ]
 
 const projectStyles: { [key: string]: { icon: React.ComponentType<{ className?: string }>, color: string, bg: string } } = {
@@ -28,6 +35,7 @@ const projectStyles: { [key: string]: { icon: React.ComponentType<{ className?: 
   'Website': { icon: FaWordpress, color: 'text-[#4CAF7D]', bg: 'bg-[#4CAF7D]/10 dark:bg-[#4CAF7D]/15' },
   'Data Analytics': { icon: FaDatabase, color: 'text-[#6C5CE7]', bg: 'bg-[#6C5CE7]/10 dark:bg-[#6C5CE7]/15' },
   'AI & Cloud': { icon: FaRobot, color: 'text-[#E8763A]', bg: 'bg-[#E8763A]/10 dark:bg-[#E8763A]/15' },
+  'Personal SaaS': { icon: FaLayerGroup, color: 'text-[#a29bfe]', bg: 'bg-[#6C5CE7]/10 dark:bg-[#6C5CE7]/15' },
 }
 
 export default function Projects() {
@@ -37,6 +45,7 @@ export default function Projects() {
   })
   const { t } = useLanguage()
   const [pdfOpen, setPdfOpen] = useState(false)
+  const [clueleakOpen, setClueleakOpen] = useState(false)
 
   return (
     <section id="projects" className="py-24">
@@ -83,7 +92,12 @@ export default function Projects() {
                       {meta.year}
                     </span>
                   </div>
-                  <span className="text-xs uppercase tracking-wide text-gray-400 dark:text-gray-500 mb-3">{meta.category}</span>
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-xs uppercase tracking-wide text-gray-400 dark:text-gray-500">{meta.category}</span>
+                    {'isClueleak' in meta && (
+                      <span className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-[#6C5CE7]/20 text-[#a29bfe]">{t.projects.personalProject}</span>
+                    )}
+                  </div>
                   <p className="text-gray-600 dark:text-gray-300 mb-4 flex-1 text-sm leading-relaxed">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mt-auto">
                     {meta.tags.map((tag) => (
@@ -115,12 +129,23 @@ export default function Projects() {
                       </button>
                     </div>
                   )}
+                  {'isClueleak' in meta && (
+                    <button
+                      onClick={() => setClueleakOpen(true)}
+                      className={`inline-flex items-center gap-2 mt-4 px-4 py-2 ${style.bg} ${style.color} rounded-xl text-sm font-medium hover:opacity-80 transition-opacity`}
+                    >
+                      <FaExternalLinkAlt className="text-xs" />
+                      {t.projects.viewDetails}
+                    </button>
+                  )}
                 </div>
               </motion.div>
             )
           })}
         </div>
       </div>
+
+      <ClueleakModal open={clueleakOpen} onClose={() => setClueleakOpen(false)} />
 
       <AnimatePresence>
         {pdfOpen && (
