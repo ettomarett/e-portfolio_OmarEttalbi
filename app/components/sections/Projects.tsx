@@ -24,7 +24,7 @@ const projectMeta = [
   },
   {
     category: 'Personal SaaS',
-    tags: ['Next.js', 'Fastify', 'PostgreSQL', 'BullMQ', 'Redis', 'Gemini AI'],
+    tags: ['Next.js', 'Fastify', 'Docker', 'Traefik', 'Grafana', 'Ansible', 'Gemini AI'],
     year: '2026',
     isClueleak: true,
   },
