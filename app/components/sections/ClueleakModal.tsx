@@ -181,7 +181,7 @@ function FrastTab() {
     <div>
       <div className={SECTION}>
         <p className="text-gray-300 leading-relaxed text-sm mb-4">
-          Private control panel for managing websites across VPS servers. Single dashboard for repository tracking, deployment history, health monitoring, and infrastructure provisioning.
+          Frast is a self-built <span className="text-white font-medium">IaaS control plane</span> — a private dashboard that abstracts the full lifecycle of deploying and operating web applications on self-managed VPS infrastructure. From provisioning a server to spinning up a production site, Frast automates every step through Ansible playbooks, state machines, and guided workflows.
         </p>
       </div>
       <div className={SECTION}>
@@ -189,15 +189,16 @@ function FrastTab() {
         <FeatureList items={[
           ['VPS Registry', 'Instance registry with connection details, health status, and hosted site count'],
           ['Website Catalog', 'Domain, GitHub repo, deployment target, and status per site'],
-          ['Guided Creation Flow', 'Step-by-step website creation: name → domain → VPS → repo → template → confirm'],
-          ['Deployment Tracking', 'Status, timestamps, and success/failure indicators per deployment'],
-          ['State Machines', 'VPS and site setup state machines with provisioning steps and event logs'],
-          ['Extensions', 'GitHub repo creation, VPS bootstrap via Ansible, Drone CI integration, team/client support'],
+          ['Guided Provisioning Flow', 'Step-by-step site creation: name → domain → VPS → repo → template → confirm — triggers Ansible playbook execution'],
+          ['Ansible Automation', 'VPS bootstrap, Nginx/Traefik setup, SSL provisioning, Docker Compose deployment, and firewall configuration — all orchestrated via playbooks'],
+          ['Deployment Tracking', 'Status, timestamps, and success/failure indicators per deployment with event logs'],
+          ['State Machines', 'VPS and site setup state machines with granular provisioning steps for reliable, resumable automation'],
+          ['Drone CI Integration', 'CI/CD pipeline wiring for automated build, test, and deploy on push'],
         ]} />
       </div>
       <div className={SECTION}>
         <h3 className={H3}>Tech Stack</h3>
-        <TechStack items={['Next.js', 'React 19', 'TypeScript', 'Prisma', 'SQLite / PostgreSQL', 'iron-session', 'Tailwind CSS', 'Docker Compose']} />
+        <TechStack items={['Next.js', 'React 19', 'TypeScript', 'Prisma', 'SQLite / PostgreSQL', 'iron-session', 'Ansible', 'Tailwind CSS', 'Docker Compose']} />
       </div>
     </div>
   )
@@ -208,8 +209,28 @@ function DevOpsTab() {
     <div>
       <div className={SECTION}>
         <p className="text-gray-300 leading-relaxed text-sm mb-4">
-          The entire Clueleak platform runs on a self-managed OVH VPS under a hand-crafted Docker Compose stack — no managed cloud services, no PaaS. Every service, network, volume, and deployment is owned and operated independently.
+          Full self-managed production stack on an OVH VPS — no PaaS, no managed cloud. Every layer from DNS to observability is owned: Cloudflare for edge, Traefik for reverse proxy, Docker Compose for service orchestration, and a Grafana + Prometheus monitoring stack with real-time alerts to protect monetized traffic.
         </p>
+      </div>
+
+      <div className={SECTION}>
+        <h3 className={H3}>Networking & Routing</h3>
+        <FeatureList items={[
+          ['Cloudflare', 'DNS management, DDoS protection, CDN caching, and SSL termination at the edge — first line of defence for all traffic'],
+          ['Traefik', 'Reverse proxy and ingress controller running as a Docker container; auto-discovers services via labels, handles TLS certificates (Let\'s Encrypt), and routes traffic to the correct container by domain'],
+          ['OVH VPS', 'Self-managed Linux server — OS hardening, UFW firewall rules, SSH key authentication, and fail2ban'],
+        ]} />
+      </div>
+
+      <div className={SECTION}>
+        <h3 className={H3}>Observability — Grafana + Prometheus</h3>
+        <FeatureList items={[
+          ['Prometheus', 'Metrics scraping engine collecting data from all exporters on a configurable interval'],
+          ['Node Exporter', 'System-level metrics: CPU, RAM, disk I/O, network throughput, and load average on the VPS host'],
+          ['cAdvisor', 'Per-container resource usage: CPU throttling, memory limits, network I/O — one panel per service'],
+          ['Grafana Dashboards', 'Custom dashboards visualizing VPS resource usage, container health, and traffic patterns in real time'],
+          ['Alerting', 'Grafana alert rules trigger notifications when CPU spikes, memory pressure, or disk usage cross critical thresholds — enabling urgent intervention before monetized traffic is impacted'],
+        ]} />
       </div>
 
       <div className={SECTION}>
@@ -235,19 +256,6 @@ function DevOpsTab() {
       </div>
 
       <div className={SECTION}>
-        <h3 className={H3}>Infrastructure</h3>
-        <FeatureList items={[
-          ['OVH VPS', 'Self-managed Linux server — OS configuration, firewall rules, SSH hardening, and service supervision all done manually'],
-          ['Reverse Proxy', 'Custom domain routing for each application over the VPS; TLS termination at the edge'],
-          ['Persistent Volumes', 'Named Docker volumes for PostgreSQL and Redis ensure data survives container restarts and redeployments'],
-          ['Database Migrations', 'Prisma migrations auto-applied on container startup — zero-downtime schema evolution across services'],
-          ['Secrets Management', 'API credentials encrypted at rest via a provider secret key; environment variables injected at runtime, never committed'],
-          ['Ansible', 'VPS bootstrap and site provisioning via Ansible playbooks — automated from Frast\'s guided creation flow'],
-          ['Drone CI', 'CI/CD pipeline integration for automated build, test, and deploy workflows triggered from Frast'],
-        ]} />
-      </div>
-
-      <div className={SECTION}>
         <h3 className={H3}>Async Job Infrastructure</h3>
         <FeatureList items={[
           ['BullMQ + Redis', 'Separate worker containers for ACE content generation and Skidjoule social posting — decoupled from API response path'],
@@ -259,7 +267,7 @@ function DevOpsTab() {
 
       <div className={SECTION}>
         <h3 className={H3}>Tech Stack</h3>
-        <TechStack items={['Docker', 'Docker Compose', 'OVH VPS', 'Linux', 'PostgreSQL 16', 'Redis 7', 'MinIO', 'BullMQ', 'Prisma Migrations', 'Ansible', 'Drone CI', 'Reverse Proxy']} />
+        <TechStack items={['Docker', 'Docker Compose', 'Traefik', 'Cloudflare', 'OVH VPS', 'Linux', 'Prometheus', 'Grafana', 'Node Exporter', 'cAdvisor', 'PostgreSQL 16', 'Redis 7', 'MinIO', 'BullMQ', 'Ansible', 'Drone CI']} />
       </div>
     </div>
   )
