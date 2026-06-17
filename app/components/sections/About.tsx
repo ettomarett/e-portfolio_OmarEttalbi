@@ -1,11 +1,13 @@
 'use client'
 
 import * as React from 'react'
-import { motion } from 'framer-motion'
+import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { FaPython, FaDatabase, FaReact, FaGitAlt, FaDocker, FaCode, FaLinux } from 'react-icons/fa'
+import { FaPython, FaDatabase, FaReact, FaGitAlt, FaDocker, FaCode, FaLinux, FaExternalLinkAlt, FaFilePdf, FaTimes } from 'react-icons/fa'
 import { SiPostgresql, SiSpringboot, SiTypescript, SiTensorflow, SiPytorch, SiApachespark, SiBlender } from 'react-icons/si'
 import { useLanguage } from '../../i18n/LanguageContext'
+import Image from 'next/image'
 
 const skills = [
   { name: 'Python', icon: FaPython },
@@ -31,6 +33,7 @@ export default function About() {
     threshold: 0.2,
   })
   const { t } = useLanguage()
+  const [openPdf, setOpenPdf] = useState<{ title: string; src: string } | null>(null)
 
   return (
     <section id="about" className="py-24">
@@ -91,14 +94,40 @@ export default function About() {
 
         <div ref={ref} id="certifications-card" className="max-w-6xl mx-auto mb-12">
           <div className="bg-white dark:bg-secondary p-8 rounded-2xl shadow-lg">
-            <h3 className="text-xl font-bold mb-4 text-primary">{t.about.certifications}</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <h3 className="text-xl font-bold mb-6 text-primary">{t.about.certifications}</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {t.about.certs.map((cert) => (
-                <div key={cert.name} className="bg-gray-50 dark:bg-secondary-light p-4 rounded-xl shadow-sm flex items-center gap-3">
-                  <span className="text-2xl">🏆</span>
-                  <div>
-                    <div className="font-bold text-sm">{cert.name}</div>
-                    <div className="text-xs text-gray-400">{cert.year}</div>
+                <div key={cert.name} className="bg-gray-50 dark:bg-secondary-light p-5 rounded-xl shadow-sm flex flex-col items-center gap-4">
+                  <div className="relative w-32 h-32 flex-shrink-0">
+                    <Image
+                      src={cert.badge}
+                      alt={cert.name}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <div className="text-center flex-1">
+                    <div className="font-bold text-sm mb-1 leading-snug">{cert.name}</div>
+                    <div className="text-xs text-gray-400 mb-1">{cert.issuer}</div>
+                    <div className="text-xs text-gray-500 dark:text-gray-400">{cert.year}</div>
+                  </div>
+                  <div className="flex gap-2 w-full">
+                    <button
+                      onClick={() => setOpenPdf({ title: cert.name, src: cert.pdf })}
+                      className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 bg-primary/10 text-primary rounded-lg text-xs font-medium hover:bg-primary/20 transition-colors"
+                    >
+                      <FaFilePdf className="text-xs" />
+                      View
+                    </button>
+                    <a
+                      href={cert.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 bg-white/5 dark:bg-white/[0.07] text-gray-300 rounded-lg text-xs font-medium hover:bg-white/10 transition-colors"
+                    >
+                      <FaExternalLinkAlt className="text-[10px]" />
+                      Visit
+                    </a>
                   </div>
                 </div>
               ))}
@@ -106,6 +135,41 @@ export default function About() {
           </div>
         </div>
       </div>
+
+      <AnimatePresence>
+        {openPdf && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+            onClick={() => setOpenPdf(null)}
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              className="relative w-full max-w-4xl h-[90vh] bg-gray-900 rounded-2xl overflow-hidden shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex items-center justify-between px-5 py-3 bg-gray-800 border-b border-white/10">
+                <span className="text-sm font-medium text-gray-200 truncate pr-4">{openPdf.title}</span>
+                <button
+                  onClick={() => setOpenPdf(null)}
+                  className="p-1.5 rounded-lg hover:bg-white/10 transition-colors text-gray-400 hover:text-white flex-shrink-0"
+                >
+                  <FaTimes className="w-4 h-4" />
+                </button>
+              </div>
+              <iframe
+                src={openPdf.src}
+                className="w-full h-[calc(90vh-48px)]"
+                title={openPdf.title}
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   )
 }
