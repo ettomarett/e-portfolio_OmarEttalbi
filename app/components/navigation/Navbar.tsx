@@ -7,8 +7,8 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link as ScrollLink } from 'react-scroll'
 import { useLanguage } from '../../i18n/LanguageContext'
 
-const navKeys = ['home', 'about', 'services', 'projects', 'publications', 'experience', 'languages', 'interests', 'contact'] as const
-const navHrefs = ['hero', 'about', 'services', 'projects', 'publications', 'experience', 'languages', 'interests', 'contact']
+const navKeys = ['home', 'about', 'services', 'projects', 'publications', 'experience', 'languages', 'interests', 'certifications', 'contact'] as const
+const navHrefs = ['hero', 'about', 'services', 'projects', 'publications', 'experience', 'languages', 'interests', 'certifications-card', 'contact']
 
 export default function Navbar() {
   const pathname = usePathname()

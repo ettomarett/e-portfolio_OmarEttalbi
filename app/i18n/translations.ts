@@ -9,6 +9,7 @@ export const translations = {
       experience: 'Experience',
       languages: 'Languages',
       interests: 'Interests',
+      certifications: 'Certifications',
       contact: 'Contact',
     },
     hero: {
@@ -249,6 +250,7 @@ export const translations = {
       experience: 'Expérience',
       languages: 'Langues',
       interests: 'Centres d\'intérêt',
+      certifications: 'Certifications',
       contact: 'Contact',
     },
     hero: {
