@@ -3,14 +3,14 @@
 import * as React from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { FaCode, FaChartLine } from 'react-icons/fa'
+import { FaCode, FaChartLine, FaDocker } from 'react-icons/fa'
 import { useLanguage } from '../../i18n/LanguageContext'
 
-const expIcons = [FaChartLine, FaCode, FaCode]
+const expIcons = [FaChartLine, FaDocker, FaCode]
 const expTechs = [
   ['SAP S/4HANA', 'SAP Datasphere', 'SAP Analytics Cloud'],
-  ['Next.js 15', 'TypeScript', 'Prisma ORM', 'PostgreSQL', 'RBAC'],
-  ['Next.js', 'Bootstrap', 'SSR/SSG', 'React'],
+  ['Docker', 'Jenkins', 'CI/CD', 'Sonarqube', 'Trivy', 'Next.js 15', 'TypeScript', 'Prisma', 'PostgreSQL'],
+  ['React', 'Next.js (SSR/SSG)', 'JavaScript', 'Bootstrap'],
 ]
 
 export default function Experience() {
