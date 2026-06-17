@@ -98,7 +98,7 @@ export default function About() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {t.about.certs.map((cert) => (
                 <div key={cert.name} className="bg-gray-50 dark:bg-secondary-light p-5 rounded-xl shadow-sm flex flex-col items-center gap-4">
-                  <div className="relative w-32 h-32 flex-shrink-0">
+                  <div className="relative w-48 h-48 flex-shrink-0">
                     <Image
                       src={cert.badge}
                       alt={cert.name}

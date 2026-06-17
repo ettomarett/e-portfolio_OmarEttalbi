@@ -42,7 +42,7 @@ export const translations = {
       certs: [
         {
           name: 'IBM AI Analyst Professional Certificate',
-          issuer: 'IBM / Credly',
+          issuer: 'IBM',
           year: '2025',
           badge: '/images/artificial-intelligence-analyst-certificate.png',
           pdf: '/images/IBMDesign20260617-31-3uhf8l.pdf',
@@ -50,7 +50,7 @@ export const translations = {
         },
         {
           name: 'SAP Certified Data Analyst — SAP Analytics Cloud',
-          issuer: 'SAP / Credly',
+          issuer: 'SAP',
           year: '2026',
           badge: '/images/sap-certified-data-analyst-sap-analytics-cloud.png',
           pdf: '/images/SAPCertification20260617-31-hirb70.pdf',
@@ -282,7 +282,7 @@ export const translations = {
       certs: [
         {
           name: 'IBM AI Analyst Professional Certificate',
-          issuer: 'IBM / Credly',
+          issuer: 'IBM',
           year: '2025',
           badge: '/images/artificial-intelligence-analyst-certificate.png',
           pdf: '/images/IBMDesign20260617-31-3uhf8l.pdf',
@@ -290,7 +290,7 @@ export const translations = {
         },
         {
           name: 'SAP Certified Data Analyst — SAP Analytics Cloud',
-          issuer: 'SAP / Credly',
+          issuer: 'SAP',
           year: '2026',
           badge: '/images/sap-certified-data-analyst-sap-analytics-cloud.png',
           pdf: '/images/SAPCertification20260617-31-hirb70.pdf',
