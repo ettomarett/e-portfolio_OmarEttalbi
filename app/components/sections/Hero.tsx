@@ -4,13 +4,14 @@ import * as React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Link as ScrollLink } from 'react-scroll'
-import { FaGithub, FaLinkedin, FaChess } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaChess, FaMedium } from 'react-icons/fa'
 import { useLanguage } from '../../i18n/LanguageContext'
 
 const socialLinks = [
   { name: 'GitHub', icon: FaGithub, href: 'https://github.com/ettomarett' },
   { name: 'LinkedIn', icon: FaLinkedin, href: 'https://www.linkedin.com/in/omar-ettalbi' },
   { name: 'Chess', icon: FaChess, href: 'https://www.chess.com/member/7iyy' },
+  { name: 'Medium', icon: FaMedium, href: 'https://medium.com/@ettomarett' },
 ]
 
 export default function Hero() {
