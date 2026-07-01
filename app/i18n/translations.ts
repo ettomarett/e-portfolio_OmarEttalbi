@@ -58,6 +58,14 @@ export const translations = {
           url: 'https://www.credly.com/badges/645911e6-d325-424f-85fd-e2260b0daba7/public_url',
         },
         {
+          name: 'SAP Certified — Business Transformation Consultant',
+          issuer: 'SAP',
+          year: '2026',
+          badge: '/images/sap-certified-business-transformation-consultant.png',
+          pdf: '/images/SAPCertification20260701-7-4a8tm7.pdf',
+          url: 'https://www.credly.com/badges/290cb223-0223-41b5-8568-77a3a1de11ca/public_url',
+        },
+        {
           name: 'Deep Reinforcement Learning in Python',
           issuer: 'DataCamp',
           year: '2025',
@@ -295,6 +303,14 @@ export const translations = {
           badge: '/images/sap-certified-data-analyst-sap-analytics-cloud.png',
           pdf: '/images/SAPCertification20260617-31-hirb70.pdf',
           url: 'https://www.credly.com/badges/645911e6-d325-424f-85fd-e2260b0daba7/public_url',
+        },
+        {
+          name: 'SAP Certified — Business Transformation Consultant',
+          issuer: 'SAP',
+          year: '2026',
+          badge: '/images/sap-certified-business-transformation-consultant.png',
+          pdf: '/images/SAPCertification20260701-7-4a8tm7.pdf',
+          url: 'https://www.credly.com/badges/290cb223-0223-41b5-8568-77a3a1de11ca/public_url',
         },
         {
           name: 'Deep Reinforcement Learning en Python',
