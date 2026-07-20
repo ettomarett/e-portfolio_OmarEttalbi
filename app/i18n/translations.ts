@@ -14,7 +14,7 @@ export const translations = {
     },
     hero: {
       greeting: "Hi, I'm",
-      subtitle: 'Software Engineering Student at ENSIAS — Currently at Diehl Aviation, Toulouse',
+      subtitle: 'Software Engineer — ENSIAS Graduate — Currently at Diehl Aviation, Toulouse',
       contactMe: 'Contact Me',
       fullCurriculum: 'Full Curriculum',
     },
@@ -261,7 +261,7 @@ export const translations = {
     },
     hero: {
       greeting: 'Bonjour, je suis',
-      subtitle: 'Élève Ingénieur en Génie Logiciel à l\'ENSIAS — Actuellement chez Diehl Aviation, Toulouse',
+      subtitle: 'Ingénieur Logiciel — Diplômé ENSIAS — Actuellement chez Diehl Aviation, Toulouse',
       contactMe: 'Me Contacter',
       fullCurriculum: 'Curriculum Complet',
     },
