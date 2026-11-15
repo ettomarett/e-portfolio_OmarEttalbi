@@ -145,6 +145,14 @@ export const translations = {
           title: 'Clueleak: AI Content & Social SaaS Platform',
           description: 'Production-grade multi-application SaaS platform built and deployed independently on a self-managed OVH VPS. Covers AI-powered content production (ACE), social media automation (Skidjoule), and VPS infrastructure management (Frast).',
         },
+        {
+          title: 'Nibrasard: Audiobook Reader & Generator Platform',
+          description: 'Audiobook reader and generator for PDF, EPUB, MOBI, and TXT documents. Ships as a desktop app (Electron) and account-based cloud platform (VPS) with web client, admin console, and processing workers. Features OCR, TTS, and AI-powered document processing.',
+        },
+        {
+          title: 'Jobuff: Self-Hosted Opportunity Tracking Platform',
+          description: 'Self-hosted opportunity-tracking application for managing PhD positions, jobs, internships, and grants. Combines React frontend with Python scraping pipeline, browser automation, email handling, and Docker-based deployment behind Caddy edge proxy.',
+        },
       ],
     },
     publications: {
@@ -391,6 +399,14 @@ export const translations = {
         {
           title: 'Clueleak : Plateforme SaaS IA & Médias Sociaux',
           description: 'Plateforme multi-applications SaaS de niveau production, construite et déployée indépendamment sur un VPS OVH autogéré. Couvre la production de contenu IA (ACE), l\'automatisation des réseaux sociaux (Skidjoule) et la gestion d\'infrastructure VPS (Frast).',
+        },
+        {
+          title: 'Nibrasard : Plateforme de Lecteur et Générateur de Livres Audio',
+          description: 'Lecteur et générateur de livres audio pour documents PDF, EPUB, MOBI et TXT. Livré sous forme d\'application de bureau (Electron) et plateforme cloud basée sur un compte (VPS) avec client web, console d\'administration et workers de traitement. Fonctionnalités OCR, TTS et traitement de documents par IA.',
+        },
+        {
+          title: 'Jobuff : Plateforme de Suivi d\'Opportunités Auto-hébergée',
+          description: 'Application auto-hébergée de suivi d\'opportunités pour gérer les postes de doctorat, emplois, stages et bourses. Combine un frontend React avec un pipeline de scraping Python, automatisation de navigateur, gestion d\'emails, et déploiement Docker derrière un proxy edge Caddy.',
         },
       ],
     },

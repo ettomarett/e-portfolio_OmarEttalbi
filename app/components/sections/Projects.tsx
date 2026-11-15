@@ -7,6 +7,8 @@ import { useInView } from 'react-intersection-observer'
 import { FaReact, FaWordpress, FaRobot, FaDatabase, FaExternalLinkAlt, FaFilePdf, FaGithub, FaTimes, FaLayerGroup } from 'react-icons/fa'
 import { useLanguage } from '../../i18n/LanguageContext'
 import ClueleakModal from './ClueleakModal'
+import NibrasardModal from './NibrasardModal'
+import JobuffModal from './JobuffModal'
 
 const projectMeta = [
   { category: 'AI & Cloud', tags: ['CatBoost', 'LightGBM', 'React Native', 'FastAPI', 'dbt', 'PostgreSQL'], year: '2026' },
@@ -27,6 +29,21 @@ const projectMeta = [
     tags: ['Next.js', 'Fastify', 'Docker', 'Traefik', 'Grafana', 'Ansible', 'Gemini AI'],
     year: '2026',
     isClueleak: true,
+    domain: 'https://clueleak.com',
+  },
+  {
+    category: 'Personal SaaS',
+    tags: ['Electron', 'React', 'Node.js', 'Express', 'BullMQ', 'PostgreSQL', 'Redis', 'Docker'],
+    year: '2026',
+    isNibrasard: true,
+    domain: 'https://nibrasard.com',
+  },
+  {
+    category: 'Web Application',
+    tags: ['React 19', 'TypeScript', 'Python', 'Playwright', 'Docker', 'Caddy', 'Drone CI'],
+    year: '2026',
+    isJobuff: true,
+    domain: 'https://jobuff.com',
   },
 ]
 
@@ -46,6 +63,8 @@ export default function Projects() {
   const { t } = useLanguage()
   const [pdfOpen, setPdfOpen] = useState(false)
   const [clueleakOpen, setClueleakOpen] = useState(false)
+  const [nibrasardOpen, setNibrasardOpen] = useState(false)
+  const [jobuffOpen, setJobuffOpen] = useState(false)
 
   return (
     <section id="projects" className="py-24">
@@ -97,6 +116,9 @@ export default function Projects() {
                     {'isClueleak' in meta && (
                       <span className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-[#6C5CE7]/20 text-[#a29bfe]">{t.projects.personalProject}</span>
                     )}
+                    {('isClueleak' in meta || 'isNibrasard' in meta || 'isJobuff' in meta) && (
+                      <span className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-[#E8763A]/20 text-[#F4A261]">Highlighted</span>
+                    )}
                   </div>
                   <p className="text-gray-600 dark:text-gray-300 mb-4 flex-1 text-sm leading-relaxed">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mt-auto">
@@ -132,11 +154,40 @@ export default function Projects() {
                   {'isClueleak' in meta && (
                     <button
                       onClick={() => setClueleakOpen(true)}
-                      className={`inline-flex items-center gap-2 mt-4 px-4 py-2 ${style.bg} ${style.color} rounded-xl text-sm font-medium hover:opacity-80 transition-opacity`}
+                      className={`inline-flex items-center gap-2 mt-2 px-4 py-2 ${style.bg} ${style.color} rounded-xl text-sm font-medium hover:opacity-80 transition-opacity`}
                     >
                       <FaExternalLinkAlt className="text-xs" />
                       {t.projects.viewDetails}
                     </button>
+                  )}
+                  {'isNibrasard' in meta && (
+                    <button
+                      onClick={() => setNibrasardOpen(true)}
+                      className={`inline-flex items-center gap-2 mt-2 px-4 py-2 ${style.bg} ${style.color} rounded-xl text-sm font-medium hover:opacity-80 transition-opacity`}
+                    >
+                      <FaExternalLinkAlt className="text-xs" />
+                      {t.projects.viewDetails}
+                    </button>
+                  )}
+                  {'isJobuff' in meta && (
+                    <button
+                      onClick={() => setJobuffOpen(true)}
+                      className={`inline-flex items-center gap-2 mt-2 px-4 py-2 ${style.bg} ${style.color} rounded-xl text-sm font-medium hover:opacity-80 transition-opacity`}
+                    >
+                      <FaExternalLinkAlt className="text-xs" />
+                      {t.projects.viewDetails}
+                    </button>
+                  )}
+                  {'domain' in meta && (
+                    <a
+                      href={meta.domain}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 mt-4 px-4 py-2 bg-[#E8763A]/20 text-[#F4A261] rounded-xl text-sm font-medium hover:opacity-80 transition-opacity border border-[#F4A261]/30"
+                    >
+                      <FaExternalLinkAlt className="text-xs" />
+                      Visit Website
+                    </a>
                   )}
                 </div>
               </motion.div>
@@ -146,6 +197,8 @@ export default function Projects() {
       </div>
 
       <ClueleakModal open={clueleakOpen} onClose={() => setClueleakOpen(false)} />
+      <NibrasardModal open={nibrasardOpen} onClose={() => setNibrasardOpen(false)} />
+      <JobuffModal open={jobuffOpen} onClose={() => setJobuffOpen(false)} />
 
       <AnimatePresence>
         {pdfOpen && (
