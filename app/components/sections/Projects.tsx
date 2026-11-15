@@ -11,19 +11,6 @@ import NibrasardModal from './NibrasardModal'
 import JobuffModal from './JobuffModal'
 
 const projectMeta = [
-  { category: 'AI & Cloud', tags: ['CatBoost', 'LightGBM', 'React Native', 'FastAPI', 'dbt', 'PostgreSQL'], year: '2026' },
-  { category: 'AI & Cloud', tags: ['Python', 'LLM', 'Multi-Agent', 'Google ADK', 'Docker', 'Spring Boot'], year: '2025' },
-  { category: 'Data Analytics', tags: ['Python', 'Prophet', 'ARIMA', 'Leaflet', 'Geospatial', 'Pandas'], year: '2025' },
-  { category: 'AI & Cloud', tags: ['RAG', 'LLM', 'Vector DB', 'LangChain', 'FAISS', 'Pinecone'], year: '2026' },
-  { category: 'Web Application', tags: ['AI Coding', 'Vitest', 'Cursor IDE', 'Full-Stack', 'ERP'], year: '2026' },
-  { category: 'Web Application', tags: ['Spring Boot', 'Angular', 'JWT', 'PostgreSQL', 'REST APIs'], year: '2023' },
-  {
-    category: 'AI & Cloud',
-    tags: ['Unity 3D', 'ML-Agents', 'Deep RL', 'C#', 'Python'],
-    year: '2022',
-    repo: 'https://github.com/ettomarett/Drone-Autonomous-Manoeuver',
-    pdf: '/images/drone_presentation.pdf',
-  },
   {
     category: 'Personal SaaS',
     tags: ['Next.js', 'Fastify', 'Docker', 'Traefik', 'Grafana', 'Ansible', 'Gemini AI'],
@@ -44,6 +31,19 @@ const projectMeta = [
     year: '2026',
     isJobuff: true,
     domain: 'https://jobuff.com',
+  },
+  { category: 'AI & Cloud', tags: ['CatBoost', 'LightGBM', 'React Native', 'FastAPI', 'dbt', 'PostgreSQL'], year: '2026' },
+  { category: 'AI & Cloud', tags: ['Python', 'LLM', 'Multi-Agent', 'Google ADK', 'Docker', 'Spring Boot'], year: '2025' },
+  { category: 'Data Analytics', tags: ['Python', 'Prophet', 'ARIMA', 'Leaflet', 'Geospatial', 'Pandas'], year: '2025' },
+  { category: 'AI & Cloud', tags: ['RAG', 'LLM', 'Vector DB', 'LangChain', 'FAISS', 'Pinecone'], year: '2026' },
+  { category: 'Web Application', tags: ['AI Coding', 'Vitest', 'Cursor IDE', 'Full-Stack', 'ERP'], year: '2026' },
+  { category: 'Web Application', tags: ['Spring Boot', 'Angular', 'JWT', 'PostgreSQL', 'REST APIs'], year: '2023' },
+  {
+    category: 'AI & Cloud',
+    tags: ['Unity 3D', 'ML-Agents', 'Deep RL', 'C#', 'Python'],
+    year: '2022',
+    repo: 'https://github.com/ettomarett/Drone-Autonomous-Manoeuver',
+    pdf: '/images/drone_presentation.pdf',
   },
 ]
 
