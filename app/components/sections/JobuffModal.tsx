@@ -66,9 +66,90 @@ export default function JobuffModal({ open, onClose }: { open: boolean; onClose:
                     ))}
                   </div>
                 </div>
+                <div className={SECTION}>
+                  <h3 className={H3}>Frontend — Web Application</h3>
+                  <div className="space-y-2">
+                    <TechSpecRow tech="React" version="^19.2.5" purpose="UI library (React 19)" />
+                    <TechSpecRow tech="React DOM" version="^19.2.5" purpose="Client-side rendering" />
+                    <TechSpecRow tech="React Router DOM" version="^7.14.2" purpose="Dynamic /:huntId/* routes" />
+                    <TechSpecRow tech="Vite" version="^8.0.10" purpose="Dev server, HMR, production build" />
+                    <TechSpecRow tech="TypeScript" version="~6.0.2" purpose="Static typing" />
+                    <TechSpecRow tech="Zustand" version="^5.0.12" purpose="Store factory pattern for multi-hunt state isolation" />
+                    <TechSpecRow tech="FontAwesome" version="^7.3.1 / ^3.5.0" purpose="UI icons" />
+                    <TechSpecRow tech="marked" version="^18.0.9" purpose="Render cached scrape content / markdown" />
+                    <TechSpecRow tech="dompurify" version="^3.4.13" purpose="Sanitize HTML before rendering" />
+                    <TechSpecRow tech="nodemailer" version="^8.0.7" purpose="SMTP email dispatch" />
+                    <TechSpecRow tech="imap-simple" version="^5.1.0" purpose="IMAP inbox fetching" />
+                    <TechSpecRow tech="mailparser" version="^3.9.9" purpose="Parse raw email into structured data" />
+                    <TechSpecRow tech="pdf-parse" version="^2.4.5" purpose="Parse PDF CVs/documents" />
+                  </div>
+                </div>
+
+                <div className={SECTION}>
+                  <h3 className={H3}>Pipeline — Python Backend & Scraping</h3>
+                  <div className="space-y-2">
+                    <TechSpecRow tech="Python" version="3.11" purpose="Backend & scraping pipeline" />
+                    <TechSpecRow tech="Playwright" version="—" purpose="Browser automation" />
+                    <TechSpecRow tech="curl_cffi" version="—" purpose="HTTP client with TLS fingerprinting" />
+                    <TechSpecRow tech="websocket-client" version="—" purpose="WebSocket client" />
+                    <TechSpecRow tech="fonttools" version="—" purpose="Font manipulation" />
+                    <TechSpecRow tech="pyautogui" version="—" purpose="GUI automation" />
+                    <TechSpecRow tech="pyperclip" version="—" purpose="Clipboard access" />
+                    <TechSpecRow tech="python-xlib" version="—" purpose="X11 library" />
+                    <TechSpecRow tech="pygetwindow" version="—" purpose="Window management" />
+                    <TechSpecRow tech="Pillow" version="—" purpose="Image processing" />
+                  </div>
+                </div>
+
+                <div className={SECTION}>
+                  <h3 className={H3}>Agent / Browser</h3>
+                  <div className="space-y-2">
+                    <TechSpecRow tech="Claude Code" version="—" purpose="AI coding agent" />
+                    <TechSpecRow tech="chrome-devtools-mcp" version="—" purpose="Chrome DevTools MCP server" />
+                    <TechSpecRow tech="Playwright (Node)" version="—" purpose="Browser automation" />
+                    <TechSpecRow tech="Chromium" version="—" purpose="Web browser engine" />
+                    <TechSpecRow tech="Xvfb" version="—" purpose="Virtual framebuffer" />
+                    <TechSpecRow tech="x11vnc" version="—" purpose="VNC server for X11" />
+                    <TechSpecRow tech="novnc" version="—" purpose="NoVNC HTML5 VNC client" />
+                    <TechSpecRow tech="websockify" version="—" purpose="WebSocket to TCP proxy" />
+                  </div>
+                </div>
+
+                <div className={SECTION}>
+                  <h3 className={H3}>Infrastructure & Deployment</h3>
+                  <div className="space-y-2">
+                    <TechSpecRow tech="Docker" version="—" purpose="Containerized app" />
+                    <TechSpecRow tech="node:24-bookworm-slim" version="—" purpose="Image base (Node 24 on Debian Bookworm)" />
+                    <TechSpecRow tech="Docker Compose" version="compose.yaml" purpose="Multi-service orchestration" />
+                    <TechSpecRow tech="Caddy" version="jobuff.caddy" purpose="TLS, security headers, reverse proxy" />
+                    <TechSpecRow tech="Drone CI" version=".drone.yml" purpose="Verify + deploy-production pipelines" />
+                    <TechSpecRow tech="tini + entrypoint.sh" version="—" purpose="Process manager (reaps orphaned processes)" />
+                    <TechSpecRow tech="Docker secrets" version="anthropic" purpose="Claude API key at runtime" />
+                    <TechSpecRow tech="curl /healthz" version="—" purpose="Docker HEALTHCHECK on port 4173" />
+                  </div>
+                </div>
+
+                <div className={SECTION}>
+                  <h3 className={H3}>Data & Storage</h3>
+                  <div className="space-y-2">
+                    <TechSpecRow tech="hunts/{hunt-id}/ledger/listings.json" version="—" purpose="Per-hunt listing data" />
+                    <TechSpecRow tech="hunts/{hunt-id}/ledger/apply-journal.ndjson" version="—" purpose="Application journal" />
+                    <TechSpecRow tech="hunts/{hunt-id}/cache/" version="—" purpose="Scraped screenshots (.png) & cached content (.md)" />
+                    <TechSpecRow tech="platforms/{slug}/" version="—" purpose="Shared library: platform.json, discover.py, DISCOVER.md, RECIPE.md" />
+                    <TechSpecRow tech="creds/" version="—" purpose="Proxy + cookie config for scraping (gitignored)" />
+                    <TechSpecRow tech="app/public/data/" version="—" purpose="Static data served by the app" />
+                  </div>
+                </div>
               </div>
             </div>
           </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  )
+}
+                  </div>
+                </div>
         </motion.div>
       )}
     </AnimatePresence>
