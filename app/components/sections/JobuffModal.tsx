@@ -1,8 +1,9 @@
 'use client'
 
 import * as React from 'react'
+import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { FaTimes, FaBookOpen, FaLaptopCode, FaCloud, FaDocker, FaPython } from 'react-icons/fa'
+import { FaTimes, FaBookOpen, FaLaptopCode, FaCloud, FaDocker, FaPython, FaServer } from 'react-icons/fa'
 
 const TAG_STYLE = 'px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-white/5 text-gray-300'
 const SECTION = 'mb-6'
@@ -34,6 +35,17 @@ function TechSpecRow({ tech, version, purpose }: { tech: string; version: string
 }
 
 export default function JobuffModal({ open, onClose }: { open: boolean; onClose: () => void }) {
+  const [activeTab, setActiveTab] = useState('overview')
+
+  const tabs = [
+    { id: 'overview', label: 'Overview', icon: FaBookOpen },
+    { id: 'frontend', label: 'Frontend', icon: FaLaptopCode },
+    { id: 'bpma', label: 'BPMA Process Map', icon: FaServer },
+    { id: 'pipeline', label: 'Python Pipeline', icon: FaPython },
+    { id: 'agent', label: 'Agent / Browser', icon: FaCloud },
+    { id: 'storage', label: 'Data & Storage', icon: FaDocker },
+  ]
+
   return (
     <AnimatePresence>
       {open && (
@@ -64,6 +76,23 @@ export default function JobuffModal({ open, onClose }: { open: boolean; onClose:
                 <FaTimes className="w-4 h-4" />
               </button>
             </div>
+
+            <div className="flex gap-1 px-6 py-2 border-b border-white/[0.07] flex-shrink-0 overflow-x-auto">
+              {tabs.map(tab => {
+                const Icon = tab.icon
+                return (
+                  <button
+                    key={tab.id}
+                    onClick={() => setActiveTab(tab.id)}
+                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors whitespace-nowrap ${activeTab === tab.id ? 'bg-[#E8763A]/20 text-[#F4A261]' : 'text-gray-400 hover:text-white hover:bg-white/5'}`}
+                  >
+                    <Icon className="w-3 h-3" />
+                    {tab.label}
+                  </button>
+                )
+              })}
+            </div>
+
             <div className="flex-1 overflow-y-auto px-6 py-5">
               <div className="space-y-6">
                 <div className={SECTION}>
