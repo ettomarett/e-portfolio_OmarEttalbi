@@ -20,7 +20,7 @@ export default function Contact() {
             </div>
             <div className="flex items-center gap-2">
               <FaPhone />
-              <a href="tel:+33766919824" className="hover:underline text-black dark:text-white">+33 7 66 91 98 24</a>
+              <a href="tel:+212604546427" className="hover:underline text-black dark:text-white">+212 6 04 54 64 27</a>
             </div>
             <div className="flex items-center gap-2">
               <FaGlobe />
