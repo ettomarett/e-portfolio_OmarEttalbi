@@ -23,6 +23,16 @@ function FeatureList({ items }: { items: [string, string][] }) {
   )
 }
 
+function TechSpecRow({ tech, version, purpose }: { tech: string; version: string; purpose: string }) {
+  return (
+    <div className="flex gap-4 px-4 py-2 border-b border-white/[0.04] text-sm">
+      <span className="w-24 font-mono text-[#F4A261]">{tech}</span>
+      <span className="w-16 text-gray-500">{version}</span>
+      <span className="text-gray-300">{purpose}</span>
+    </div>
+  )
+}
+
 export default function JobuffModal({ open, onClose }: { open: boolean; onClose: () => void }) {
   return (
     <AnimatePresence>
@@ -143,13 +153,6 @@ export default function JobuffModal({ open, onClose }: { open: boolean; onClose:
               </div>
             </div>
           </motion.div>
-        </motion.div>
-      )}
-    </AnimatePresence>
-  )
-}
-                  </div>
-                </div>
         </motion.div>
       )}
     </AnimatePresence>

@@ -227,8 +227,6 @@ export default function NibrasardModal({ open, onClose }: { open: boolean; onClo
                   </div>
                 </div>
 
-                  </div>
-                </div>
               </div>
             </div>
           </motion.div>
@@ -237,5 +235,4 @@ export default function NibrasardModal({ open, onClose }: { open: boolean; onClo
     </AnimatePresence>
   )
 }
-                  </div>
-                </div>
+
