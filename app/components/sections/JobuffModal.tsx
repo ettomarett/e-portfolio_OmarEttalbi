@@ -254,7 +254,7 @@ export default function JobuffModal({ open, onClose }: { open: boolean; onClose:
                     </div>
                   </motion.div>
                 )}
-              </AnimatePresence>
+              </div>
             </div>
           </motion.div>
         </motion.div>
