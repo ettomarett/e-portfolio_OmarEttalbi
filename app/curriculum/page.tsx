@@ -11,12 +11,12 @@ const semesters = [
   {
     id: 'cpge',
     num: 'P',
-    year: '2020–2022 · Classes Préparatoires aux Grandes Écoles, Settat',
+    year: '2020 to 2022 · Classes Préparatoires aux Grandes Écoles, Settat',
     color: '#c0392b',
     modules: [
       {
         code: 'CNC',
-        title: 'Concours National Commun — Filière TSI',
+        title: 'Concours National Commun; Filière TSI',
         subs: [{ tags: undefined as string[] | undefined }],
       },
       {
@@ -29,7 +29,7 @@ const semesters = [
   {
     id: 's1',
     num: 'S1',
-    year: '2022–2023 · 1ère Année',
+    year: '2022 to 2023 · 1ère Année',
     color: '#E8763A',
     modules: [
       { code: 'M1.1', title: 'Algorithmique & Structures de Données', subs: [{}, {}, {}] },
@@ -43,7 +43,7 @@ const semesters = [
   {
     id: 's2',
     num: 'S2',
-    year: '2023–2024 · 1ère Année',
+    year: '2023 to 2024 · 1ère Année',
     color: '#E8763A',
     modules: [
       { code: 'M2.1', title: 'Bases de Données', subs: [{ tags: ['Data Engineering', 'Knowledge Graphs'] }, { tags: ['Data Engineering'] }] },
@@ -56,7 +56,7 @@ const semesters = [
   {
     id: 's3',
     num: 'S3',
-    year: '2024–2025 · 2ème Année',
+    year: '2024 to 2025 · 2ème Année',
     color: '#4CAF7D',
     modules: [
       { code: 'M3.1.2', title: 'Génie Logiciel', subs: [{}] },
@@ -75,7 +75,7 @@ const semesters = [
   {
     id: 's4',
     num: 'S4',
-    year: '2024–2025 · 2ème Année',
+    year: '2024 to 2025 · 2ème Année',
     color: '#4CAF7D',
     modules: [
       { code: 'M4.4', title: 'Concepts et Technologies de l\'IA', subs: [{ tags: ['Knowledge Graphs', 'Machine Learning', 'Ontologies'] }] },
@@ -89,7 +89,7 @@ const semesters = [
   {
     id: 's5',
     num: 'S5',
-    year: '2025–2026 · 3ème Année',
+    year: '2025 to 2026 · 3ème Année',
     color: '#6C5CE7',
     modules: [
       { code: 'M5.1', title: 'Intégration des Applications d\'Entreprise', subs: [{}, { tags: ['Ontologies'] }, { tags: ['HCI', 'Data Visualization'] }] },
@@ -121,7 +121,7 @@ const internships = [
 
 const certifications = [
   { name: 'IBM AI Analyst Professional Certificate' },
-  { name: 'DataCamp — Deep Reinforcement Learning in Python' },
+  { name: 'DataCamp; Deep Reinforcement Learning in Python' },
 ]
 
 const tagColors: Record<string, string> = {
@@ -161,7 +161,7 @@ export default function CurriculumPage() {
             {ui.headerBadge}
           </div>
           <h1 className="text-4xl md:text-5xl font-bold font-heading mb-3">
-            ENSIAS — <span className="text-primary">{ui.headerTitle}</span>
+            ENSIAS: <span className="text-primary">{ui.headerTitle}</span>
           </h1>
           <p className="text-gray-400 max-w-3xl text-lg">{ui.headerSubtitle}</p>
           <div className="flex flex-wrap gap-8 mt-8">

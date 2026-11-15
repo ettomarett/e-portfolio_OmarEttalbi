@@ -1,19 +1,19 @@
 export const curriculumUI = {
   en: {
     backToPortfolio: 'Back to Portfolio',
-    headerBadge: 'Mohammed V University — Rabat',
+    headerBadge: 'Mohammed V University; Rabat',
     headerTitle: 'Software Engineering',
-    headerSubtitle: 'State Engineering Degree in Computer Science — Software Engineering & Information Systems. Full curriculum with professors and topic coverage.',
+    headerSubtitle: 'State Engineering Degree in Computer Science; Software Engineering & Information Systems. Full curriculum with professors and topic coverage.',
     duration: 'Duration',
     durationValue: '3 years (6 semesters)',
     academicYears: 'Academic Years',
-    academicYearsValue: '2022–2026',
+    academicYearsValue: '2022 to 2026',
     specialization: 'Specialization',
-    specializationValue: 'GL — Software Engineering',
+    specializationValue: 'GL: Software Engineering',
     coordinator: 'Coordinator',
-    cpgeBanner: 'CPGE Preparatory School (2020–2022)',
-    ensiasBanner: 'ENSIAS Engineering Cycle (2022–2026)',
-    ensiasDescription: 'State Engineering Degree — 3 years, 5 semesters of coursework + 1 semester end-of-studies internship (PFE). Semesters S1–S2 are Common Core, S3–S4 Advanced Studies, S5 Software Engineering Specialization.',
+    cpgeBanner: 'CPGE Preparatory School (2020 to 2022)',
+    ensiasBanner: 'ENSIAS Engineering Cycle (2022 to 2026)',
+    ensiasDescription: 'State Engineering Degree, 3 years, 5 semesters of coursework + 1 semester end-of-studies internship (PFE). Semesters S1 to S2 are Common Core, S3 to S4 Advanced Studies, S5 Software Engineering Specialization.',
     defendedProjects: 'Defended Projects',
     defendedProjectsSub: 'Each project defended before a jury panel',
     team: 'Team',
@@ -26,19 +26,19 @@ export const curriculumUI = {
   },
   fr: {
     backToPortfolio: 'Retour au Portfolio',
-    headerBadge: 'Université Mohammed V — Rabat',
+    headerBadge: 'Université Mohammed V: Rabat',
     headerTitle: 'Génie Logiciel',
-    headerSubtitle: "Cycle d'Ingénieur d'État en Informatique — Filière Génie Logiciel & Systèmes d'Information. Curriculum complet avec professeurs et couverture thématique.",
+    headerSubtitle: "Cycle d'Ingénieur d'État en Informatique; Filière Génie Logiciel & Systèmes d'Information. Curriculum complet avec professeurs et couverture thématique.",
     duration: 'Durée',
     durationValue: '3 ans (6 semestres)',
     academicYears: 'Années Académiques',
-    academicYearsValue: '2022–2026',
+    academicYearsValue: '2022 to 2026',
     specialization: 'Spécialisation',
-    specializationValue: 'GL — Génie Logiciel',
+    specializationValue: 'GL: Génie Logiciel',
     coordinator: 'Coordinateur',
-    cpgeBanner: 'CPGE Classes Préparatoires (2020–2022)',
-    ensiasBanner: "Cycle d'Ingénieur ENSIAS (2022–2026)",
-    ensiasDescription: "Cycle d'Ingénieur d'État — 3 ans, 5 semestres de cours + 1 semestre de stage de fin d'études (PFE). Semestres S1–S2 Tronc Commun, S3–S4 Approfondissement, S5 Spécialisation GL.",
+    cpgeBanner: 'CPGE Classes Préparatoires (2020 to 2022)',
+    ensiasBanner: "Cycle d'Ingénieur ENSIAS (2022 to 2026)",
+    ensiasDescription: "Cycle d'Ingénieur d'État, 3 ans, 5 semestres de cours + 1 semestre de stage de fin d'études (PFE). Semestres S1 to S2 Tronc Commun, S3 to S4 Approfondissement, S5 Spécialisation GL.",
     defendedProjects: 'Projets Soutenus',
     defendedProjectsSub: 'Chaque projet soutenu devant un jury',
     team: 'Équipe',
@@ -54,11 +54,11 @@ export const curriculumUI = {
 export const semesterTranslations = {
   en: {
     cpge: {
-      title: 'Preparatory School — CPGE TSI',
-      year: '2020–2022 · Preparatory Classes, Settat',
+      title: 'Preparatory School; CPGE TSI',
+      year: '2020 to 2022 · Preparatory Classes, Settat',
       modules: [
         {
-          title: 'National Competitive Exam — TSI Track',
+          title: 'National Competitive Exam; TSI Track',
           subs: [
             { name: 'National Competitive Exam Result', topics: 'Ranked in the top 18% nationally in the TSI track of the Concours National Commun (CNC). Two-year intensive program covering advanced mathematics (analysis, algebra, probability), physics, engineering sciences, and computer science.' },
           ],
@@ -73,8 +73,8 @@ export const semesterTranslations = {
       ],
     },
     s1: {
-      title: 'Semester 1 — Tronc Commun',
-      year: '2022–2023 · 1st Year',
+      title: 'Semester 1; Tronc Commun',
+      year: '2022 to 2023 · 1st Year',
       modules: [
         { title: 'Algorithms & Data Structures', subs: [
           { name: 'Algorithms', topics: 'Complexity analysis, sorting/searching algorithms, divide-and-conquer, dynamic programming, greedy algorithms' },
@@ -104,11 +104,11 @@ export const semesterTranslations = {
       ],
     },
     s2: {
-      title: 'Semester 2 — Tronc Commun',
-      year: '2023–2024 · 1st Year',
+      title: 'Semester 2; Tronc Commun',
+      year: '2023 to 2024 · 1st Year',
       modules: [
         { title: 'Databases', subs: [
-          { name: 'Databases I', topics: 'Relational model, ER diagrams, functional dependencies, normalization (1NF–BCNF), SQL fundamentals' },
+          { name: 'Databases I', topics: 'Relational model, ER diagrams, functional dependencies, normalization (1NF to BCNF), SQL fundamentals' },
           { name: 'Databases II', topics: 'Advanced SQL, query optimization, triggers, stored procedures, transaction management, concurrency control' },
         ]},
         { title: 'Networks & Systems', subs: [
@@ -132,8 +132,8 @@ export const semesterTranslations = {
       ],
     },
     s3: {
-      title: 'Semester 3 — Approfondissement',
-      year: '2024–2025 · 2nd Year',
+      title: 'Semester 3; Approfondissement',
+      year: '2024 to 2025 · 2nd Year',
       modules: [
         { title: 'Software Engineering', subs: [{ name: 'Software Engineering', topics: 'Software development lifecycle, requirements engineering, UML, software architecture, testing strategies, quality assurance' }]},
         { title: 'IS Development Methodology', subs: [{ name: 'IS Development Methodology', topics: 'IS development methodologies (Merise, UML-based), business process modeling, conceptual/logical/physical data modeling, enterprise data architecture' }]},
@@ -158,8 +158,8 @@ export const semesterTranslations = {
       ],
     },
     s4: {
-      title: 'Semester 4 — Approfondissement',
-      year: '2024–2025 · 2nd Year',
+      title: 'Semester 4; Approfondissement',
+      year: '2024 to 2025 · 2nd Year',
       modules: [
         { title: 'AI Concepts & Technologies', subs: [{ name: 'AI Foundations / AI Technologies', topics: 'Designing AI solutions (design thinking, structured workflows), AI frameworks (TensorFlow, Keras, PyTorch, Apache Spark), supervised/unsupervised/reinforcement learning, neural networks, AutoAI & AI scaling (PyCaret, Spark MLlib), MLOps deployment & lifecycle (MLFlow, Azure ML, SageMaker), generative AI (RNNs, LSTMs, GRUs, Transformers, GANs), Large Language Models (GPT architecture, fine-tuning LLMs), prompt engineering (zero-shot, few-shot, chain-of-thought), AI ethics (fairness, explainability, privacy).' }]},
         { title: 'Database Administration', subs: [
@@ -187,8 +187,8 @@ export const semesterTranslations = {
       ],
     },
     s5: {
-      title: 'Semester 5 — Spécialisation GL',
-      year: '2025–2026 · 3rd Year',
+      title: 'Semester 5; Spécialisation GL',
+      year: '2025 to 2026 · 3rd Year',
       modules: [
         { title: 'Enterprise Application Integration', subs: [
           { name: 'Service & Object Integration', topics: 'SOA architecture, web services (SOAP/REST), API design, service orchestration, microservices integration, WSDL/UDDI' },
@@ -219,35 +219,35 @@ export const semesterTranslations = {
           { name: 'Conferences: IT & Business', topics: 'Industry talks, technology trends, enterprise innovation case studies, guest lectures from industry professionals' },
           { name: 'Certification', topics: 'IBM AI Analyst certification preparation and examination' },
         ]},
-        { title: 'Capstone Project', subs: [{ name: 'Capstone Project', topics: 'Capstone integrative project combining software engineering, IS governance, architecture, and quality — full lifecycle from requirements to deployment' }]},
+        { title: 'Capstone Project', subs: [{ name: 'Capstone Project', topics: 'Capstone integrative project combining software engineering, IS governance, architecture, and quality: full lifecycle from requirements to deployment' }]},
         { title: 'Language & Communication 5', subs: [{ name: 'TOEIC Preparation', topics: 'English proficiency, TOEIC exam preparation, professional English communication' }]},
       ],
     },
     projects: [
-      { title: 'Design & Development of an Equipment Supervision Tool', description: 'Full-stack web application for equipment supervision, maintenance request tracking, and RBAC. Built with Spring Boot, Angular, JWT authentication, and MVC architecture.', year: '2022–2023 · 1st Year', team: 'Omar Ettalbi, Anass Serroukh' },
-      { title: 'Mo-To-Mi: Monolithic → Microservices AI Migration Framework', description: 'Multi-agent AI system for automated migration of monolithic Spring Boot applications to microservices. 5 specialized autonomous agents (Architect, Observer, Strategist, Builder, Validator), each powered by dedicated LLMs.', year: '2024–2025 · 2nd Year', team: 'Omar Ettalbi, Doha Negraoui' },
-      { title: 'Smart Sleep Tracker: Intelligent Sleep Monitoring & Personalized Recommendations', description: 'Dual-model closed-loop system: Model A (CatBoost) for sleep quality prediction and Model B (LightGBM Ranker) for optimizing personalized intervention policies. Modern data stack: React Native, FastAPI, dbt, PostgreSQL, Great Expectations.', year: '2025–2026 · 3rd Year', team: 'Omar Ettalbi, Ayoub Akour, Saad Aittaleb' },
-      { title: 'Meter Readings System: Utility Meter Management Backoffice', description: 'Backoffice web application for Rabat Energie & Eau (REE): meter fleet management (water & electricity), field agent assignment to city districts, and consumption data centralization before billing. ERP integration simulation. AI Coding methodology with Cursor IDE — NLP-based requirements analysis, code generation, test data creation, documentation. 75 tests with Vitest.', year: '2025–2026 · 3rd Year', team: 'Omar Ettalbi + 6 teammates · Supervisor: Ms. Z. Mcharfi' },
-      { title: 'Morocco Rainfall & Wealth Analysis — Data-Driven Decision Making', description: 'Individual project: multi-source geospatial data integration (45-year rainfall records, Relative Wealth Index). Interactive dashboards with Leaflet maps. Benchmarked 4 time series models — Prophet achieved best MAE (8.41).', year: '2024–2025 · Decision Support Systems', team: 'Omar Ettalbi (individual project)' },
-      { title: 'RAG: Technical Analysis & Enterprise Adoption Perspectives', description: 'Research report on RAG pipeline architecture, comparative analysis vs. fine-tuning, market analysis of RAG ecosystem (LangChain, LlamaIndex, FAISS, Chroma, Pinecone). Systematic literature review (2022–2025).', year: '2025–2026 · 3rd Year', team: 'Omar Ettalbi, Ayoub Akour, Saad Ait Taleb' },
+      { title: 'Design & Development of an Equipment Supervision Tool', description: 'Full-stack web application for equipment supervision, maintenance request tracking, and RBAC. Built with Spring Boot, Angular, JWT authentication, and MVC architecture.', year: '2022 to 2023 · 1st Year', team: 'Omar Ettalbi, Anass Serroukh' },
+      { title: 'Mo-To-Mi: Monolithic → Microservices AI Migration Framework', description: 'Multi-agent AI system for automated migration of monolithic Spring Boot applications to microservices. 5 specialized autonomous agents (Architect, Observer, Strategist, Builder, Validator), each powered by dedicated LLMs.', year: '2024 to 2025 · 2nd Year', team: 'Omar Ettalbi, Doha Negraoui' },
+      { title: 'Smart Sleep Tracker: Intelligent Sleep Monitoring & Personalized Recommendations', description: 'Dual-model closed-loop system: Model A (CatBoost) for sleep quality prediction and Model B (LightGBM Ranker) for optimizing personalized intervention policies. Modern data stack: React Native, FastAPI, dbt, PostgreSQL, Great Expectations.', year: '2025 to 2026 · 3rd Year', team: 'Omar Ettalbi, Ayoub Akour, Saad Aittaleb' },
+      { title: 'Meter Readings System: Utility Meter Management Backoffice', description: 'Backoffice web application for Rabat Energie & Eau (REE): meter fleet management (water & electricity), field agent assignment to city districts, and consumption data centralization before billing. ERP integration simulation. AI Coding methodology with Cursor IDE: NLP-based requirements analysis, code generation, test data creation, documentation. 75 tests with Vitest.', year: '2025 to 2026 · 3rd Year', team: 'Omar Ettalbi + 6 teammates · Supervisor: Ms. Z. Mcharfi' },
+      { title: 'Morocco Rainfall & Wealth Analysis; Data-Driven Decision Making', description: 'Individual project: multi-source geospatial data integration (45-year rainfall records, Relative Wealth Index). Interactive dashboards with Leaflet maps. Benchmarked 4 time series models; Prophet achieved best MAE (8.41).', year: '2024 to 2025 · Decision Support Systems', team: 'Omar Ettalbi (individual project)' },
+      { title: 'RAG: Technical Analysis & Enterprise Adoption Perspectives', description: 'Research report on RAG pipeline architecture, comparative analysis vs. fine-tuning, market analysis of RAG ecosystem (LangChain, LlamaIndex, FAISS, Chroma, Pinecone). Systematic literature review (2022 to 2025).', year: '2025 to 2026 · 3rd Year', team: 'Omar Ettalbi, Ayoub Akour, Saad Ait Taleb' },
     ],
     internships: [
-      { title: 'RaiseUp Consulting: Front-End Development of Responsive Corporate Website', description: "Design and development of the company's official website front-end. UX/UI research, Next.js (SSR/SSG), Bootstrap. Site adopted as official production version and deployed to the company's domain.", year: '2024–2025 · 1st Year Internship' },
-      { title: 'RaiseUp Consulting: International Student Ops Platform', description: 'End-to-end web application consolidating the international study lifecycle: document upload & review, appointment booking, application/visa progression tracking, payments with receipts. Role-based dashboards (Student vs. Admin).', year: '2025–2026 · 2nd Year Internship' },
-      { title: 'Diehl Aviation — Digitalization & Data Analytics (End-of-Studies Internship)', description: 'Digitalization of operational shop floor processes using SAP S/4HANA, data processing with SAP Datasphere, and data visualization with SAP Analytics Cloud. MRO aviation sector, Toulouse, France.', year: '2025–2026 · Semester 6 (PFE) — In progress' },
+      { title: 'RaiseUp Consulting: Front-End Development of Responsive Corporate Website', description: "Design and development of the company's official website front-end. UX/UI research, Next.js (SSR/SSG), Bootstrap. Site adopted as official production version and deployed to the company's domain.", year: '2024 to 2025 · 1st Year Internship' },
+      { title: 'RaiseUp Consulting: International Student Ops Platform', description: 'End-to-end web application consolidating the international study lifecycle: document upload & review, appointment booking, application/visa progression tracking, payments with receipts. Role-based dashboards (Student vs. Admin).', year: '2025 to 2026 · 2nd Year Internship' },
+      { title: 'Diehl Aviation: Digitalization & Data Analytics (End-of-Studies Internship)', description: 'Digitalization of operational shop floor processes using SAP S/4HANA, data processing with SAP Datasphere, and data visualization with SAP Analytics Cloud. MRO aviation sector, Toulouse, France.', year: '2025 to 2026 · Semester 6 (PFE)' },
     ],
     certifications: [
-      { description: 'AI foundations, data analysis pipelines, machine learning workflow design, responsible AI — obtained as part of M5.6 Certification module' },
-      { description: 'DQN, policy gradients, reward shaping, OpenAI Gym environments — completed March 2025' },
+      { description: 'AI foundations, data analysis pipelines, machine learning workflow design, responsible AI: obtained as part of M5.6 Certification module' },
+      { description: 'DQN, policy gradients, reward shaping, OpenAI Gym environments: completed March 2025' },
     ],
   },
   fr: {
     cpge: {
-      title: 'Classes Préparatoires — CPGE TSI',
-      year: '2020–2022 · Classes Préparatoires aux Grandes Écoles, Settat',
+      title: 'Classes Préparatoires; CPGE TSI',
+      year: '2020 to 2022 · Classes Préparatoires aux Grandes Écoles, Settat',
       modules: [
         {
-          title: 'Concours National Commun — Filière TSI',
+          title: 'Concours National Commun; Filière TSI',
           subs: [
             { name: 'Résultat du Concours National', topics: 'Classé dans le top 18% au niveau national dans la filière TSI du Concours National Commun (CNC). Programme intensif de deux ans couvrant les mathématiques avancées (analyse, algèbre, probabilités), la physique, les sciences de l\'ingénieur et l\'informatique.' },
           ],
@@ -262,8 +262,8 @@ export const semesterTranslations = {
       ],
     },
     s1: {
-      title: 'Semestre 1 — Tronc Commun',
-      year: '2022–2023 · 1ère Année',
+      title: 'Semestre 1; Tronc Commun',
+      year: '2022 to 2023 · 1ère Année',
       modules: [
         { title: 'Algorithmique & Structures de Données', subs: [
           { name: 'Algorithmique', topics: 'Analyse de complexité, algorithmes de tri/recherche, diviser pour régner, programmation dynamique, algorithmes gloutons' },
@@ -293,11 +293,11 @@ export const semesterTranslations = {
       ],
     },
     s2: {
-      title: 'Semestre 2 — Tronc Commun',
-      year: '2023–2024 · 1ère Année',
+      title: 'Semestre 2; Tronc Commun',
+      year: '2023 to 2024 · 1ère Année',
       modules: [
         { title: 'Bases de Données', subs: [
-          { name: 'Bases de Données I', topics: 'Modèle relationnel, diagrammes E/R, dépendances fonctionnelles, normalisation (1NF–BCNF), fondamentaux SQL' },
+          { name: 'Bases de Données I', topics: 'Modèle relationnel, diagrammes E/R, dépendances fonctionnelles, normalisation (1NF to BCNF), fondamentaux SQL' },
           { name: 'Bases de Données II', topics: 'SQL avancé, optimisation de requêtes, triggers, procédures stockées, gestion des transactions, contrôle de concurrence' },
         ]},
         { title: 'Réseaux & Systèmes', subs: [
@@ -321,8 +321,8 @@ export const semesterTranslations = {
       ],
     },
     s3: {
-      title: 'Semestre 3 — Approfondissement',
-      year: '2024–2025 · 2ème Année',
+      title: 'Semestre 3; Approfondissement',
+      year: '2024 to 2025 · 2ème Année',
       modules: [
         { title: 'Génie Logiciel', subs: [{ name: 'Génie Logiciel', topics: 'Cycle de vie du développement logiciel, ingénierie des exigences, UML, architecture logicielle, stratégies de tests, assurance qualité' }]},
         { title: 'Méthodologie de Développement des SI', subs: [{ name: 'Méthodologie de Développement des SI', topics: 'Méthodologies de développement des SI (Merise, UML), modélisation des processus métier, modélisation conceptuelle/logique/physique des données, architecture de données d\'entreprise' }]},
@@ -347,8 +347,8 @@ export const semesterTranslations = {
       ],
     },
     s4: {
-      title: 'Semestre 4 — Approfondissement',
-      year: '2024–2025 · 2ème Année',
+      title: 'Semestre 4; Approfondissement',
+      year: '2024 to 2025 · 2ème Année',
       modules: [
         { title: 'Concepts & Technologies IA', subs: [{ name: "Fondement de l'IA / Technologies IA", topics: 'Conception de solutions IA (design thinking, workflows structurés), frameworks IA (TensorFlow, Keras, PyTorch, Apache Spark), apprentissage supervisé/non-supervisé/par renforcement, réseaux de neurones, AutoAI et mise à l\'échelle IA (PyCaret, Spark MLlib), déploiement et cycle de vie MLOps (MLFlow, Azure ML, SageMaker), IA générative (RNN, LSTM, GRU, Transformers, GAN), grands modèles de langage (architecture GPT, fine-tuning LLMs), ingénierie des prompts (zero-shot, few-shot, chain-of-thought), éthique de l\'IA (équité, explicabilité, vie privée).' }]},
         { title: 'Administration des Bases de Données', subs: [
@@ -376,8 +376,8 @@ export const semesterTranslations = {
       ],
     },
     s5: {
-      title: 'Semestre 5 — Spécialisation GL',
-      year: '2025–2026 · 3ème Année',
+      title: 'Semestre 5; Spécialisation GL',
+      year: '2025 to 2026 · 3ème Année',
       modules: [
         { title: 'Intégration d\'Applications d\'Entreprise', subs: [
           { name: 'Intégration des Services et des Objets', topics: 'Architecture SOA, services web (SOAP/REST), conception d\'API, orchestration de services, intégration de microservices, WSDL/UDDI' },
@@ -408,26 +408,26 @@ export const semesterTranslations = {
           { name: 'Conférences : IT et Entreprise', topics: 'Conférences industrielles, tendances technologiques, études de cas d\'innovation en entreprise, interventions de professionnels de l\'industrie' },
           { name: 'Certification', topics: 'Préparation et passage de la certification IBM AI Analyst' },
         ]},
-        { title: 'Projet Fédérateur', subs: [{ name: 'Projet Fédérateur', topics: 'Projet intégrateur de synthèse combinant génie logiciel, gouvernance des SI, architecture et qualité — cycle de vie complet des exigences au déploiement' }]},
+        { title: 'Projet Fédérateur', subs: [{ name: 'Projet Fédérateur', topics: 'Projet intégrateur de synthèse combinant génie logiciel, gouvernance des SI, architecture et qualité, cycle de vie complet des exigences au déploiement' }]},
         { title: 'Langue & Communication 5', subs: [{ name: 'Préparation TOEIC', topics: 'Maîtrise de l\'anglais, préparation à l\'examen TOEIC, communication professionnelle en anglais' }]},
       ],
     },
     projects: [
-      { title: 'Conception et Développement d\'un Outil de Supervision des Équipements', description: 'Application web full-stack pour la supervision d\'équipements, le suivi des demandes de maintenance et le RBAC. Développée avec Spring Boot, Angular, authentification JWT et architecture MVC.', year: '2022–2023 · 1ère Année', team: 'Omar Ettalbi, Anass Serroukh' },
-      { title: 'Mo-To-Mi: Framework de Migration Monolithique → Microservices par IA', description: 'Système IA multi-agents pour la migration automatisée d\'applications Spring Boot monolithiques vers des microservices. 5 agents autonomes spécialisés (Architecte, Observateur, Stratège, Constructeur, Validateur), chacun alimenté par des LLMs dédiés.', year: '2024–2025 · 2ème Année', team: 'Omar Ettalbi, Doha Negraoui' },
-      { title: 'Smart Sleep Tracker: Suivi Intelligent du Sommeil et Recommandations Personnalisées', description: 'Système en boucle fermée à double modèle : Modèle A (CatBoost) pour la prédiction de la qualité du sommeil et Modèle B (LightGBM Ranker) pour l\'optimisation des politiques d\'intervention personnalisées. Stack de données moderne : React Native, FastAPI, dbt, PostgreSQL, Great Expectations.', year: '2025–2026 · 3ème Année', team: 'Omar Ettalbi, Ayoub Akour, Saad Aittaleb' },
-      { title: 'SI Relevés: Backoffice de Gestion des Compteurs', description: 'Application Backoffice Web pour Rabat Énergie & Eau (REE) : gestion du parc de compteurs (eau et électricité), affectation des agents de terrain aux quartiers, centralisation des données de consommation avant facturation. Simulation d\'intégration ERP. Méthodologie AI Coding avec Cursor IDE — analyse des besoins par NLP, génération de code, création de jeux de données de test, documentation. 75 tests avec Vitest.', year: '2025–2026 · 3ème Année', team: 'Omar Ettalbi + 6 coéquipiers · Encadrante: Mme Z. Mcharfi' },
-      { title: 'Analyse des Précipitations & de la Richesse au Maroc — Aide à la Décision', description: 'Projet individuel : intégration de données géospatiales multi-sources (45 ans de relevés pluviométriques, Indice de Richesse Relative). Tableaux de bord interactifs avec cartes Leaflet. 4 modèles de séries temporelles comparés — Prophet a obtenu le meilleur MAE (8.41).', year: '2024–2025 · Systèmes Décisionnels', team: 'Omar Ettalbi (projet individuel)' },
-      { title: 'RAG: Analyse Technique et Perspectives d\'Adoption en Entreprise', description: 'Rapport de recherche sur l\'architecture des pipelines RAG, analyse comparative vs. fine-tuning, analyse du marché de l\'écosystème RAG (LangChain, LlamaIndex, FAISS, Chroma, Pinecone). Revue systématique de la littérature (2022–2025).', year: '2025–2026 · 3ème Année', team: 'Omar Ettalbi, Ayoub Akour, Saad Ait Taleb' },
+      { title: 'Conception et Développement d\'un Outil de Supervision des Équipements', description: 'Application web full-stack pour la supervision d\'équipements, le suivi des demandes de maintenance et le RBAC. Développée avec Spring Boot, Angular, authentification JWT et architecture MVC.', year: '2022 to 2023 · 1ère Année', team: 'Omar Ettalbi, Anass Serroukh' },
+      { title: 'Mo-To-Mi: Framework de Migration Monolithique → Microservices par IA', description: 'Système IA multi-agents pour la migration automatisée d\'applications Spring Boot monolithiques vers des microservices. 5 agents autonomes spécialisés (Architecte, Observateur, Stratège, Constructeur, Validateur), chacun alimenté par des LLMs dédiés.', year: '2024 to 2025 · 2ème Année', team: 'Omar Ettalbi, Doha Negraoui' },
+      { title: 'Smart Sleep Tracker: Suivi Intelligent du Sommeil et Recommandations Personnalisées', description: 'Système en boucle fermée à double modèle : Modèle A (CatBoost) pour la prédiction de la qualité du sommeil et Modèle B (LightGBM Ranker) pour l\'optimisation des politiques d\'intervention personnalisées. Stack de données moderne : React Native, FastAPI, dbt, PostgreSQL, Great Expectations.', year: '2025 to 2026 · 3ème Année', team: 'Omar Ettalbi, Ayoub Akour, Saad Aittaleb' },
+      { title: 'SI Relevés: Backoffice de Gestion des Compteurs', description: 'Application Backoffice Web pour Rabat Énergie & Eau (REE) : gestion du parc de compteurs (eau et électricité), affectation des agents de terrain aux quartiers, centralisation des données de consommation avant facturation. Simulation d\'intégration ERP. Méthodologie AI Coding avec Cursor IDE: analyse des besoins par NLP, génération de code, création de jeux de données de test, documentation. 75 tests avec Vitest.', year: '2025 to 2026 · 3ème Année', team: 'Omar Ettalbi + 6 coéquipiers · Encadrante: Mme Z. Mcharfi' },
+      { title: 'Analyse des Précipitations & de la Richesse au Maroc; Aide à la Décision', description: 'Projet individuel : intégration de données géospatiales multi-sources (45 ans de relevés pluviométriques, Indice de Richesse Relative). Tableaux de bord interactifs avec cartes Leaflet. 4 modèles de séries temporelles comparés; Prophet a obtenu le meilleur MAE (8.41).', year: '2024 to 2025 · Systèmes Décisionnels', team: 'Omar Ettalbi (projet individuel)' },
+      { title: 'RAG: Analyse Technique et Perspectives d\'Adoption en Entreprise', description: 'Rapport de recherche sur l\'architecture des pipelines RAG, analyse comparative vs. fine-tuning, analyse du marché de l\'écosystème RAG (LangChain, LlamaIndex, FAISS, Chroma, Pinecone). Revue systématique de la littérature (2022 to 2025).', year: '2025 to 2026 · 3ème Année', team: 'Omar Ettalbi, Ayoub Akour, Saad Ait Taleb' },
     ],
     internships: [
-      { title: 'RaiseUp Consulting : Développement Front-End d\'un Site Web d\'Entreprise Responsive', description: 'Conception et développement du front-end du site web officiel de l\'entreprise. Recherche UX/UI, Next.js (SSR/SSG), Bootstrap. Site adopté comme version de production officielle et déployé sur le domaine de l\'entreprise.', year: '2024–2025 · Stage 1ère Année' },
-      { title: 'RaiseUp Consulting : Plateforme d\'Opérations Étudiantes Internationales', description: 'Application web complète consolidant le cycle de vie des études internationales : gestion documentaire, prise de rendez-vous, suivi de progression candidatures/visas, paiements avec reçus. Tableaux de bord par rôle (Étudiant vs. Admin).', year: '2025–2026 · Stage 2ème Année' },
-      { title: 'Diehl Aviation — Digitalisation & Data Analytics (Stage de Fin d\'Études)', description: 'Digitalisation des processus opérationnels du shop floor avec SAP S/4HANA, traitement des données avec SAP Datasphere et visualisation avec SAP Analytics Cloud. Secteur MRO aéronautique, Toulouse, France.', year: '2025–2026 · Semestre 6 (PFE) — En cours' },
+      { title: 'RaiseUp Consulting : Développement Front-End d\'un Site Web d\'Entreprise Responsive', description: 'Conception et développement du front-end du site web officiel de l\'entreprise. Recherche UX/UI, Next.js (SSR/SSG), Bootstrap. Site adopté comme version de production officielle et déployé sur le domaine de l\'entreprise.', year: '2024 to 2025 · Stage 1ère Année' },
+      { title: 'RaiseUp Consulting : Plateforme d\'Opérations Étudiantes Internationales', description: 'Application web complète consolidant le cycle de vie des études internationales : gestion documentaire, prise de rendez-vous, suivi de progression candidatures/visas, paiements avec reçus. Tableaux de bord par rôle (Étudiant vs. Admin).', year: '2025 to 2026 · Stage 2ème Année' },
+      { title: 'Diehl Aviation: Digitalisation & Data Analytics (Stage de Fin d\'Études)', description: 'Digitalisation des processus opérationnels du shop floor avec SAP S/4HANA, traitement des données avec SAP Datasphere et visualisation avec SAP Analytics Cloud. Secteur MRO aéronautique, Toulouse, France.', year: '2025 à 2026 · Semestre 6 (PFE)' },
     ],
     certifications: [
-      { description: 'Fondements de l\'IA, pipelines d\'analyse de données, conception de workflows ML, IA responsable — obtenu dans le cadre du module M5.6 Certification' },
-      { description: 'DQN, policy gradients, reward shaping, environnements OpenAI Gym — complété en mars 2025' },
+      { description: 'Fondements de l\'IA, pipelines d\'analyse de données, conception de workflows ML, IA responsable: obtenu dans le cadre du module M5.6 Certification' },
+      { description: 'DQN, policy gradients, reward shaping, environnements OpenAI Gym: complété en mars 2025' },
     ],
   },
 }

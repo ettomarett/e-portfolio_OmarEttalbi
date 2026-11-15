@@ -164,7 +164,7 @@ export default function Projects() {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex items-center justify-between px-5 py-3 bg-gray-800 border-b border-white/10">
-                <span className="text-sm font-medium text-gray-200">TIPE — Autonomous Drone Presentation</span>
+                <span className="text-sm font-medium text-gray-200">TIPE: Autonomous Drone Presentation</span>
                 <button
                   onClick={() => setPdfOpen(false)}
                   className="p-1.5 rounded-lg hover:bg-white/10 transition-colors text-gray-400 hover:text-white"

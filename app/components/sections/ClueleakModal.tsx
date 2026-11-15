@@ -27,7 +27,7 @@ function FeatureList({ items }: { items: [string, string][] }) {
       {items.map(([name, desc]) => (
         <li key={name} className={FEATURE}>
           <span className={`${DOT} bg-[#6C5CE7]`} />
-          <span><span className="font-medium text-white">{name}</span> — {desc}</span>
+          <span><span className="font-medium text-white">{name}</span>: {desc}</span>
         </li>
       ))}
     </ul>
@@ -47,7 +47,7 @@ function OverviewTab() {
     <div>
       <div className={SECTION}>
         <p className="text-gray-300 leading-relaxed text-sm mb-4">
-          Clueleak is a production-grade, multi-application SaaS platform built and deployed entirely independently — outside any academic or professional obligation. It covers AI-powered content production, social media automation, infrastructure management, and content publication, all running on a self-managed OVH VPS under a custom Docker Compose stack.
+          Clueleak is a production-grade, multi-application SaaS platform built and deployed entirely independently: outside any academic or professional obligation. It covers AI-powered content production, social media automation, infrastructure management, and content publication, all running on a self-managed OVH VPS under a custom Docker Compose stack.
         </p>
         <div className="flex flex-wrap gap-2">
           {['Personal Project', 'Production', 'OVH VPS', 'Self-directed', 'Ongoing'].map(t => (
@@ -114,7 +114,7 @@ function AceTab() {
           ['Template Marketplace', 'Reusable versioned content templates with fork, revert, diff, publish, and visibility controls'],
           ['Template Batches', 'Run templates against item arrays or AI-expanded briefs; full-screen batch review UI with slot-based approval'],
           ['Memory System', 'Tagged feedback stored per brand, origin-scoped to prevent cross-contamination between workflow runs and template batches'],
-          ['AI Agent', 'Gemini-powered tool-calling loop with confirmation protocol for write operations — reads data, navigates UI, creates workflows, and promotes templates'],
+          ['AI Agent', 'Gemini-powered tool-calling loop with confirmation protocol for write operations: reads data, navigates UI, creates workflows, and promotes templates'],
           ['Recurring Schedules', 'Cron-based template batch automation with state tracking (enabled, nextRunAt, itemCursor, totalRuns)'],
           ['Version Control', 'Immutable snapshots across templates, runs, workflows, and studio graphs with revert and diff support'],
         ]} />
@@ -181,7 +181,7 @@ function FrastTab() {
     <div>
       <div className={SECTION}>
         <p className="text-gray-300 leading-relaxed text-sm mb-4">
-          Frast is a self-built <span className="text-white font-medium">IaaS control plane</span> — a private dashboard that abstracts the full lifecycle of deploying and operating web applications on self-managed VPS infrastructure. From provisioning a server to spinning up a production site, Frast automates every step through Ansible playbooks, state machines, and guided workflows.
+          Frast is a self-built <span className="text-white font-medium">IaaS control plane</span>, a private dashboard that abstracts the full lifecycle of deploying and operating web applications on self-managed VPS infrastructure. From provisioning a server to spinning up a production site, Frast automates every step through Ansible playbooks, state machines, and guided workflows.
         </p>
       </div>
       <div className={SECTION}>
@@ -189,8 +189,8 @@ function FrastTab() {
         <FeatureList items={[
           ['VPS Registry', 'Instance registry with connection details, health status, and hosted site count'],
           ['Website Catalog', 'Domain, GitHub repo, deployment target, and status per site'],
-          ['Guided Provisioning Flow', 'Step-by-step site creation: name → domain → VPS → repo → template → confirm — triggers Ansible playbook execution'],
-          ['Ansible Automation', 'VPS bootstrap, Nginx/Traefik setup, SSL provisioning, Docker Compose deployment, and firewall configuration — all orchestrated via playbooks'],
+          ['Guided Provisioning Flow', 'Step-by-step site creation: name → domain → VPS → repo → template → confirm: triggers Ansible playbook execution'],
+          ['Ansible Automation', 'VPS bootstrap, Nginx/Traefik setup, SSL provisioning, Docker Compose deployment, and firewall configuration: all orchestrated via playbooks'],
           ['Deployment Tracking', 'Status, timestamps, and success/failure indicators per deployment with event logs'],
           ['State Machines', 'VPS and site setup state machines with granular provisioning steps for reliable, resumable automation'],
           ['Drone CI Integration', 'CI/CD pipeline wiring for automated build, test, and deploy on push'],
@@ -209,27 +209,27 @@ function DevOpsTab() {
     <div>
       <div className={SECTION}>
         <p className="text-gray-300 leading-relaxed text-sm mb-4">
-          Full self-managed production stack on an OVH VPS — no PaaS, no managed cloud. Every layer from DNS to observability is owned: Cloudflare for edge, Traefik for reverse proxy, Docker Compose for service orchestration, and a Grafana + Prometheus monitoring stack with real-time alerts to protect monetized traffic.
+          Full self-managed production stack on an OVH VPS: no PaaS, no managed cloud. Every layer from DNS to observability is owned: Cloudflare for edge, Traefik for reverse proxy, Docker Compose for service orchestration, and a Grafana + Prometheus monitoring stack with real-time alerts to protect monetized traffic.
         </p>
       </div>
 
       <div className={SECTION}>
         <h3 className={H3}>Networking & Routing</h3>
         <FeatureList items={[
-          ['Cloudflare', 'DNS management, DDoS protection, CDN caching, and SSL termination at the edge — first line of defence for all traffic'],
+          ['Cloudflare', 'DNS management, DDoS protection, CDN caching, and SSL termination at the edge: first line of defence for all traffic'],
           ['Traefik', 'Reverse proxy and ingress controller running as a Docker container; auto-discovers services via labels, handles TLS certificates (Let\'s Encrypt), and routes traffic to the correct container by domain'],
-          ['OVH VPS', 'Self-managed Linux server — OS hardening, UFW firewall rules, SSH key authentication, and fail2ban'],
+          ['OVH VPS', 'Self-managed Linux server; OS hardening, UFW firewall rules, SSH key authentication, and fail2ban'],
         ]} />
       </div>
 
       <div className={SECTION}>
-        <h3 className={H3}>Observability — Grafana + Prometheus</h3>
+        <h3 className={H3}>Observability; Grafana + Prometheus</h3>
         <FeatureList items={[
           ['Prometheus', 'Metrics scraping engine collecting data from all exporters on a configurable interval'],
           ['Node Exporter', 'System-level metrics: CPU, RAM, disk I/O, network throughput, and load average on the VPS host'],
-          ['cAdvisor', 'Per-container resource usage: CPU throttling, memory limits, network I/O — one panel per service'],
+          ['cAdvisor', 'Per-container resource usage: CPU throttling, memory limits, network I/O, one panel per service'],
           ['Grafana Dashboards', 'Custom dashboards visualizing VPS resource usage, container health, and traffic patterns in real time'],
-          ['Alerting', 'Grafana alert rules trigger notifications when CPU spikes, memory pressure, or disk usage cross critical thresholds — enabling urgent intervention before monetized traffic is impacted'],
+          ['Alerting', 'Grafana alert rules trigger notifications when CPU spikes, memory pressure, or disk usage cross critical thresholds: enabling urgent intervention before monetized traffic is impacted'],
         ]} />
       </div>
 
@@ -239,7 +239,7 @@ function DevOpsTab() {
           {[
             ['ACE Frontend', 'Next.js · Port 3099', 'Turbopack hot reload in dev; production build in container'],
             ['ACE Backend', 'Fastify 5 · Port 4000', 'tsx watch in dev; compiled in production'],
-            ['ACE Worker', 'BullMQ container', 'Isolated worker process — scaled independently from the API'],
+            ['ACE Worker', 'BullMQ container', 'Isolated worker process: scaled independently from the API'],
             ['PostgreSQL 16', 'Port 5432', 'Persistent named volume; Prisma migrations auto-applied on startup'],
             ['Redis 7', 'Port 6379', 'Persistent named volume; used for BullMQ job queues and caching'],
             ['MinIO', 'Ports 9000 / 9001', 'S3-compatible object storage for generated assets; console on 9001'],
@@ -258,9 +258,9 @@ function DevOpsTab() {
       <div className={SECTION}>
         <h3 className={H3}>Async Job Infrastructure</h3>
         <FeatureList items={[
-          ['BullMQ + Redis', 'Separate worker containers for ACE content generation and Skidjoule social posting — decoupled from API response path'],
+          ['BullMQ + Redis', 'Separate worker containers for ACE content generation and Skidjoule social posting: decoupled from API response path'],
           ['Job Status Tracking', 'Per-job state machine: pending → queued → in_progress → completed / failed / cancelled with retry logic'],
-          ['Worker Isolation', 'ACE worker runs as a dedicated container — can be scaled or restarted independently without affecting the API or frontend'],
+          ['Worker Isolation', 'ACE worker runs as a dedicated container: can be scaled or restarted independently without affecting the API or frontend'],
           ['Cost Observability', 'Token usage, API costs, and captcha costs recorded per job for full spending visibility'],
         ]} />
       </div>
@@ -279,9 +279,9 @@ function HighlightsTab() {
       <div className={SECTION}>
         <FeatureList items={[
           ['Two-dimensional data partitioning', 'originKind discriminator on Run and Memory models prevents cross-contamination between workflow runs and template batch runs'],
-          ['Immutable versioning', 'Full snapshot history on templates, runs, and workflows with revert and diff support — nothing is ever overwritten'],
+          ['Immutable versioning', 'Full snapshot history on templates, runs, and workflows with revert and diff support: nothing is ever overwritten'],
           ['Unified studio execution path', 'Single backend service handles both HTTP route calls and AI agent tool invocations, ensuring consistency'],
-          ['AI agent with confirmation protocol', 'Write operations pause and require explicit user approval before executing — safe agentic automation'],
+          ['AI agent with confirmation protocol', 'Write operations pause and require explicit user approval before executing: safe agentic automation'],
           ['Server-side image rendering pipeline', 'Sharp-based compositing with filters, text overlays via SVG/pango, and layer composites for image generation'],
           ['Background job processing', 'BullMQ + Redis for async content generation (ACE) and social posting (Skidjoule) with separate worker containers for scalability'],
           ['Per-run cost tracking', 'Token usage and API costs recorded per run, template execution, and setup job for full observability'],

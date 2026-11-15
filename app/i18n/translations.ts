@@ -14,30 +14,30 @@ export const translations = {
     },
     hero: {
       greeting: "Hi, I'm",
-      subtitle: 'Software Engineer — ENSIAS Graduate — Currently at Diehl Aviation, Toulouse',
+      subtitle: 'Software Engineer, ENSIAS Graduate, Diehl Aviation, Toulouse',
       contactMe: 'Contact Me',
       fullCurriculum: 'Full Curriculum',
     },
     about: {
       title: 'About Me',
-      bio1: 'Final-year Software Engineering student at ENSIAS (Mohammed V University, Rabat). My training spans the full software lifecycle — from algorithms and formal methods to enterprise architecture, AI, and DevOps — with a strong foundation in mathematics and engineering sciences from CPGE TSI (ranked top 18% in the national engineering school entrance exam).',
+      bio1: 'Software Engineering graduate of ENSIAS (Mohammed V University, Rabat). My training spans the full software lifecycle, from algorithms and formal methods to enterprise architecture, AI, and DevOps, with a strong foundation in mathematics and engineering sciences from CPGE TSI (ranked top 18% in the national engineering school entrance exam).',
       bio2: 'I have hands-on experience building multi-agent AI systems, full-stack web platforms, ML pipelines, and data-driven dashboards. I work across Python, Java/Spring Boot, TypeScript/React/Next.js, and modern data tools (dbt, Spark, SAP).',
-      bio3: 'Currently completing my end-of-studies internship at Diehl Aviation (Toulouse, France), working on digitalization of shop floor processes with SAP S/4HANA, SAP Datasphere, and SAP Analytics Cloud.',
+      bio3: 'Completed my end-of-studies internship at Diehl Aviation (Toulouse, France), working on digitalization of shop floor processes with SAP S/4HANA, SAP Datasphere, and SAP Analytics Cloud.',
       education: 'Education',
       skills: 'Skills',
       certifications: 'Certifications',
       edu: [
         {
-          school: 'ENSIAS — Mohammed V University',
-          degree: 'State Engineering Degree — Software Engineering',
+          school: 'ENSIAS, Mohammed V University',
+          degree: 'State Engineering Degree, Software Engineering',
           location: 'Rabat, Morocco',
-          years: '2022–2026 (3rd Year — S6 Final Internship in progress)',
+          years: '2022 to 2026',
         },
         {
-          school: 'CPGE TSI — Preparatory Classes, Settat',
-          degree: 'Maths, Physics & Engineering Sciences — Ranked top 18% in national engineering school entrance exam',
+          school: 'CPGE TSI, Preparatory Classes, Settat',
+          degree: 'Maths, Physics & Engineering Sciences, ranked top 18% in national engineering school entrance exam',
           location: 'Settat, Morocco',
-          years: '2020–2022',
+          years: '2020 to 2022',
         },
       ],
       certs: [
@@ -50,7 +50,7 @@ export const translations = {
           url: 'https://www.credly.com/badges/ca3397a0-ce39-4de5-861f-fed63860857c/public_url',
         },
         {
-          name: 'SAP Certified Data Analyst — SAP Analytics Cloud',
+          name: 'SAP Certified Data Analyst: SAP Analytics Cloud',
           issuer: 'SAP',
           year: '2026',
           badge: '/images/sap-certified-data-analyst-sap-analytics-cloud.png',
@@ -58,7 +58,7 @@ export const translations = {
           url: 'https://www.credly.com/badges/645911e6-d325-424f-85fd-e2260b0daba7/public_url',
         },
         {
-          name: 'SAP Certified — Business Transformation Consultant',
+          name: 'SAP Certified: Business Transformation Consultant',
           issuer: 'SAP',
           year: '2026',
           badge: '/images/sap-certified-business-transformation-consultant.png',
@@ -114,35 +114,35 @@ export const translations = {
       personalProject: 'Personal Project',
       items: [
         {
-          title: 'Smart Sleep Tracker — ML Closed-Loop Recommendation System',
+          title: 'Smart Sleep Tracker: ML Closed-Loop Recommendation System',
           description: 'Dual-model closed-loop system: Model A (CatBoost) for sleep quality prediction and Model B (LightGBM Ranker) for optimizing personalized intervention policies. Learns from user feedback to refine recommendations. Modern data stack with Great Expectations for data quality.',
         },
         {
-          title: 'Mo-To-Mi — Multi-Agent LLM Migration Framework',
+          title: 'Mo-To-Mi: Multi-Agent LLM Migration Framework',
           description: 'Multi-agent AI system for automated migration of monolithic Spring Boot apps to microservices. 5 specialized autonomous agents (Architect, Observer, Strategist, Builder, Validator), each powered by dedicated LLMs with domain-specific prompts and tools. Tested on real applications.',
         },
         {
           title: 'Morocco Rainfall & Wealth Analysis',
-          description: 'Individual project: multi-source geospatial data integration (45-year rainfall records, Relative Wealth Index). Interactive dashboards with Leaflet maps. Benchmarked 4 time series models — Prophet achieved best MAE (8.41). Full Python pipeline with point-in-polygon analysis.',
+          description: 'Individual project: multi-source geospatial data integration (45-year rainfall records, Relative Wealth Index). Interactive dashboards with Leaflet maps. Benchmarked 4 time series models: Prophet achieved best MAE (8.41). Full Python pipeline with point-in-polygon analysis.',
         },
         {
-          title: 'RAG Architecture — Technical Research Report',
-          description: 'Research report on RAG pipeline architecture: document retrieval, embedding, chunking, vector databases. Comparative analysis vs. fine-tuning and traditional search. Market analysis of RAG ecosystem. Systematic literature review (2022–2025) with structured scoring matrices.',
+          title: 'RAG Architecture: Technical Research Report',
+          description: 'Research report on RAG pipeline architecture: document retrieval, embedding, chunking, vector databases. Comparative analysis vs. fine-tuning and traditional search. Market analysis of RAG ecosystem. Systematic literature review (2022 to 2025) with structured scoring matrices.',
         },
         {
-          title: 'Meter Readings System — Utility Meter Management Backoffice',
-          description: 'Backoffice web application for Rabat Energie & Eau (REE): meter fleet management (water & electricity), field agent assignment to city districts, and consumption data centralization before billing. ERP integration simulation module. Built with a structured AI Coding methodology — AI-assisted requirements analysis (NLP), code generation, test data creation, and documentation using Cursor IDE. 75 tests with Vitest.',
+          title: 'Meter Readings System: Utility Meter Management Backoffice',
+          description: 'Backoffice web application for Rabat Energie & Eau (REE): meter fleet management (water & electricity), field agent assignment to city districts, and consumption data centralization before billing. ERP integration simulation module. Built with a structured AI Coding methodology: AI-assisted requirements analysis (NLP), code generation, test data creation, and documentation using Cursor IDE. 75 tests with Vitest.',
         },
         {
           title: 'Equipment Supervision Tool',
           description: 'Full-stack web application for equipment supervision, maintenance request tracking, and role-based access control (RBAC). UML design, CRUD operations, and user-friendly dashboard for supervisors and employees.',
         },
         {
-          title: 'TIPE — Autonomous Drone Navigation with Deep RL',
+          title: 'TIPE: Autonomous Drone Navigation with Deep RL',
           description: 'Individual CPGE research project: modeled a city environment, drone, and sensors in Unity 3D. Trained an autonomous navigation agent using the ML-Agents toolkit with deep RL (Q-learning, policy gradients, reward shaping) for waste management network navigation.',
         },
         {
-          title: 'Clueleak — AI Content & Social SaaS Platform',
+          title: 'Clueleak: AI Content & Social SaaS Platform',
           description: 'Production-grade multi-application SaaS platform built and deployed independently on a self-managed OVH VPS. Covers AI-powered content production (ACE), social media automation (Skidjoule), and VPS infrastructure management (Frast).',
         },
       ],
@@ -151,8 +151,8 @@ export const translations = {
       title: 'Scientific Publication',
       subtitle: 'Published research bridging neuroscience, content analysis, and viewer behavior.',
       badge: 'Scientific Publication',
-      bookTitle: 'Khozai — Understanding Content Engagement Through Neuroscience',
-      bookDescription: 'A formal scientific framework connecting the physics of video content to the biology of the human brain to the behavior of real viewers. The book spans 13 chapters across 5 parts — covering brain architecture, dimensions of experience, behavioral measurement vectors, mutation and correlation engines, inference chains, calibration and governance, and real-world applications. A multidisciplinary work at the intersection of neuroscience, data science, and content analytics.',
+      bookTitle: 'Khozai: Understanding Content Engagement Through Neuroscience',
+      bookDescription: 'A formal scientific framework connecting the physics of video content to the biology of the human brain to the behavior of real viewers. The book spans 13 chapters across 5 parts, covering brain architecture, dimensions of experience, behavioral measurement vectors, mutation and correlation engines, inference chains, calibration and governance, and real-world applications. A multidisciplinary work at the intersection of neuroscience, data science, and content analytics.',
       readOn: 'Read on khozai.com',
       tags: ['Neuroscience', 'Content Analytics', 'Behavioral Science', 'Data Science', 'Formal Framework'],
     },
@@ -168,8 +168,8 @@ export const translations = {
         {
           title: 'Software Engineering Intern',
           company: 'Diehl Aviation',
-          period: 'Toulouse, France | 2025 – 2026 (ongoing)',
-          type: 'Current',
+          period: 'Toulouse, France | March to September 2026',
+          type: 'Finished',
           description: 'Digitalization of shop floor operational processes in the MRO (Maintenance, Repair & Overhaul) aviation sector using SAP technologies.',
           achievements: [
             'Digitalizing shop floor operational processes using SAP S/4HANA',
@@ -180,7 +180,7 @@ export const translations = {
         {
           title: 'DevOps Engineer Intern',
           company: 'RaiseUp Consulting',
-          period: 'Casablanca, Morocco | May – Sep 2025',
+          period: 'Casablanca, Morocco | May to Sep 2025',
           type: 'Finished',
           description: 'Deployed and operated a production platform for student lifecycle management, handling infrastructure, CI/CD, and application security.',
           achievements: [
@@ -192,7 +192,7 @@ export const translations = {
         {
           title: 'Full Stack Developer Intern',
           company: 'RaiseUp Consulting',
-          period: 'Casablanca, Morocco | May – Sep 2024',
+          period: 'Casablanca, Morocco | May to Sep 2024',
           type: 'Previous',
           description: "Designed and developed the company's official production website end-to-end.",
           achievements: [
@@ -219,15 +219,15 @@ export const translations = {
       hobbies: 'Hobbies',
       items: [
         {
-          title: 'Co-Founder & Lead — ENSIAS Radio',
+          title: 'Co-Founder & Lead, ENSIAS Radio',
           description: 'Student club leadership and content creation',
         },
         {
-          title: 'Computer Vision — YOLO & OpenCV',
+          title: 'Computer Vision: YOLO & OpenCV',
           description: 'Object detection, image processing, model fine-tuning, and video analysis through personal side projects',
         },
         {
-          title: 'Blender — 3D Modeling',
+          title: 'Blender: 3D Modeling',
           description: 'Mesh modeling, sculpting, materials/textures, lighting, scene composition, and rendering',
         },
         {
@@ -261,30 +261,30 @@ export const translations = {
     },
     hero: {
       greeting: 'Bonjour, je suis',
-      subtitle: 'Ingénieur Logiciel — Diplômé ENSIAS — Actuellement chez Diehl Aviation, Toulouse',
+      subtitle: 'Ingénieur Logiciel, Diplômé ENSIAS, Diehl Aviation, Toulouse',
       contactMe: 'Me Contacter',
       fullCurriculum: 'Curriculum Complet',
     },
     about: {
       title: 'À propos',
-      bio1: 'Élève ingénieur en dernière année de Génie Logiciel à l\'ENSIAS (Université Mohammed V, Rabat). Ma formation couvre l\'ensemble du cycle de vie logiciel — des algorithmes et méthodes formelles à l\'architecture d\'entreprise, l\'IA et le DevOps — avec une solide base en mathématiques et sciences de l\'ingénieur acquise en CPGE TSI (classé top 18% au Concours National Commun).',
+      bio1: 'Diplômé en Génie Logiciel de l\'ENSIAS (Université Mohammed V, Rabat). Ma formation couvre l\'ensemble du cycle de vie logiciel, des algorithmes et méthodes formelles à l\'architecture d\'entreprise, l\'IA et le DevOps, avec une solide base en mathématiques et sciences de l\'ingénieur acquise en CPGE TSI (classé top 18% au Concours National Commun).',
       bio2: 'J\'ai une expérience pratique dans la construction de systèmes multi-agents IA, de plateformes web full-stack, de pipelines ML et de tableaux de bord data-driven. Je travaille avec Python, Java/Spring Boot, TypeScript/React/Next.js et des outils de données modernes (dbt, Spark, SAP).',
-      bio3: 'Actuellement en stage de fin d\'études chez Diehl Aviation (Toulouse, France), je travaille sur la digitalisation des processus opérationnels avec SAP S/4HANA, SAP Datasphere et SAP Analytics Cloud.',
+      bio3: 'J\'ai terminé mon stage de fin d\'études chez Diehl Aviation (Toulouse, France), où j\'ai travaillé sur la digitalisation des processus opérationnels avec SAP S/4HANA, SAP Datasphere et SAP Analytics Cloud.',
       education: 'Formation',
       skills: 'Compétences',
       certifications: 'Certifications',
       edu: [
         {
-          school: 'ENSIAS — Université Mohammed V',
-          degree: 'Cycle d\'Ingénieur — Génie Logiciel',
+          school: 'ENSIAS, Université Mohammed V',
+          degree: 'Cycle d\'Ingénieur, Génie Logiciel',
           location: 'Rabat, Maroc',
-          years: '2022–2026 (3ème Année — S6 PFE en cours)',
+          years: '2022 à 2026',
         },
         {
-          school: 'CPGE TSI — Classes Préparatoires, Settat',
-          degree: 'Mathématiques, Physique & Sciences de l\'Ingénieur — Classé top 18% au Concours National Commun',
+          school: 'CPGE TSI, Classes Préparatoires, Settat',
+          degree: 'Mathématiques, Physique & Sciences de l\'Ingénieur, classé top 18% au Concours National Commun',
           location: 'Settat, Maroc',
-          years: '2020–2022',
+          years: '2020 to 2022',
         },
       ],
       certs: [
@@ -297,7 +297,7 @@ export const translations = {
           url: 'https://www.credly.com/badges/ca3397a0-ce39-4de5-861f-fed63860857c/public_url',
         },
         {
-          name: 'SAP Certified Data Analyst — SAP Analytics Cloud',
+          name: 'SAP Certified Data Analyst: SAP Analytics Cloud',
           issuer: 'SAP',
           year: '2026',
           badge: '/images/sap-certified-data-analyst-sap-analytics-cloud.png',
@@ -305,7 +305,7 @@ export const translations = {
           url: 'https://www.credly.com/badges/645911e6-d325-424f-85fd-e2260b0daba7/public_url',
         },
         {
-          name: 'SAP Certified — Business Transformation Consultant',
+          name: 'SAP Certified: Business Transformation Consultant',
           issuer: 'SAP',
           year: '2026',
           badge: '/images/sap-certified-business-transformation-consultant.png',
@@ -361,35 +361,35 @@ export const translations = {
       personalProject: 'Projet Personnel',
       items: [
         {
-          title: 'Smart Sleep Tracker — Système de Recommandation ML en Boucle Fermée',
+          title: 'Smart Sleep Tracker: Système de Recommandation ML en Boucle Fermée',
           description: 'Système en boucle fermée à double modèle : Modèle A (CatBoost) pour la prédiction de la qualité du sommeil et Modèle B (LightGBM Ranker) pour l\'optimisation des politiques d\'intervention personnalisées. Apprend du feedback utilisateur pour affiner les recommandations. Stack de données moderne avec Great Expectations.',
         },
         {
-          title: 'Mo-To-Mi — Framework de Migration LLM Multi-Agents',
+          title: 'Mo-To-Mi: Framework de Migration LLM Multi-Agents',
           description: 'Système IA multi-agents pour la migration automatisée d\'applications Spring Boot monolithiques vers des microservices. 5 agents autonomes spécialisés (Architecte, Observateur, Stratège, Constructeur, Validateur), chacun alimenté par des LLMs dédiés. Testé sur des applications réelles.',
         },
         {
           title: 'Analyse des Précipitations & de la Richesse au Maroc',
-          description: 'Projet individuel : intégration de données géospatiales multi-sources (45 ans de relevés pluviométriques, Indice de Richesse Relative). Tableaux de bord interactifs avec cartes Leaflet. 4 modèles de séries temporelles comparés — Prophet a obtenu le meilleur MAE (8.41). Pipeline Python complet.',
+          description: 'Projet individuel : intégration de données géospatiales multi-sources (45 ans de relevés pluviométriques, Indice de Richesse Relative). Tableaux de bord interactifs avec cartes Leaflet. 4 modèles de séries temporelles comparés : Prophet a obtenu le meilleur MAE (8.41). Pipeline Python complet.',
         },
         {
-          title: 'Architecture RAG — Rapport de Recherche Technique',
-          description: 'Rapport de recherche sur l\'architecture des pipelines RAG : recherche de documents, embedding, chunking, bases vectorielles. Analyse comparative vs. fine-tuning et recherche traditionnelle. Analyse du marché de l\'écosystème RAG. Revue systématique de la littérature (2022–2025).',
+          title: 'Architecture RAG : Rapport de Recherche Technique',
+          description: 'Rapport de recherche sur l\'architecture des pipelines RAG : recherche de documents, embedding, chunking, bases vectorielles. Analyse comparative vs. fine-tuning et recherche traditionnelle. Analyse du marché de l\'écosystème RAG. Revue systématique de la littérature (2022 à 2025).',
         },
         {
-          title: 'SI Relevés — Backoffice de Gestion des Compteurs',
-          description: 'Application Backoffice Web pour Rabat Énergie & Eau (REE) : gestion du parc de compteurs (eau et électricité), affectation des agents de terrain aux quartiers, et centralisation des données de consommation avant facturation. Module de simulation d\'intégration ERP. Développé avec une méthodologie AI Coding structurée — analyse des besoins assistée par IA (NLP), génération de code, création de jeux de données de test et documentation via Cursor IDE. 75 tests avec Vitest.',
+          title: 'SI Relevés : Backoffice de Gestion des Compteurs',
+          description: 'Application Backoffice Web pour Rabat Énergie & Eau (REE) : gestion du parc de compteurs (eau et électricité), affectation des agents de terrain aux quartiers, et centralisation des données de consommation avant facturation. Module de simulation d\'intégration ERP. Développé avec une méthodologie AI Coding structurée : analyse des besoins assistée par IA (NLP), génération de code, création de jeux de données de test et documentation via Cursor IDE. 75 tests avec Vitest.',
         },
         {
           title: 'Outil de Supervision d\'Équipements',
           description: 'Application web full-stack pour la supervision d\'équipements, le suivi des demandes de maintenance et le contrôle d\'accès basé sur les rôles (RBAC). Conception UML, opérations CRUD et tableau de bord convivial.',
         },
         {
-          title: 'TIPE — Navigation Autonome de Drone par Deep RL',
+          title: 'TIPE : Navigation Autonome de Drone par Deep RL',
           description: 'Projet de recherche CPGE individuel : modélisation d\'un environnement urbain, d\'un drone et de capteurs dans Unity 3D. Entraînement d\'un agent de navigation autonome avec le toolkit ML-Agents et le deep RL (Q-learning, policy gradients, reward shaping) pour la navigation dans un réseau de gestion des déchets.',
         },
         {
-          title: 'Clueleak — Plateforme SaaS IA & Médias Sociaux',
+          title: 'Clueleak : Plateforme SaaS IA & Médias Sociaux',
           description: 'Plateforme multi-applications SaaS de niveau production, construite et déployée indépendamment sur un VPS OVH autogéré. Couvre la production de contenu IA (ACE), l\'automatisation des réseaux sociaux (Skidjoule) et la gestion d\'infrastructure VPS (Frast).',
         },
       ],
@@ -398,8 +398,8 @@ export const translations = {
       title: 'Publication Scientifique',
       subtitle: 'Recherche publiée à l\'intersection des neurosciences, de l\'analyse de contenu et du comportement des spectateurs.',
       badge: 'Publication Scientifique',
-      bookTitle: 'Khozai — Comprendre l\'Engagement du Contenu par les Neurosciences',
-      bookDescription: 'Un cadre scientifique formel reliant la physique du contenu vidéo à la biologie du cerveau humain et au comportement des spectateurs réels. Le livre couvre 13 chapitres répartis en 5 parties — architecture cérébrale, dimensions de l\'expérience, vecteurs de mesure comportementale, moteurs de mutation et de corrélation, chaînes d\'inférence, calibration et gouvernance, et applications concrètes. Un travail multidisciplinaire à l\'intersection des neurosciences, de la data science et de l\'analyse de contenu.',
+      bookTitle: 'Khozai : Comprendre l\'Engagement du Contenu par les Neurosciences',
+      bookDescription: 'Un cadre scientifique formel reliant la physique du contenu vidéo à la biologie du cerveau humain et au comportement des spectateurs réels. Le livre couvre 13 chapitres répartis en 5 parties : architecture cérébrale, dimensions de l\'expérience, vecteurs de mesure comportementale, moteurs de mutation et de corrélation, chaînes d\'inférence, calibration et gouvernance, et applications concrètes. Un travail multidisciplinaire à l\'intersection des neurosciences, de la data science et de l\'analyse de contenu.',
       readOn: 'Lire sur khozai.com',
       tags: ['Neurosciences', 'Analyse de Contenu', 'Sciences Comportementales', 'Data Science', 'Cadre Formel'],
     },
@@ -415,8 +415,8 @@ export const translations = {
         {
           title: 'Stagiaire Ingénieur Logiciel',
           company: 'Diehl Aviation',
-          period: 'Toulouse, France | 2025 – 2026 (en cours)',
-          type: 'Current',
+          period: 'Toulouse, France | Mars à Septembre 2026',
+          type: 'Finished',
           description: 'Digitalisation des processus opérationnels du shop floor dans le secteur MRO (Maintenance, Repair & Overhaul) aéronautique avec les technologies SAP.',
           achievements: [
             'Digitalisation des processus opérationnels du shop floor avec SAP S/4HANA',
@@ -427,7 +427,7 @@ export const translations = {
         {
           title: 'Stagiaire Ingénieur DevOps',
           company: 'RaiseUp Consulting',
-          period: 'Casablanca, Maroc | Mai – Sep 2025',
+          period: 'Casablanca, Maroc | Mai à Sep 2025',
           type: 'Finished',
           description: 'Déploiement et exploitation d\'une plateforme de production pour la gestion du cycle de vie étudiant, couvrant l\'infrastructure, CI/CD et la sécurité applicative.',
           achievements: [
@@ -439,7 +439,7 @@ export const translations = {
         {
           title: 'Stagiaire Développeur Full Stack',
           company: 'RaiseUp Consulting',
-          period: 'Casablanca, Maroc | Mai – Sep 2024',
+          period: 'Casablanca, Maroc | Mai à Sep 2024',
           type: 'Previous',
           description: 'Conception et développement complet du site web officiel de production de l\'entreprise.',
           achievements: [
@@ -466,15 +466,15 @@ export const translations = {
       hobbies: 'Loisirs',
       items: [
         {
-          title: 'Co-Fondateur & Responsable — ENSIAS Radio',
+          title: 'Co-Fondateur & Responsable, ENSIAS Radio',
           description: 'Leadership associatif et création de contenu',
         },
         {
-          title: 'Vision par Ordinateur — YOLO & OpenCV',
+          title: 'Vision par Ordinateur : YOLO & OpenCV',
           description: 'Détection d\'objets, traitement d\'images, fine-tuning de modèles et analyse vidéo à travers des projets personnels',
         },
         {
-          title: 'Blender — Modélisation 3D',
+          title: 'Blender : Modélisation 3D',
           description: 'Modélisation de maillage, sculpting, matériaux/textures, éclairage, composition de scènes et rendu',
         },
         {
