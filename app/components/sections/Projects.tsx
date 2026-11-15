@@ -17,6 +17,7 @@ const projectMeta = [
     year: '2026',
     isClueleak: true,
     domain: 'https://clueleak.com',
+    image: '/images/clueleakcover.png',
   },
   {
     category: 'Personal SaaS',
@@ -24,6 +25,7 @@ const projectMeta = [
     year: '2026',
     isNibrasard: true,
     domain: 'https://nibrasard.com',
+    image: '/images/nibrasardcover.png',
   },
   {
     category: 'Web Application',
@@ -31,6 +33,7 @@ const projectMeta = [
     year: '2026',
     isJobuff: true,
     domain: 'https://jobuff.com',
+    image: '/images/jobuffcover.png',
   },
   { category: 'AI & Cloud', tags: ['CatBoost', 'LightGBM', 'React Native', 'FastAPI', 'dbt', 'PostgreSQL'], year: '2026' },
   { category: 'AI & Cloud', tags: ['Python', 'LLM', 'Multi-Agent', 'Google ADK', 'Docker', 'Spring Boot'], year: '2025' },
@@ -101,9 +104,17 @@ export default function Projects() {
                 transition={{ duration: 0.5 }}
                 className="bg-white dark:bg-secondary rounded-2xl shadow-lg hover:shadow-2xl transition-shadow group flex flex-col overflow-hidden"
               >
-                <div className={`flex items-center justify-center h-48 w-full ${style.bg}`}>
-                  <Icon className={`${style.color} text-6xl`} />
-                </div>
+                {meta.image ? (
+                  <img
+                    src={meta.image}
+                    alt={project.title}
+                    className="w-full h-48 object-cover"
+                  />
+                ) : (
+                  <div className={`flex items-center justify-center h-48 w-full ${style.bg}`}>
+                    <Icon className={`${style.color} text-6xl`} />
+                  </div>
+                )}
                 <div className="flex-1 flex flex-col p-6">
                   <div className="flex justify-between items-start mb-2">
                     <h3 className="text-xl font-bold text-white">{project.title}</h3>
