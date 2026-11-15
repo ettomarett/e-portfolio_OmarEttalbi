@@ -9,54 +9,8 @@ import { useLanguage } from '../../i18n/LanguageContext'
 import ClueleakModal from './ClueleakModal'
 import NibrasardModal from './NibrasardModal'
 import JobuffModal from './JobuffModal'
-
-const projectMeta = [
-  {
-    category: 'Personal SaaS',
-    tags: ['Next.js', 'Fastify', 'Docker', 'Traefik', 'Grafana', 'Ansible', 'Gemini AI'],
-    year: '2026',
-    isClueleak: true,
-    domain: 'https://clueleak.com',
-    image: '/images/clueleakcover.png',
-  },
-  {
-    category: 'Personal SaaS',
-    tags: ['Electron', 'React', 'Node.js', 'Express', 'BullMQ', 'PostgreSQL', 'Redis', 'Docker'],
-    year: '2026',
-    isNibrasard: true,
-    domain: 'https://nibrasard.com',
-    image: '/images/nibrasardcover.png',
-  },
-  {
-    category: 'Web Application',
-    tags: ['React 19', 'TypeScript', 'Python', 'Playwright', 'Docker', 'Caddy', 'Drone CI'],
-    year: '2026',
-    isJobuff: true,
-    domain: 'https://jobuff.com',
-    image: '/images/jobuffcover.png',
-  },
-  { category: 'AI & Cloud', tags: ['CatBoost', 'LightGBM', 'React Native', 'FastAPI', 'dbt', 'PostgreSQL'], year: '2026' },
-  { category: 'AI & Cloud', tags: ['Python', 'LLM', 'Multi-Agent', 'Google ADK', 'Docker', 'Spring Boot'], year: '2025' },
-  { category: 'Data Analytics', tags: ['Python', 'Prophet', 'ARIMA', 'Leaflet', 'Geospatial', 'Pandas'], year: '2025' },
-  { category: 'AI & Cloud', tags: ['RAG', 'LLM', 'Vector DB', 'LangChain', 'FAISS', 'Pinecone'], year: '2026' },
-  { category: 'Web Application', tags: ['AI Coding', 'Vitest', 'Cursor IDE', 'Full-Stack', 'ERP'], year: '2026' },
-  { category: 'Web Application', tags: ['Spring Boot', 'Angular', 'JWT', 'PostgreSQL', 'REST APIs'], year: '2023' },
-  {
-    category: 'AI & Cloud',
-    tags: ['Unity 3D', 'ML-Agents', 'Deep RL', 'C#', 'Python'],
-    year: '2022',
-    repo: 'https://github.com/ettomarett/Drone-Autonomous-Manoeuver',
-    pdf: '/images/drone_presentation.pdf',
-  },
-]
-
-const projectStyles: { [key: string]: { icon: React.ComponentType<{ className?: string }>, color: string, bg: string } } = {
-  'Web Application': { icon: FaReact, color: 'text-[#4CAF7D]', bg: 'bg-[#4CAF7D]/10 dark:bg-[#4CAF7D]/15' },
-  'Website': { icon: FaWordpress, color: 'text-[#4CAF7D]', bg: 'bg-[#4CAF7D]/10 dark:bg-[#4CAF7D]/15' },
-  'Data Analytics': { icon: FaDatabase, color: 'text-[#6C5CE7]', bg: 'bg-[#6C5CE7]/10 dark:bg-[#6C5CE7]/15' },
-  'AI & Cloud': { icon: FaRobot, color: 'text-[#E8763A]', bg: 'bg-[#E8763A]/10 dark:bg-[#E8763A]/15' },
-  'Personal SaaS': { icon: FaLayerGroup, color: 'text-[#a29bfe]', bg: 'bg-[#6C5CE7]/10 dark:bg-[#6C5CE7]/15' },
-}
+import HighlightedProjects from './HighlightedProjects'
+import OtherProjects from './OtherProjects'
 
 export default function Projects() {
   const [ref, inView] = useInView({
@@ -91,160 +45,47 @@ export default function Projects() {
           </motion.p>
         </div>
 
-        <div ref={ref} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {t.projects.items.map((project, index) => {
-            const meta = projectMeta[index]
-            const style = projectStyles[meta.category] || projectStyles['AI & Cloud']
-            const Icon = style.icon
-            return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5 }}
-                className="bg-white dark:bg-secondary rounded-2xl shadow-lg hover:shadow-2xl transition-shadow group flex flex-col overflow-hidden"
-              >
-                {meta.image ? (
-                  <img
-                    src={meta.image}
-                    alt={project.title}
-                    className="w-full h-48 object-cover"
-                  />
-                ) : (
-                  <div className={`flex items-center justify-center h-48 w-full ${style.bg}`}>
-                    <Icon className={`${style.color} text-6xl`} />
-                  </div>
-                )}
-                <div className="flex-1 flex flex-col p-6">
-                  <div className="flex justify-between items-start mb-2">
-                    <h3 className="text-xl font-bold text-white">{project.title}</h3>
-                    <span className={`text-xs ${style.bg} ${style.color} px-2 py-1 rounded-full font-medium flex-shrink-0 ml-2`}>
-                      {meta.year}
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="text-xs uppercase tracking-wide text-gray-400 dark:text-gray-500">{meta.category}</span>
-                    {'isClueleak' in meta && (
-                      <span className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-[#6C5CE7]/20 text-[#a29bfe]">{t.projects.personalProject}</span>
-                    )}
-                    {('isClueleak' in meta || 'isNibrasard' in meta || 'isJobuff' in meta) && (
-                      <span className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-[#E8763A]/20 text-[#F4A261]">Highlighted</span>
-                    )}
-                  </div>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4 flex-1 text-sm leading-relaxed">{project.description}</p>
-                  <div className="flex flex-wrap gap-2 mt-auto">
-                    {meta.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-3 py-1 bg-white/5 dark:bg-white/[0.07] text-gray-300 rounded-full text-xs font-medium"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  {'repo' in meta && (
-                    <div className="flex flex-wrap gap-2 mt-4">
-                      <a
-                        href={meta.repo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`inline-flex items-center gap-2 px-4 py-2 ${style.bg} ${style.color} rounded-xl text-sm font-medium hover:opacity-80 transition-opacity`}
-                      >
-                        <FaGithub className="text-sm" />
-                        {t.projects.viewRepo}
-                      </a>
-                      <button
-                        onClick={() => setPdfOpen(true)}
-                        className={`inline-flex items-center gap-2 px-4 py-2 ${style.bg} ${style.color} rounded-xl text-sm font-medium hover:opacity-80 transition-opacity`}
-                      >
-                        <FaFilePdf className="text-sm" />
-                        {t.projects.viewPresentation}
-                      </button>
-                    </div>
-                  )}
-                  {'isClueleak' in meta && (
-                    <button
-                      onClick={() => setClueleakOpen(true)}
-                      className={`inline-flex items-center gap-2 mt-2 px-4 py-2 ${style.bg} ${style.color} rounded-xl text-sm font-medium hover:opacity-80 transition-opacity`}
-                    >
-                      <FaExternalLinkAlt className="text-xs" />
-                      {t.projects.viewDetails}
-                    </button>
-                  )}
-                  {'isNibrasard' in meta && (
-                    <button
-                      onClick={() => setNibrasardOpen(true)}
-                      className={`inline-flex items-center gap-2 mt-2 px-4 py-2 ${style.bg} ${style.color} rounded-xl text-sm font-medium hover:opacity-80 transition-opacity`}
-                    >
-                      <FaExternalLinkAlt className="text-xs" />
-                      {t.projects.viewDetails}
-                    </button>
-                  )}
-                  {'isJobuff' in meta && (
-                    <button
-                      onClick={() => setJobuffOpen(true)}
-                      className={`inline-flex items-center gap-2 mt-2 px-4 py-2 ${style.bg} ${style.color} rounded-xl text-sm font-medium hover:opacity-80 transition-opacity`}
-                    >
-                      <FaExternalLinkAlt className="text-xs" />
-                      {t.projects.viewDetails}
-                    </button>
-                  )}
-                  {'domain' in meta && (
-                    <a
-                      href={meta.domain}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 mt-4 px-4 py-2 bg-[#E8763A]/20 text-[#F4A261] rounded-xl text-sm font-medium hover:opacity-80 transition-opacity border border-[#F4A261]/30"
-                    >
-                      <FaExternalLinkAlt className="text-xs" />
-                      Visit Website
-                    </a>
-                  )}
-                </div>
-              </motion.div>
-            )
-          })}
+        <div ref={ref} className="mb-24">
+          <HighlightedProjects />
+          <OtherProjects />
         </div>
-      </div>
 
-      <ClueleakModal open={clueleakOpen} onClose={() => setClueleakOpen(false)} />
-      <NibrasardModal open={nibrasardOpen} onClose={() => setNibrasardOpen(false)} />
-      <JobuffModal open={jobuffOpen} onClose={() => setJobuffOpen(false)} />
+        <ClueleakModal open={clueleakOpen} onClose={() => setClueleakOpen(false)} />
+        <NibrasardModal open={nibrasardOpen} onClose={() => setNibrasardOpen(false)} />
+        <JobuffModal open={jobuffOpen} onClose={() => setJobuffOpen(false)} />
 
-      <AnimatePresence>
-        {pdfOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
-            onClick={() => setPdfOpen(false)}
-          >
+        <AnimatePresence>
+          {pdfOpen && (
             <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              className="relative w-full max-w-5xl h-[90vh] bg-gray-900 rounded-2xl overflow-hidden shadow-2xl"
-              onClick={(e) => e.stopPropagation()}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+              onClick={() => setPdfOpen(false)}
             >
-              <div className="flex items-center justify-between px-5 py-3 bg-gray-800 border-b border-white/10">
-                <span className="text-sm font-medium text-gray-200">TIPE: Autonomous Drone Presentation</span>
-                <button
-                  onClick={() => setPdfOpen(false)}
-                  className="p-1.5 rounded-lg hover:bg-white/10 transition-colors text-gray-400 hover:text-white"
-                >
-                  <FaTimes className="w-4 h-4" />
-                </button>
-              </div>
-              <iframe
-                src="/images/drone_presentation.pdf"
-                className="w-full h-[calc(90vh-48px)]"
-                title="Drone Project Presentation"
-              />
+              <motion.div
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                className="relative w-full max-w-5xl h-[90vh] bg-gray-900 rounded-2xl overflow-hidden shadow-2xl"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <div className="flex items-center justify-between px-5 py-3 bg-gray-800 border-b border-white/10">
+                  <span className="text-sm font-medium text-gray-200">TIPE: Autonomous Drone Presentation</span>
+                  <button onClick={() => setPdfOpen(false)} className="p-1.5 rounded-lg hover:bg-white/10 transition-colors text-gray-400 hover:text-white flex-shrink-0 ml-4">
+                    <FaTimes className="w-4 h-4" />
+                  </button>
+                </div>
+                <iframe
+                  src="/images/drone_presentation.pdf"
+                  className="w-full h-[calc(90vh-48px)]"
+                  title="Drone Project Presentation"
+                />
+              </motion.div>
             </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          )}
+        </AnimatePresence>
+      </div>
     </section>
   )
 }

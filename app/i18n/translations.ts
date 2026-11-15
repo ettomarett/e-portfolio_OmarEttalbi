@@ -112,6 +112,8 @@ export const translations = {
       viewRepo: 'View Repository',
       viewDetails: 'View Details',
       personalProject: 'Personal Project',
+      highlighted: 'Highlighted Projects',
+      otherProjects: 'Other Projects',
       items: [
         {
           title: 'Smart Sleep Tracker: ML Closed-Loop Recommendation System',
@@ -367,6 +369,8 @@ export const translations = {
       viewRepo: 'Voir le Dépôt',
       viewDetails: 'Voir les Détails',
       personalProject: 'Projet Personnel',
+      highlighted: 'Projets Mis en Avant',
+      otherProjects: 'Autres Projets',
       items: [
         {
           title: 'Smart Sleep Tracker: Système de Recommandation ML en Boucle Fermée',
