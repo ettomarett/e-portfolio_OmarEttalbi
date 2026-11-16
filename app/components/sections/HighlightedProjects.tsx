@@ -72,7 +72,7 @@ export default function HighlightedProjects({
                   <Icon className={`${style.color} text-6xl`} />
                 </div>
               )}
-              <div className="flex-1 flex flex-col">
+              <div className="flex-1 flex flex-col pt-4">
                 <div className="flex justify-between items-start mb-2 px-6">
                   <h3 className="text-xl font-bold text-white">{lang === 'fr' ? meta.titleFr : meta.title}</h3>
                   <span className={`text-xs ${style.bg} ${style.color} px-2 py-1 rounded-full font-medium flex-shrink-0 ml-2`}>{meta.year}</span>
