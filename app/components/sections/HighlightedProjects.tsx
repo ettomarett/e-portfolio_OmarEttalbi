@@ -83,7 +83,7 @@ export default function HighlightedProjects({
                   ))}
                 </div>
                 <DescriptionRenderer description={meta.description} />
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-3 px-6 mb-6">
                   {'isClueleak' in meta && (
                     <button
                       onClick={onClueleakOpen}

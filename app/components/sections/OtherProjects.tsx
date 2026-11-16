@@ -77,7 +77,7 @@ export default function OtherProjects({ onPdfOpen }: OtherProjectsProps) {
                   ))}
                 </div>
                 <DescriptionRenderer description={meta.description} />
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-3 px-6 mb-6">
                   {meta.repo && (
                     <a
                       href={meta.repo}
