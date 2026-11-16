@@ -122,6 +122,8 @@ const internships = [
 const certifications = [
   { name: 'IBM AI Analyst Professional Certificate' },
   { name: 'DataCamp; Deep Reinforcement Learning in Python' },
+  { name: 'SAP Certified Data Analyst: SAP Analytics Cloud' },
+  { name: 'SAP Certified: Business Transformation Consultant' },
 ]
 
 const tagColors: Record<string, string> = {
