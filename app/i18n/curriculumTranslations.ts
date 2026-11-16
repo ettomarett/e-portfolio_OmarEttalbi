@@ -239,8 +239,8 @@ export const semesterTranslations = {
     certifications: [
       { description: 'AI foundations, data analysis pipelines, machine learning workflow design, responsible AI: obtained as part of M5.6 Certification module' },
       { description: 'DQN, policy gradients, reward shaping, OpenAI Gym environments: completed March 2025' },
-      { description: 'SAP Analytics Cloud data visualization, storytelling, and enterprise reporting: SAP Certified Data Analyst, expires 2026' },
-      { description: 'SAP S/4HANA business transformation, enterprise architecture, and digital consulting: SAP Certified Business Transformation Consultant, expires 2026' },
+      { description: 'SAP Analytics Cloud data visualization, storytelling, and enterprise reporting: SAP Certified Data Analyst, obtained 2026' },
+      { description: 'SAP S/4HANA business transformation, enterprise architecture, and digital consulting: SAP Certified Business Transformation Consultant, obtained 2026' },
     ],
   },
   fr: {
@@ -430,8 +430,8 @@ export const semesterTranslations = {
     certifications: [
       { description: 'Fondements de l\'IA, pipelines d\'analyse de données, conception de workflows ML, IA responsable: obtenu dans le cadre du module M5.6 Certification' },
       { description: 'DQN, policy gradients, reward shaping, environnements OpenAI Gym: complété en mars 2025' },
-      { description: 'Visualisation de données, storytelling et reporting d\'entreprise avec SAP Analytics Cloud: SAP Certified Data Analyst, expire en 2026' },
-      { description: 'Transformation commerciale, architecture d\'entreprise et conseil digital avec SAP S/4HANA: SAP Certified Business Transformation Consultant, expire en 2026' },
+      { description: 'Visualisation de données, storytelling et reporting d\'entreprise avec SAP Analytics Cloud: SAP Certified Data Analyst, obtenu en 2026' },
+      { description: 'Transformation commerciale, architecture d\'entreprise et conseil digital avec SAP S/4HANA: SAP Certified Business Transformation Consultant, obtenu en 2026' },
     ],
   },
 }
