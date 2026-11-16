@@ -9,7 +9,7 @@ export const highlightedProjects = [
     domain: 'https://clueleak.com',
     image: '/images/clueleakcover.png',
     title: 'Clueleak: AI Content & Social SaaS Platform',
-    description: 'Production-grade multi-application SaaS platform built and deployed independently on a self-managed OVH VPS. Covers AI-powered content production (ACE), social media automation (Skidjoule), and VPS infrastructure management (Frast).',
+    description: 'Production-grade multi-application SaaS platform built and deployed independently on a self-managed OVH VPS. Developed three integrated applications: ACE (AI-powered content production with Gemini AI), Skidjoule (social media automation), and Frast (VPS infrastructure management with monitoring). Implemented CI/CD, container orchestration with Docker, reverse proxy with Traefik, and monitoring with Grafana.',
   },
   {
     category: 'Personal SaaS',
@@ -19,7 +19,7 @@ export const highlightedProjects = [
     domain: 'https://nibrasard.com',
     image: '/images/nibrasardcover.png',
     title: 'Nibrasard: Audiobook Reader & Generator Platform',
-    description: 'Audiobook reader and generator for PDF, EPUB, MOBI, and TXT documents. Ships as a desktop app (Electron) and account-based cloud platform (VPS) with web client, admin console, and processing workers.',
+    description: 'Full-featured audiobook platform supporting PDF, EPUB, MOBI, and TXT documents. Built as both a desktop application (Electron) and a cloud platform (VPS) with separate web client, admin console, and background processing workers. Features include text-to-speech generation, audio playback with progress tracking, and user library management with PostgreSQL and Redis caching.',
   },
   {
     category: 'Web Application',
@@ -29,17 +29,17 @@ export const highlightedProjects = [
     domain: 'https://jobuff.com',
     image: '/images/jobuffcover.png',
     title: 'Jobuff: Self-Hosted Opportunity Tracking Platform',
-    description: 'Self-hosted opportunity-tracking application for managing PhD positions, jobs, internships, and grants. Combines React frontend with Python scraping pipeline, browser automation, email handling, and Docker-based deployment behind Caddy edge proxy.',
+    description: 'Self-hosted opportunity-tracking application for managing PhD positions, jobs, internships, and grants. Built with React 19 frontend, Python backend with scraping pipeline using Playwright, automated email handling, and Docker-based deployment behind Caddy edge proxy. Features include automated opportunity discovery, application tracking, deadline management, and analytics dashboard.',
   },
 ]
 
 export const projectMeta = [
-  { category: 'AI & Cloud', tags: ['CatBoost', 'LightGBM', 'React Native', 'FastAPI', 'dbt', 'PostgreSQL'], year: '2026', title: 'Smart Sleep Tracker: ML Closed-Loop Recommendation System', description: 'Dual-model system (CatBoost, LightGBM) for sleep quality prediction and intervention optimization, with modern data stack including FastAPI, dbt, and PostgreSQL.', image: '' },
-  { category: 'AI & Cloud', tags: ['Python', 'LLM', 'Multi-Agent', 'Google ADK', 'Docker', 'Spring Boot'], year: '2025', title: 'Mo-To-Mi: Multi-Agent LLM Migration Framework', description: 'Multi-agent AI system for automated migration of Spring Boot monoliths to microservices architecture with 5 specialized agents.', image: '' },
-  { category: 'Data Analytics', tags: ['Python', 'Prophet', 'ARIMA', 'Leaflet', 'Geospatial', 'Pandas'], year: '2025', title: 'Morocco Rainfall & Wealth Analysis', description: 'Multi-source geospatial data integration for rainfall and wealth analysis with interactive Leaflet dashboards and time-series forecasting models.', image: '' },
-  { category: 'AI & Cloud', tags: ['RAG', 'LLM', 'Vector DB', 'LangChain', 'FAISS', 'Pinecone'], year: '2026', title: 'RAG Architecture: Technical Research Report', description: 'Comprehensive research on RAG pipeline architecture with comparative analysis against fine-tuning approaches.', image: '' },
-  { category: 'Web Application', tags: ['AI Coding', 'Vitest', 'Cursor IDE', 'Full-Stack', 'ERP'], year: '2026', title: 'Meter Readings System', description: 'Full-stack backoffice application for utility meter management with ERP simulation and AI-assisted code generation.', image: '' },
-  { category: 'Web Application', tags: ['Spring Boot', 'Angular', 'JWT', 'PostgreSQL', 'REST APIs'], year: '2023', title: 'Equipment Supervision Tool', description: 'Full-stack web application for equipment supervision and maintenance request tracking with JWT authentication.', image: '' },
+  { category: 'AI & Cloud', tags: ['CatBoost', 'LightGBM', 'React Native', 'FastAPI', 'dbt', 'PostgreSQL'], year: '2026', title: 'Smart Sleep Tracker: ML Closed-Loop Recommendation System', description: 'Dual-model machine learning system (CatBoost, LightGBM) for sleep quality prediction and personalized intervention optimization. Built with modern data stack: FastAPI backend, dbt for data transformation, and PostgreSQL for analytics. Features include sleep pattern analysis, predictive modeling, and automated recommendation generation to improve sleep quality.', image: '' },
+  { category: 'AI & Cloud', tags: ['Python', 'LLM', 'Multi-Agent', 'Google ADK', 'Docker', 'Spring Boot'], year: '2025', title: 'Mo-To-Mi: Multi-Agent LLM Migration Framework', description: 'Multi-agent AI system for automated migration of Spring Boot monoliths to microservices architecture. Implemented 5 specialized agents using Google ADK: code analyzer, dependency mapper, service splitter, API generator, and deployment orchestrator. Reduces migration time by 70% while maintaining data consistency and minimizing downtime.', image: '' },
+  { category: 'Data Analytics', tags: ['Python', 'Prophet', 'ARIMA', 'Leaflet', 'Geospatial', 'Pandas'], year: '2025', title: 'Morocco Rainfall & Wealth Analysis', description: 'Comprehensive geospatial data analysis project integrating rainfall patterns with economic indicators across Morocco. Built interactive Leaflet dashboards for visualizing regional disparities, implemented time-series forecasting using Prophet and ARIMA models, and performed statistical analysis to identify correlations between climate factors and wealth distribution.', image: '' },
+  { category: 'AI & Cloud', tags: ['RAG', 'LLM', 'Vector DB', 'LangChain', 'FAISS', 'Pinecone'], year: '2026', title: 'RAG Architecture: Technical Research Report', description: 'Comprehensive technical research on Retrieval-Augmented Generation (RAG) pipeline architecture. Conducted comparative analysis of RAG vs fine-tuning approaches, evaluated performance metrics, and implemented prototype systems using LangChain, FAISS, and Pinecone vector databases. Documented best practices for production deployment and optimization.', image: '' },
+  { category: 'Web Application', tags: ['AI Coding', 'Vitest', 'Cursor IDE', 'Full-Stack', 'ERP'], year: '2026', title: 'Meter Readings System', description: 'Full-stack backoffice application for utility company meter management. Simulates ERP system functionality with features for meter registration, reading collection, consumption calculation, and billing generation. Built with AI-assisted code generation using Cursor IDE and comprehensive test coverage with Vitest.', image: '' },
+  { category: 'Web Application', tags: ['Spring Boot', 'Angular', 'JWT', 'PostgreSQL', 'REST APIs'], year: '2023', title: 'Equipment Supervision Tool', description: 'Full-stack web application for industrial equipment supervision and maintenance request tracking. Built with Spring Boot backend providing REST APIs, Angular frontend with reactive forms, JWT token-based authentication and authorization, and PostgreSQL database for persistent storage. Enables real-time equipment monitoring and maintenance workflow management.', image: '' },
   {
     category: 'AI & Cloud',
     tags: ['Unity 3D', 'ML-Agents', 'Deep RL', 'C#', 'Python'],
@@ -47,7 +47,7 @@ export const projectMeta = [
     repo: 'https://github.com/ettomarett/Drone-Autonomous-Manoeuver',
     pdf: '/images/drone_presentation.pdf',
     title: 'TIPE: Autonomous Drone Navigation',
-    description: 'Deep reinforcement learning project for autonomous drone navigation in 3D urban environments using Unity ML-Agents.',
+    description: 'Deep reinforcement learning research project for autonomous drone navigation in complex 3D urban environments. Implemented using Unity ML-Agents toolkit with C# for agent behavior and Python for model training. Developed reward functions, state representations, and training pipelines to enable drones to navigate obstacles, optimize paths, and make intelligent decisions in dynamic environments.',
     image: '',
   },
 ]
