@@ -8,15 +8,22 @@ import { FaReact, FaWordpress, FaRobot, FaDatabase, FaExternalLinkAlt, FaFilePdf
 import { useLanguage } from '../../i18n/LanguageContext'
 import { highlightedProjects, projectStyles } from './projectsData'
 
-export default function HighlightedProjects() {
+interface HighlightedProjectsProps {
+  onClueleakOpen: () => void
+  onNibrasardOpen: () => void
+  onJobuffOpen: () => void
+}
+
+export default function HighlightedProjects({ 
+  onClueleakOpen, 
+  onNibrasardOpen, 
+  onJobuffOpen 
+}: HighlightedProjectsProps) {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   })
   const { t } = useLanguage()
-  const [clueleakOpen, setClueleakOpen] = useState(false)
-  const [nibrasardOpen, setNibrasardOpen] = useState(false)
-  const [jobuffOpen, setJobuffOpen] = useState(false)
 
   return (
     <div className="mb-16" ref={ref}>
@@ -55,7 +62,7 @@ export default function HighlightedProjects() {
                 <div className="flex flex-wrap gap-3">
                   {'isClueleak' in meta && (
                     <button
-                      onClick={() => setClueleakOpen(true)}
+                      onClick={onClueleakOpen}
                       className="inline-flex items-center gap-2 px-4 py-2 bg-[#6C5CE7] text-[#a29bfe] rounded-xl text-sm font-medium hover:opacity-80 transition-opacity"
                     >
                       <FaExternalLinkAlt className="text-xs" /> {t.projects.viewDetails}
@@ -63,7 +70,7 @@ export default function HighlightedProjects() {
                   )}
                   {'isNibrasard' in meta && (
                     <button
-                      onClick={() => setNibrasardOpen(true)}
+                      onClick={onNibrasardOpen}
                       className="inline-flex items-center gap-2 px-4 py-2 bg-[#6C5CE7] text-[#a29bfe] rounded-xl text-sm font-medium hover:opacity-80 transition-opacity"
                     >
                       <FaExternalLinkAlt className="text-xs" /> {t.projects.viewDetails}
@@ -71,7 +78,7 @@ export default function HighlightedProjects() {
                   )}
                   {'isJobuff' in meta && (
                     <button
-                      onClick={() => setJobuffOpen(true)}
+                      onClick={onJobuffOpen}
                       className="inline-flex items-center gap-2 px-4 py-2 bg-[#6C5CE7] text-[#a29bfe] rounded-xl text-sm font-medium hover:opacity-80 transition-opacity"
                     >
                       <FaExternalLinkAlt className="text-xs" /> {t.projects.viewDetails}

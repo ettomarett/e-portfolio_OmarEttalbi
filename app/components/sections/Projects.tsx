@@ -46,7 +46,11 @@ export default function Projects() {
         </div>
 
         <div ref={ref} className="mb-24">
-          <HighlightedProjects />
+          <HighlightedProjects 
+            onClueleakOpen={() => setClueleakOpen(true)}
+            onNibrasardOpen={() => setNibrasardOpen(true)}
+            onJobuffOpen={() => setJobuffOpen(true)}
+          />
           <OtherProjects />
         </div>
 
