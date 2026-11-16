@@ -8,13 +8,16 @@ import { FaReact, FaWordpress, FaRobot, FaDatabase, FaExternalLinkAlt, FaFilePdf
 import { useLanguage } from '../../i18n/LanguageContext'
 import { projectMeta, projectStyles } from './projectsData'
 
-export default function OtherProjects() {
+interface OtherProjectsProps {
+  onPdfOpen: () => void
+}
+
+export default function OtherProjects({ onPdfOpen }: OtherProjectsProps) {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   })
   const { t } = useLanguage()
-  const [pdfOpen, setPdfOpen] = useState(false)
 
   return (
     <div ref={ref}>
@@ -63,7 +66,7 @@ export default function OtherProjects() {
                   )}
                   {meta.pdf && (
                     <button
-                      onClick={() => setPdfOpen(true)}
+                      onClick={onPdfOpen}
                       className="inline-flex items-center gap-2 px-4 py-2 bg-[#6C5CE7]/20 text-[#a29bfe] rounded-xl text-sm font-medium hover:opacity-80 transition-opacity border border-[#a29bfe]/30"
                     >
                       <FaFilePdf className="text-xs" /> View PDF

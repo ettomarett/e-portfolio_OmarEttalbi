@@ -51,7 +51,7 @@ export default function Projects() {
             onNibrasardOpen={() => setNibrasardOpen(true)}
             onJobuffOpen={() => setJobuffOpen(true)}
           />
-          <OtherProjects />
+          <OtherProjects onPdfOpen={() => setPdfOpen(true)} />
         </div>
 
         <ClueleakModal open={clueleakOpen} onClose={() => setClueleakOpen(false)} />
