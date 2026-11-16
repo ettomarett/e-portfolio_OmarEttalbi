@@ -41,7 +41,7 @@ export default function OtherProjects({ onPdfOpen }: OtherProjectsProps) {
     triggerOnce: true,
     threshold: 0.1,
   })
-  const { t } = useLanguage()
+  const { t, lang } = useLanguage()
 
   return (
     <div ref={ref}>
@@ -68,7 +68,7 @@ export default function OtherProjects({ onPdfOpen }: OtherProjectsProps) {
               )}
               <div className="flex-1 flex flex-col">
                 <div className="flex justify-between items-start mb-2 px-6">
-                  <h3 className="text-xl font-bold text-white">{meta.title}</h3>
+                  <h3 className="text-xl font-bold text-white">{lang === 'fr' ? meta.titleFr : meta.title}</h3>
                   <span className={`text-xs ${style.bg} ${style.color} px-2 py-1 rounded-full font-medium flex-shrink-0 ml-2`}>{meta.year}</span>
                 </div>
                 <div className="flex flex-wrap items-center gap-2 mb-3 mx-1 px-6">
@@ -76,7 +76,7 @@ export default function OtherProjects({ onPdfOpen }: OtherProjectsProps) {
                     <span key={tag} className="text-xs px-2 py-1 rounded-full bg-[#6C5CE7]/20 text-[#a29bfe] whitespace-nowrap">{tag}</span>
                   ))}
                 </div>
-                <DescriptionRenderer description={meta.description} />
+                <DescriptionRenderer description={lang === 'fr' ? meta.descriptionFr : meta.description} />
                 <div className="flex flex-wrap gap-3 px-6 mb-6">
                   {meta.repo && (
                     <a
