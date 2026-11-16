@@ -20,7 +20,7 @@ export const translations = {
     },
     about: {
       title: 'About Me',
-      bio1: 'Software Engineering graduate of ENSIAS (Mohammed V University, Rabat). My training spans the full software lifecycle, from algorithms and formal methods to enterprise architecture, AI, and DevOps, with a strong foundation in mathematics and engineering sciences from CPGE TSI (ranked top 18% in the national engineering school entrance exam).',
+      bio1: 'Software Engineering graduate of ENSIAS (Mohammed V University, Rabat). My training spans the full software lifecycle, from algorithms and formal methods to enterprise architecture, AI, and DevOps, with a strong foundation in mathematics and engineering sciences from Preparatory Classes for Engineering Schools - Technology and Industrial Sciences (ranked top 18% in the national engineering school entrance exam).',
       bio2: 'I have hands-on experience building multi-agent AI systems, full-stack web platforms, ML pipelines, and data-driven dashboards. I work across Python, Java/Spring Boot, TypeScript/React/Next.js, and modern data tools (dbt, Spark, SAP).',
       bio3: 'Completed my end-of-studies internship at Diehl Aviation (Toulouse, France), working on digitalization of shop floor processes with SAP S/4HANA, SAP Datasphere, and SAP Analytics Cloud.',
       education: 'Education',
@@ -29,12 +29,12 @@ export const translations = {
       edu: [
         {
           school: 'ENSIAS, Mohammed V University',
-          degree: 'State Engineering Degree, Software Engineering',
+          degree: "Master's Software Engineering Degree, Software Engineering",
           location: 'Rabat, Morocco',
           years: '2022 to 2026',
         },
         {
-          school: 'CPGE TSI, Preparatory Classes, Settat',
+          school: 'Preparatory Classes for Engineering Schools - Technology and Industrial Sciences, Settat',
           degree: 'Maths, Physics & Engineering Sciences, ranked top 18% in national engineering school entrance exam',
           location: 'Settat, Morocco',
           years: '2020 to 2022',

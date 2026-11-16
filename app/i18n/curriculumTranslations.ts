@@ -3,7 +3,7 @@ export const curriculumUI = {
     backToPortfolio: 'Back to Portfolio',
     headerBadge: 'Mohammed V University; Rabat',
     headerTitle: 'Software Engineering',
-    headerSubtitle: 'State Engineering Degree in Computer Science; Software Engineering & Information Systems. Full curriculum with professors and topic coverage.',
+    headerSubtitle: "Master's Software Engineering Degree in Computer Science; Software Engineering & Information Systems. Full curriculum with professors and topic coverage.",
     duration: 'Duration',
     durationValue: '3 years (6 semesters)',
     academicYears: 'Academic Years',
@@ -13,7 +13,7 @@ export const curriculumUI = {
     coordinator: 'Coordinator',
     cpgeBanner: 'CPGE Preparatory School (2020 to 2022)',
     ensiasBanner: 'ENSIAS Engineering Cycle (2022 to 2026)',
-    ensiasDescription: 'State Engineering Degree, 3 years, 5 semesters of coursework + 1 semester end-of-studies internship (PFE). Semesters S1 to S2 are Common Core, S3 to S4 Advanced Studies, S5 Software Engineering Specialization.',
+    ensiasDescription: "Master's Software Engineering Degree, 3 years, 5 semesters of coursework + 1 semester end-of-studies internship (PFE). Semesters S1 to S2 are Common Core, S3 to S4 Advanced Studies, S5 Software Engineering Specialization.",
     defendedProjects: 'Defended Projects',
     defendedProjectsSub: 'Each project defended before a jury panel',
     team: 'Team',
@@ -54,7 +54,7 @@ export const curriculumUI = {
 export const semesterTranslations = {
   en: {
     cpge: {
-      title: 'Preparatory School; CPGE TSI',
+      title: 'Preparatory School; Preparatory Classes for Engineering Schools - Technology and Industrial Sciences',
       year: '2020 to 2022 · Preparatory Classes, Settat',
       modules: [
         {
