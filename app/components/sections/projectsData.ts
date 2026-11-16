@@ -1,4 +1,4 @@
-import { FaReact, FaWordpress, FaRobot, FaDatabase, FaLayerGroup } from 'react-icons/fa'
+﻿import { FaReact, FaWordpress, FaRobot, FaDatabase, FaLayerGroup } from 'react-icons/fa'
 
 export const highlightedProjects = [
   {
@@ -11,9 +11,9 @@ export const highlightedProjects = [
     title: 'Clueleak: Autonomous AI Content & Social SaaS Platform',
     description: `Enterprise-grade multi-application AI SaaS platform architected and deployed independently on self-managed OVH VPS infrastructure. Designed and built three AI-native applications:
 
-• ACE — AI-powered content production pipeline leveraging Gemini LLM for automated article generation, summarization, and content optimization
-• Skidjoule — Social media automation system with AI agent workflows for cross-platform posting and engagement
-• Frast — Infrastructure management layer with real-time VPS monitoring, Grafana dashboards, and automated alerting
+• ACE - AI-powered content production pipeline leveraging Gemini LLM for automated article generation, summarization, and content optimization
+• Skidjoule - Social media automation system with AI agent workflows for cross-platform posting and engagement
+• Frast - Infrastructure management layer with real-time VPS monitoring, Grafana dashboards, and automated alerting
 
 Key technical achievements: Full CI/CD pipeline, container orchestration with Docker, reverse proxy with Traefik, infrastructure-as-code with Ansible, and production monitoring stack. Deployed to serve production traffic with zero-downtime deployments.`,
   },
@@ -27,8 +27,8 @@ Key technical achievements: Full CI/CD pipeline, container orchestration with Do
     title: 'Nibrasard: AI-Powered Audiobook Reader & Generator',
     description: `Next-generation audiobook platform transforming documents into high-quality audio experiences. Architected as dual-platform system:
 
-• Desktop Application — Electron-based native app for offline audiobook consumption
-• Cloud Platform — VPS-deployed SaaS with web client, admin console, and distributed processing workers
+• Desktop Application - Electron-based native app for offline audiobook consumption
+• Cloud Platform - VPS-deployed SaaS with web client, admin console, and distributed processing workers
 
 AI capabilities: LLM-powered text-to-speech generation with voice synthesis, intelligent document parsing (PDF, EPUB, MOBI, TXT), and audio processing pipeline with BullMQ job queues. User library management with PostgreSQL and Redis caching layer for sub-second response times. Multi-tenant architecture supporting account-based access and content synchronization across devices.`,
   },
@@ -42,10 +42,10 @@ AI capabilities: LLM-powered text-to-speech generation with voice synthesis, int
     title: 'Jobuff: AI Agent Opportunity Tracking Platform',
     description: `Self-hosted intelligent opportunity-tracking platform for PhD positions, jobs, internships, and grants. Full-stack application combining React 19 frontend with Python AI-driven backend:
 
-• AI Scraping Pipeline — Playwright-based browser automation with AI agents for automated opportunity discovery across 50+ sources
-• Smart Matching — LLM-powered opportunity categorization and relevance scoring
-• Workflow Automation — Automated email handling, deadline tracking, and application management
-• Analytics Dashboard — Real-time insights into application pipeline and success rates
+• AI Scraping Pipeline - Playwright-based browser automation with AI agents for automated opportunity discovery across 50+ sources
+• Smart Matching - LLM-powered opportunity categorization and relevance scoring
+• Workflow Automation - Automated email handling, deadline tracking, and application management
+• Analytics Dashboard - Real-time insights into application pipeline and success rates
 
 Deployment: Docker containerization behind Caddy edge proxy with automated CI/CD. Designed for scalability with microservices architecture and independent component deployment.`,
   },
@@ -57,11 +57,11 @@ export const projectMeta = [
 AI Capabilities: Sleep pattern classification with 92%+ accuracy, predictive modeling for sleep quality forecasting, and automated intervention recommendation engine. Closed-loop feedback system that adapts recommendations based on user response data. Deployed as REST microservice with containerized inference endpoints.`, image: '' },
   { category: 'AI & Cloud', tags: ['Python', 'LLM', 'Multi-Agent', 'Google ADK', 'Docker', 'Spring Boot', 'MCP'], year: '2025', title: 'Mo-To-Mi: Multi-Agent LLM Migration Framework', description: `Enterprise-grade multi-agent LLM system for automated Spring Boot monolith-to-microservices migration. Implemented 5 specialized AI agents using Google Agent Development Kit (ADK):
 
-• Code Analyzer Agent — Static code analysis and dependency mapping
-• Service Splitter Agent — Intelligent bounded context identification
-• API Generator Agent — REST API design and OpenAPI specification generation
-• Migration Orchestrator Agent — Automated refactoring and deployment coordination
-• Validation Agent — Regression testing and data consistency verification
+• Code Analyzer Agent - Static code analysis and dependency mapping
+• Service Splitter Agent - Intelligent bounded context identification
+• API Generator Agent - REST API design and OpenAPI specification generation
+• Migration Orchestrator Agent - Automated refactoring and deployment coordination
+• Validation Agent - Regression testing and data consistency verification
 
 MCP Integration: Model Context Protocol servers enabling secure agent access to code repositories, CI/CD pipelines, and infrastructure configurations.
 
@@ -114,3 +114,4 @@ export const projectStyles: { [key: string]: { icon: React.ComponentType<{ class
   'AI & Cloud': { icon: FaRobot, color: 'text-[#E8763A]', bg: 'bg-[#E8763A]/10 dark:bg-[#E8763A]/15' },
   'Personal SaaS': { icon: FaLayerGroup, color: 'text-[#a29bfe]', bg: 'bg-[#6C5CE7]/10 dark:bg-[#6C5CE7]/15' },
 }
+
