@@ -44,9 +44,9 @@ export default function OtherProjects() {
                   <h3 className="text-xl font-bold text-white">{meta.title}</h3>
                   <span className={`text-xs ${style.bg} ${style.color} px-2 py-1 rounded-full font-medium flex-shrink-0 ml-2`}>{meta.year}</span>
                   </div>
-                <div className="flex items-center gap-2 mb-3">
+                <div className="flex flex-wrap items-center gap-2 mb-3 mx-1">
                   {meta.tags.map((tag) => (
-                    <span key={tag} className="text-xs px-2 py-1 rounded-full bg-[#6C5CE7]/20 text-[#a29bfe]">{tag}</span>
+                    <span key={tag} className="text-xs px-2 py-1 rounded-full bg-[#6C5CE7]/20 text-[#a29bfe] whitespace-nowrap">{tag}</span>
                   ))}
                 </div>
                 <p className="text-gray-400 text-sm leading-relaxed mb-6 flex-1">{meta.description}</p>
