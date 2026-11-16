@@ -20,9 +20,13 @@
     },
     about: {
       title: 'About Me',
-      bio1: 'Software Engineering graduate of ENSIAS (Mohammed V University, Rabat) with a Master\'s in Software Engineering. My training combines rigorous engineering foundations from Preparatory Classes for Engineering Schools - Technology and Industrial Sciences (top 18% nationally) with advanced specialization in AI, enterprise architecture, and full-stack development.',
-      bio2: 'I design and build intelligent, production-grade systemsâ€”spanning multi-agent AI platforms, LLM pipelines, enterprise web applications, and data analytics. My work includes autonomous AI agents, AI-powered audiobook platforms, and job tracking systems deployed on self-managed infrastructure with Docker, CI/CD, and monitoring. Technical stack: Python, Java/Spring Boot, TypeScript/React/Next.js, SAP S/4HANA, dbt, Spark.',
-      bio3: 'Software Engineer at Diehl Aviation (Toulouse, France), driving shop floor digitalization with SAP S/4HANA, SAP Datasphere, and SAP Analytics Cloud. Previously delivered full-stack platforms and DevOps pipelines at RaiseUp Consulting (Casablanca). Certified in IBM AI Analysis, SAP Analytics Cloud, SAP Business Transformation, and Deep Reinforcement Learning. I blend deep technical expertise with product-focused delivery to create measurable impact.',
+      bio1: `I'm Omar Ettalbi, a software engineer who builds systems that are meant to run in production, not just demo well.
+
+My path started in Settat, where two years of intensive preparatory classes (CPGE TSI) put me in the top 18% nationally on Morocco's CNC engineering entrance exam. That same discipline carried me through a Software Engineering degree at ENSIAS (Mohammed V University, Rabat), and into the two areas I now work across daily: enterprise systems and applied AI.`,
+      bio2: `On the enterprise side, I work with SAP S/4HANA, SAP Datasphere, and SAP Analytics Cloud, where I'm a certified SAP Associate. I've used this stack to drive real transformation projects, including a shop-floor digitalization initiative at Diehl Aviation that cut data processing time by a lot. On the AI and software side, I design multi-agent platforms, LLM pipelines, and full-stack applications (Python, Java/Spring Boot, TypeScript/React/Next.js), deployed and monitored on self-managed infrastructure with Docker and CI/CD.`,
+      bio3: `I'm also the author of Khozai, an e-book about neuroscience & content creation, and outside of engineering I spend time on Blender, chess, and computer vision experiments. I'm fluent in French, English, and Arabic, which has made it easy to work across teams in Morocco and France.
+
+If you're looking for someone who can take a system from an idea to architecture diagrams to production deployment, and explain the trade-offs along the way, let's talk.`,
       education: 'Education',
       skills: 'Skills',
       certifications: 'Certifications',
@@ -277,9 +281,13 @@
     },
     about: {
       title: 'Ã€ propos',
-      bio1: 'DiplÃ©mÃ© en GÃ©nie Logiciel de l\'ENSIAS (UniversitÃ© Mohammed V, Rabat) avec un Master en GÃ©nie Logiciel. Ma formation allie des bases d\'ingÃ©nieur rigoureuses acquises en Classes PrÃ©paratoires aux Grandes ´Ecoles - FiliÃ¨re Technologie et Sciences Industrielles (top 18% national) avec une spÃ©cialisation avancÃ©e en IA, architecture d\'entreprise et dÃ©veloppement full-stack.',
-      bio2: 'Je conçois et construis des systÃ¨mes intelligents de qualitÃ© production—s\'Ã©tendant des plateformes multi-agents IA, pipelines LLM, applications web d\'entreprise et analytics data. Mon travail inclut des agents IA autonomes, des plateformes de livres audio propulsÃ©s par l\'IA, et des systÃ¨mes de suivi d\'opportunitÃ©s dÃ©ployÃ©s sur infrastructure auto-gÃ©rÃ©e avec Docker, CI/CD et monitoring. Stack technique : Python, Java/Spring Boot, TypeScript/React/Next.js, SAP S/4HANA, dbt, Spark.',
-      bio3: 'IngÃ©nieur Logiciel chez Diehl Aviation (Toulouse, France), pilotant la digitalisation des processus d\'atelier avec SAP S/4HANA, SAP Datasphere et SAP Analytics Cloud. Auparavant, j\'ai livrÃ© des plateformes full-stack et pipelines DevOps chez RaiseUp Consulting (Casablanca). CertifiÃ© IBM AI Analyst, SAP Analytics Cloud, SAP Business Transformation et Deep Reinforcement Learning. J\'allie expertise technique profonde et livraison orientÃ©e produit pour crÃ©er un impact mesurable.',
+      bio1: `Je suis Omar Ettalbi, un ingénieur logiciel qui construit des systèmes faits pour tourner en production, pas seulement pour bien démo.
+
+Mon parcours a commencé à Settat, où deux années de classes préparatoires intensives (CPGE TSI) m'ont placé dans le top 18% national au concours d'entrée aux écoles d'ingénieurs du CNC au Maroc. Cette même discipline m'a porté tout au long de mon diplôme en Génie Logiciel à l'ENSIAS (Université Mohammed V, Rabat), et vers les deux domaines dans lesquels je travaille au quotidien : les systèmes d'entreprise et l'IA appliquée.`,
+      bio2: `Côté systèmes d'entreprise, je travaille avec SAP S/4HANA, SAP Datasphere, et SAP Analytics Cloud, où je suis certifié SAP Associate. J'ai utilisé cette stack pour mener de vrais projets de transformation, dont une initiative de digitalisation de l'atelier chez Diehl Aviation qui a fortement réduit le temps de traitement des données. Côté IA et logiciel, je conçois des plateformes multi-agents, des pipelines LLM, et des applications full-stack (Python, Java/Spring Boot, TypeScript/React/Next.js), déployées et monitorées sur une infrastructure auto-gérée avec Docker et CI/CD.`,
+      bio3: `Je suis aussi l'auteur de Khozai, un e-book sur les neurosciences et la création de contenu, et en dehors de l'ingénierie je passe du temps sur Blender, les échecs et des expériences de vision par ordinateur. Je parle couramment français, anglais et arabe, ce qui m'a permis de travailler facilement à travers des équipes au Maroc et en France.
+
+Si vous cherchez quelqu'un capable de mener un système d'une idée à des schémas d'architecture puis au déploiement en production, tout en expliquant les compromis en cours de route, parlons-en.`,
       education: 'Formation',
       skills: 'CompÃ©tences',
       certifications: 'Certifications',
